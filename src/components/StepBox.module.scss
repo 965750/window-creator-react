@@ -1,0 +1,14 @@
+.circle {
+    width: 50px;
+    height: 50px;
+
+    &__inside {
+        transform: translate(-50%, -50%);
+        height: 5px;
+        width: 5px;
+    }
+
+    &__text {
+        font-size: 10px;
+    }
+}

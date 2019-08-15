@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createAccount } from '../store/actions/authActions'
-import '../index.css'
-import styles from './Home.scss'
+import styles from './Home.module.scss'
 
 class Home extends Component {
     componentDidMount () {
@@ -18,7 +17,7 @@ class Home extends Component {
         return (
             <div className="test">
                 <p className="bg-blue-600 mt-5 test__text">My Home Page</p>
-                <p>JUST TRYING MODULES</p>
+                <p className={styles.test__text}>JUST TRYING MODULES</p>
                 <button onClick={this.handleClick} >New Account?</button>
             </div>
         )

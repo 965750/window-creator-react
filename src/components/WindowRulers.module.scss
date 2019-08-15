@@ -1,0 +1,27 @@
+.ruler {
+    &--vertical {
+        width: 16px;
+    }
+
+    &--horizontal {
+        height: 16px;
+    }
+    
+    &__counter {
+        transform: translate(-50%, -50%);
+        line-height: 18px;
+        width: 40px;
+        height: 20px;
+    }
+}
+
+.bar {
+    &--vertical {
+        width: 2px;
+    }
+
+    &--horizontal {
+        height: 2px;
+        margin-top: 7px;
+    }
+}

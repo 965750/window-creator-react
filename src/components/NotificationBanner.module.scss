@@ -1,0 +1,11 @@
+.banner {
+    height: 80px;
+
+    &__text {
+        line-height: 80px;
+    }
+
+    &__close {
+        transform: translate(0, -50%)
+    }
+}
