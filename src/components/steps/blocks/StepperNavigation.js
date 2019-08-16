@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { changeStep } from '../store/actions/themeActions'
+import { changeStep } from '../../../store/actions/themeActions'
 
 class StepperNavigation extends Component {
     render() {

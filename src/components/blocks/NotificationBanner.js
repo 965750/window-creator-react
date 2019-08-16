@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './NotificationBanner.module.scss'
 import { connect } from 'react-redux'
-import { clearNotification } from '../store/actions/themeActions'
+import { clearNotification } from '../../store/actions/themeActions'
 
 class NotificationBanner extends Component {
     state = {

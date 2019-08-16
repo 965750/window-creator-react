@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import CreatorPreview from '../components/CreatorPreview'
-import StepFirstOptions from '../components/StepFirstOptions'
-import Stepper from '../components/Stepper'
-import StepperNavigation from '../components/StepperNavigation'
+import CreatorPreview from '../components/steps/blocks/CreatorPreview'
+import StepFirstOptions from '../components/steps/firstStep/StepFirstOptions'
+import StepSecondOptions from '../components/steps/secondStep/StepSecondOptions'
+import Stepper from '../components/steps/blocks/Stepper'
+import StepperNavigation from '../components/steps/blocks/StepperNavigation'
 import styles from './Creator.module.scss'
+import { connect } from 'react-redux'
 
 class Creator extends Component {
     state = {
@@ -12,6 +14,17 @@ class Creator extends Component {
     }
 
     render() {
+        let currentStepOptions
+
+        switch (this.props.step) {
+            case 1:
+                currentStepOptions = <StepFirstOptions />
+                break
+            case 2:
+                currentStepOptions = <StepSecondOptions />
+                break
+        }
+
         return (
             <div className={`${styles.wrapper} mx-auto`}>
                 <Stepper />
@@ -28,4 +41,10 @@ class Creator extends Component {
     }
 }
 
-export default Creator
+const mapStateToProps = state => {
+    return {
+        step: state.theme.stepper.active,
+    }
+}
+
+export default connect(mapStateToProps)(Creator)

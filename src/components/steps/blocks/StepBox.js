@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './StepBox.module.scss'
 import { connect } from 'react-redux'
-import { changeStep } from '../store/actions/themeActions'
+import { changeStep } from '../../../store/actions/themeActions'
 
 function StepBox ({ step, active, handleChangeStep }) {
     return (

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './Loading.module.scss'
 import { connect } from 'react-redux'
-import { isLoading } from '../store/actions/themeActions'
+import { isLoading } from '../../store/actions/themeActions'
 import { withRouter } from 'react-router'
 
 class Loading extends Component {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { resizeWindow, changeDoorType } from '../store/actions/creatorActions'
-import styles from './StepFirstOptions.module.scss'
+import { resizeWindow, changeDoorType } from '../../../store/actions/creatorActions'
+import styles from './StepSecondOptions.module.scss'
 
-class StepFirstOptions extends Component {
+class StepSecondOptions extends Component {
     state = {
         doorType: 1
     }
@@ -27,7 +27,7 @@ class StepFirstOptions extends Component {
             [e.target.id]: value,
             id: e.target.id
         })
-    }    
+    }
 
     render() {
         return (
@@ -69,4 +69,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(StepFirstOptions)
+export default connect(mapStateToProps, mapDispatchToProps)(StepSecondOptions)
