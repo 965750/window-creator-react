@@ -33,7 +33,7 @@ class StepFirstOptions extends Component {
         return (
             <div className={`pt-2`}>
                 <div className={`${styles.options} mb-10`}>
-                    <p className='mb-4 text-darkText'>Door type</p>
+                    <p className='mb-4 text-darkText border-b border-mercury'>Door type</p>
                     <label className='block mb-0'>
                         <input onChange={() => this.handleDoorType(1)} checked={this.props.window.doorType === 1} type="radio" /> Single door
                     </label>
@@ -43,7 +43,7 @@ class StepFirstOptions extends Component {
                 </div>
                 {this.state.doorType}
                 <div>
-                    <p className='mb-4 text-darkText'>Door size</p>
+                    <p className='mb-4 text-darkText border-b border-mercury'>Door size</p>
                     <div className='flex mb-2'>
                         <p className={`${styles.inputBox__label} mr-5`}>Width</p><input id="width" className={`${styles.inputBox} border mr-1 text-center`} onChange={this.handleChange} value={this.props.window.width} type="number" /><span>cm</span>
                     </div>

@@ -709,10 +709,6 @@ video {
   background-color: #6991b2;
 }
 
-.bg-solitude {
-  background-color: #ebf7ff;
-}
-
 .bg-gullGray {
   background-color: #95a3ad;
 }
@@ -761,10 +757,6 @@ video {
   background-color: #6991b2;
 }
 
-.hover\:bg-solitude:hover {
-  background-color: #ebf7ff;
-}
-
 .hover\:bg-gullGray:hover {
   background-color: #95a3ad;
 }
@@ -811,10 +803,6 @@ video {
 
 .focus\:bg-hippieBlue:focus {
   background-color: #6991b2;
-}
-
-.focus\:bg-solitude:focus {
-  background-color: #ebf7ff;
 }
 
 .focus\:bg-gullGray:focus {
@@ -945,10 +933,6 @@ video {
   border-color: #6991b2;
 }
 
-.border-solitude {
-  border-color: #ebf7ff;
-}
-
 .border-gullGray {
   border-color: #95a3ad;
 }
@@ -997,10 +981,6 @@ video {
   border-color: #6991b2;
 }
 
-.hover\:border-solitude:hover {
-  border-color: #ebf7ff;
-}
-
 .hover\:border-gullGray:hover {
   border-color: #95a3ad;
 }
@@ -1047,10 +1027,6 @@ video {
 
 .focus\:border-hippieBlue:focus {
   border-color: #6991b2;
-}
-
-.focus\:border-solitude:focus {
-  border-color: #ebf7ff;
 }
 
 .focus\:border-gullGray:focus {
@@ -3913,10 +3889,6 @@ video {
   color: #6991b2;
 }
 
-.placeholder-solitude::placeholder {
-  color: #ebf7ff;
-}
-
 .placeholder-gullGray::placeholder {
   color: #95a3ad;
 }
@@ -3963,10 +3935,6 @@ video {
 
 .focus\:placeholder-hippieBlue:focus::placeholder {
   color: #6991b2;
-}
-
-.focus\:placeholder-solitude:focus::placeholder {
-  color: #ebf7ff;
 }
 
 .focus\:placeholder-gullGray:focus::placeholder {
@@ -4421,10 +4389,6 @@ video {
   color: #6991b2;
 }
 
-.text-solitude {
-  color: #ebf7ff;
-}
-
 .text-gullGray {
   color: #95a3ad;
 }
@@ -4473,10 +4437,6 @@ video {
   color: #6991b2;
 }
 
-.hover\:text-solitude:hover {
-  color: #ebf7ff;
-}
-
 .hover\:text-gullGray:hover {
   color: #95a3ad;
 }
@@ -4523,10 +4483,6 @@ video {
 
 .focus\:text-hippieBlue:focus {
   color: #6991b2;
-}
-
-.focus\:text-solitude:focus {
-  color: #ebf7ff;
 }
 
 .focus\:text-gullGray:focus {
@@ -5091,10 +5047,6 @@ video {
     background-color: #6991b2;
   }
 
-  .sm\:bg-solitude {
-    background-color: #ebf7ff;
-  }
-
   .sm\:bg-gullGray {
     background-color: #95a3ad;
   }
@@ -5143,10 +5095,6 @@ video {
     background-color: #6991b2;
   }
 
-  .sm\:hover\:bg-solitude:hover {
-    background-color: #ebf7ff;
-  }
-
   .sm\:hover\:bg-gullGray:hover {
     background-color: #95a3ad;
   }
@@ -5193,10 +5141,6 @@ video {
 
   .sm\:focus\:bg-hippieBlue:focus {
     background-color: #6991b2;
-  }
-
-  .sm\:focus\:bg-solitude:focus {
-    background-color: #ebf7ff;
   }
 
   .sm\:focus\:bg-gullGray:focus {
@@ -5327,10 +5271,6 @@ video {
     border-color: #6991b2;
   }
 
-  .sm\:border-solitude {
-    border-color: #ebf7ff;
-  }
-
   .sm\:border-gullGray {
     border-color: #95a3ad;
   }
@@ -5379,10 +5319,6 @@ video {
     border-color: #6991b2;
   }
 
-  .sm\:hover\:border-solitude:hover {
-    border-color: #ebf7ff;
-  }
-
   .sm\:hover\:border-gullGray:hover {
     border-color: #95a3ad;
   }
@@ -5429,10 +5365,6 @@ video {
 
   .sm\:focus\:border-hippieBlue:focus {
     border-color: #6991b2;
-  }
-
-  .sm\:focus\:border-solitude:focus {
-    border-color: #ebf7ff;
   }
 
   .sm\:focus\:border-gullGray:focus {
@@ -8295,10 +8227,6 @@ video {
     color: #6991b2;
   }
 
-  .sm\:placeholder-solitude::placeholder {
-    color: #ebf7ff;
-  }
-
   .sm\:placeholder-gullGray::placeholder {
     color: #95a3ad;
   }
@@ -8345,10 +8273,6 @@ video {
 
   .sm\:focus\:placeholder-hippieBlue:focus::placeholder {
     color: #6991b2;
-  }
-
-  .sm\:focus\:placeholder-solitude:focus::placeholder {
-    color: #ebf7ff;
   }
 
   .sm\:focus\:placeholder-gullGray:focus::placeholder {
@@ -8803,10 +8727,6 @@ video {
     color: #6991b2;
   }
 
-  .sm\:text-solitude {
-    color: #ebf7ff;
-  }
-
   .sm\:text-gullGray {
     color: #95a3ad;
   }
@@ -8855,10 +8775,6 @@ video {
     color: #6991b2;
   }
 
-  .sm\:hover\:text-solitude:hover {
-    color: #ebf7ff;
-  }
-
   .sm\:hover\:text-gullGray:hover {
     color: #95a3ad;
   }
@@ -8905,10 +8821,6 @@ video {
 
   .sm\:focus\:text-hippieBlue:focus {
     color: #6991b2;
-  }
-
-  .sm\:focus\:text-solitude:focus {
-    color: #ebf7ff;
   }
 
   .sm\:focus\:text-gullGray:focus {
@@ -9474,10 +9386,6 @@ video {
     background-color: #6991b2;
   }
 
-  .md\:bg-solitude {
-    background-color: #ebf7ff;
-  }
-
   .md\:bg-gullGray {
     background-color: #95a3ad;
   }
@@ -9526,10 +9434,6 @@ video {
     background-color: #6991b2;
   }
 
-  .md\:hover\:bg-solitude:hover {
-    background-color: #ebf7ff;
-  }
-
   .md\:hover\:bg-gullGray:hover {
     background-color: #95a3ad;
   }
@@ -9576,10 +9480,6 @@ video {
 
   .md\:focus\:bg-hippieBlue:focus {
     background-color: #6991b2;
-  }
-
-  .md\:focus\:bg-solitude:focus {
-    background-color: #ebf7ff;
   }
 
   .md\:focus\:bg-gullGray:focus {
@@ -9710,10 +9610,6 @@ video {
     border-color: #6991b2;
   }
 
-  .md\:border-solitude {
-    border-color: #ebf7ff;
-  }
-
   .md\:border-gullGray {
     border-color: #95a3ad;
   }
@@ -9762,10 +9658,6 @@ video {
     border-color: #6991b2;
   }
 
-  .md\:hover\:border-solitude:hover {
-    border-color: #ebf7ff;
-  }
-
   .md\:hover\:border-gullGray:hover {
     border-color: #95a3ad;
   }
@@ -9812,10 +9704,6 @@ video {
 
   .md\:focus\:border-hippieBlue:focus {
     border-color: #6991b2;
-  }
-
-  .md\:focus\:border-solitude:focus {
-    border-color: #ebf7ff;
   }
 
   .md\:focus\:border-gullGray:focus {
@@ -12678,10 +12566,6 @@ video {
     color: #6991b2;
   }
 
-  .md\:placeholder-solitude::placeholder {
-    color: #ebf7ff;
-  }
-
   .md\:placeholder-gullGray::placeholder {
     color: #95a3ad;
   }
@@ -12728,10 +12612,6 @@ video {
 
   .md\:focus\:placeholder-hippieBlue:focus::placeholder {
     color: #6991b2;
-  }
-
-  .md\:focus\:placeholder-solitude:focus::placeholder {
-    color: #ebf7ff;
   }
 
   .md\:focus\:placeholder-gullGray:focus::placeholder {
@@ -13186,10 +13066,6 @@ video {
     color: #6991b2;
   }
 
-  .md\:text-solitude {
-    color: #ebf7ff;
-  }
-
   .md\:text-gullGray {
     color: #95a3ad;
   }
@@ -13238,10 +13114,6 @@ video {
     color: #6991b2;
   }
 
-  .md\:hover\:text-solitude:hover {
-    color: #ebf7ff;
-  }
-
   .md\:hover\:text-gullGray:hover {
     color: #95a3ad;
   }
@@ -13288,10 +13160,6 @@ video {
 
   .md\:focus\:text-hippieBlue:focus {
     color: #6991b2;
-  }
-
-  .md\:focus\:text-solitude:focus {
-    color: #ebf7ff;
   }
 
   .md\:focus\:text-gullGray:focus {
@@ -13857,10 +13725,6 @@ video {
     background-color: #6991b2;
   }
 
-  .lg\:bg-solitude {
-    background-color: #ebf7ff;
-  }
-
   .lg\:bg-gullGray {
     background-color: #95a3ad;
   }
@@ -13909,10 +13773,6 @@ video {
     background-color: #6991b2;
   }
 
-  .lg\:hover\:bg-solitude:hover {
-    background-color: #ebf7ff;
-  }
-
   .lg\:hover\:bg-gullGray:hover {
     background-color: #95a3ad;
   }
@@ -13959,10 +13819,6 @@ video {
 
   .lg\:focus\:bg-hippieBlue:focus {
     background-color: #6991b2;
-  }
-
-  .lg\:focus\:bg-solitude:focus {
-    background-color: #ebf7ff;
   }
 
   .lg\:focus\:bg-gullGray:focus {
@@ -14093,10 +13949,6 @@ video {
     border-color: #6991b2;
   }
 
-  .lg\:border-solitude {
-    border-color: #ebf7ff;
-  }
-
   .lg\:border-gullGray {
     border-color: #95a3ad;
   }
@@ -14145,10 +13997,6 @@ video {
     border-color: #6991b2;
   }
 
-  .lg\:hover\:border-solitude:hover {
-    border-color: #ebf7ff;
-  }
-
   .lg\:hover\:border-gullGray:hover {
     border-color: #95a3ad;
   }
@@ -14195,10 +14043,6 @@ video {
 
   .lg\:focus\:border-hippieBlue:focus {
     border-color: #6991b2;
-  }
-
-  .lg\:focus\:border-solitude:focus {
-    border-color: #ebf7ff;
   }
 
   .lg\:focus\:border-gullGray:focus {
@@ -17061,10 +16905,6 @@ video {
     color: #6991b2;
   }
 
-  .lg\:placeholder-solitude::placeholder {
-    color: #ebf7ff;
-  }
-
   .lg\:placeholder-gullGray::placeholder {
     color: #95a3ad;
   }
@@ -17111,10 +16951,6 @@ video {
 
   .lg\:focus\:placeholder-hippieBlue:focus::placeholder {
     color: #6991b2;
-  }
-
-  .lg\:focus\:placeholder-solitude:focus::placeholder {
-    color: #ebf7ff;
   }
 
   .lg\:focus\:placeholder-gullGray:focus::placeholder {
@@ -17569,10 +17405,6 @@ video {
     color: #6991b2;
   }
 
-  .lg\:text-solitude {
-    color: #ebf7ff;
-  }
-
   .lg\:text-gullGray {
     color: #95a3ad;
   }
@@ -17621,10 +17453,6 @@ video {
     color: #6991b2;
   }
 
-  .lg\:hover\:text-solitude:hover {
-    color: #ebf7ff;
-  }
-
   .lg\:hover\:text-gullGray:hover {
     color: #95a3ad;
   }
@@ -17671,10 +17499,6 @@ video {
 
   .lg\:focus\:text-hippieBlue:focus {
     color: #6991b2;
-  }
-
-  .lg\:focus\:text-solitude:focus {
-    color: #ebf7ff;
   }
 
   .lg\:focus\:text-gullGray:focus {
@@ -18240,10 +18064,6 @@ video {
     background-color: #6991b2;
   }
 
-  .xl\:bg-solitude {
-    background-color: #ebf7ff;
-  }
-
   .xl\:bg-gullGray {
     background-color: #95a3ad;
   }
@@ -18292,10 +18112,6 @@ video {
     background-color: #6991b2;
   }
 
-  .xl\:hover\:bg-solitude:hover {
-    background-color: #ebf7ff;
-  }
-
   .xl\:hover\:bg-gullGray:hover {
     background-color: #95a3ad;
   }
@@ -18342,10 +18158,6 @@ video {
 
   .xl\:focus\:bg-hippieBlue:focus {
     background-color: #6991b2;
-  }
-
-  .xl\:focus\:bg-solitude:focus {
-    background-color: #ebf7ff;
   }
 
   .xl\:focus\:bg-gullGray:focus {
@@ -18476,10 +18288,6 @@ video {
     border-color: #6991b2;
   }
 
-  .xl\:border-solitude {
-    border-color: #ebf7ff;
-  }
-
   .xl\:border-gullGray {
     border-color: #95a3ad;
   }
@@ -18528,10 +18336,6 @@ video {
     border-color: #6991b2;
   }
 
-  .xl\:hover\:border-solitude:hover {
-    border-color: #ebf7ff;
-  }
-
   .xl\:hover\:border-gullGray:hover {
     border-color: #95a3ad;
   }
@@ -18578,10 +18382,6 @@ video {
 
   .xl\:focus\:border-hippieBlue:focus {
     border-color: #6991b2;
-  }
-
-  .xl\:focus\:border-solitude:focus {
-    border-color: #ebf7ff;
   }
 
   .xl\:focus\:border-gullGray:focus {
@@ -21444,10 +21244,6 @@ video {
     color: #6991b2;
   }
 
-  .xl\:placeholder-solitude::placeholder {
-    color: #ebf7ff;
-  }
-
   .xl\:placeholder-gullGray::placeholder {
     color: #95a3ad;
   }
@@ -21494,10 +21290,6 @@ video {
 
   .xl\:focus\:placeholder-hippieBlue:focus::placeholder {
     color: #6991b2;
-  }
-
-  .xl\:focus\:placeholder-solitude:focus::placeholder {
-    color: #ebf7ff;
   }
 
   .xl\:focus\:placeholder-gullGray:focus::placeholder {
@@ -21952,10 +21744,6 @@ video {
     color: #6991b2;
   }
 
-  .xl\:text-solitude {
-    color: #ebf7ff;
-  }
-
   .xl\:text-gullGray {
     color: #95a3ad;
   }
@@ -22004,10 +21792,6 @@ video {
     color: #6991b2;
   }
 
-  .xl\:hover\:text-solitude:hover {
-    color: #ebf7ff;
-  }
-
   .xl\:hover\:text-gullGray:hover {
     color: #95a3ad;
   }
@@ -22054,10 +21838,6 @@ video {
 
   .xl\:focus\:text-hippieBlue:focus {
     color: #6991b2;
-  }
-
-  .xl\:focus\:text-solitude:focus {
-    color: #ebf7ff;
   }
 
   .xl\:focus\:text-gullGray:focus {

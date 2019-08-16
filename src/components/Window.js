@@ -29,7 +29,7 @@ class Window extends Component {
         })
 
         return (
-            <div className='h-full' style={{ width: `${this.props.width}px`, height: `${this.props.height}px` }}>
+            <div className='h-full z-20' style={{ width: `${this.props.width}px`, height: `${this.props.height}px` }}>
                 <table className={`${styles.window} w-full h-full`}>
                     <tbody>
                         { table }

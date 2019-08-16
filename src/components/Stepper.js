@@ -12,7 +12,7 @@ class Stepper extends Component {
                         <StepBox step={step} active={step.id === this.props.activeStep} key={step.id} />
                     )
                 })}
-                <div className={`${styles.stepper__line} border-b border-solitude absolute z-10 left-half`} />
+                <div className={`${styles.stepper__line} border-b border-mercury absolute z-10 left-half`} />
             </div>
         )
     }

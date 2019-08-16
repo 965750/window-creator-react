@@ -1,7 +1,22 @@
 .preview {
     height: 500px;
+
+    &__background {
+        background-image: url('../assets/room.jpg');
+        background-position: -150px -24px;
+        background-size: 820px 571px;
+        background-repeat: no-repeat;
+    }
 }
 
-.cityBackground {
-    background-image: url('../assets/city.png')
+.city {
+
+    &__window {
+        bottom: 99px;
+        left: 150px;
+    }
+
+    &__background {
+        min-width: 530px;
+    }
 }
