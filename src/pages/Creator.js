@@ -7,17 +7,18 @@ import styles from './Creator.module.scss'
 
 class Creator extends Component {
     state = {
-        rows: ['','',''],
-        columns: ['','','']
+        rows: ['', '', ''],
+        columns: ['', '', ''],
     }
 
     render() {
         return (
             <div className={`${styles.wrapper} mx-auto`}>
                 <Stepper />
-                <div className='flex mt-4'>
+
+                <div className="flex mt-4">
                     <CreatorPreview />
-                    <div className='w-1/3 ml-6 relative'>
+                    <div className="w-1/3 ml-6 relative">
                         <StepFirstOptions />
                         <StepperNavigation />
                     </div>
