@@ -2,51 +2,51 @@ const initState = {
     notification: null,
     isLoading: false,
     stepper: {
-        active: 2,
+        active: 1,
         steps: [
             {
                 label: 'Step 1',
                 title: 'Choose Door',
-                id: 1
+                id: 1,
             },
             {
                 label: 'Step 2',
                 title: 'Choose Door Division',
-                id: 2
+                id: 2,
             },
             {
                 label: 'Step 3',
                 title: 'Choose Color',
-                id: 3
-            }
-        ]
-    }
+                id: 3,
+            },
+        ],
+    },
 }
 
 const themeReduceer = (state = initState, action) => {
-    switch (action.type ) {
+    switch (action.type) {
         case 'SET_NOTIFICATION':
             return {
                 ...state,
-                notification: action.notification
+                notification: action.notification,
             }
         case 'CLEAR_NOTIFICATION':
             return {
                 ...state,
-                notification: null
+                notification: null,
             }
         case 'SET_LOADING':
             return {
                 ...state,
-                isLoading: action.isLoading
+                isLoading: action.isLoading,
             }
         case 'CHANGE_STEP':
             return {
                 ...state,
                 stepper: {
                     ...state.stepper,
-                    active: action.step
-                }
+                    active: action.step,
+                },
             }
     }
     return state

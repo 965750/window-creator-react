@@ -37,19 +37,17 @@ class CreatorPreview extends Component {
                             />
                         </div>
                     ) : null}
-                    <WindowRulers
-                        doorType={this.props.window.doorType}
-                        height={this.props.window.height}
-                        width={this.props.window.width}
-                    />
-                    {[...Array(this.props.window.doorType)].map(() => {
-                        return (
-                            <Window
-                                height={this.props.window.height}
-                                width={this.props.window.width}
-                            />
-                        )
-                    })}
+                    <WindowRulers window={this.props.window} />
+                    {[...Array(this.props.window.doorType)].map(
+                        (single, index) => {
+                            return (
+                                <Window
+                                    key={index}
+                                    window={this.props.window}
+                                />
+                            )
+                        }
+                    )}
                 </div>
             </div>
         )

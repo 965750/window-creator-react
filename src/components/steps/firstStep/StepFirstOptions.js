@@ -2,28 +2,72 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
     resizeWindow,
-    changeDoorType,
+    changeWindowType,
 } from '../../../store/actions/creatorActions'
+import { setNotification } from '../../../store/actions/themeActions'
 import styles from './StepFirstOptions.module.scss'
 
 class StepFirstOptions extends Component {
+    constructor(props) {
+        super(props)
+        this.heightInput = React.createRef()
+        this.widthInput = React.createRef()
+    }
+
     state = {
         doorType: 1,
     }
 
+    componentDidMount() {
+        this.heightInput.current.value = this.props.window.height
+        this.widthInput.current.value = this.props.window.width
+    }
+
     handleDoorType = value => {
-        this.props.changeDoorType(value)
+        this.props.changeWindowType(value)
     }
 
     handleChange = e => {
+        console.log(e.target.id, 67666666)
         let value = Number(e.target.value)
 
+        const limits = {
+            height: {
+                min: 160,
+                max: 300,
+            },
+            width: {
+                min: 60,
+                max: 170,
+            },
+        }
+
         if (e.target.id === 'height') {
-            value > 300 ? (value = 300) : (value = value)
-            value < 160 ? (value = 160) : (value = value)
+            value > limits.height.max
+                ? (value = limits.height.max)
+                : (value = value)
+            value < limits.height.min
+                ? (value = limits.height.min)
+                : (value = value)
         } else if (e.target.id === 'width') {
-            value > 170 ? (value = 170) : (value = value)
-            value < 60 ? (value = 60) : (value = value)
+            value > limits.width.max
+                ? (value = limits.width.max)
+                : (value = value)
+            value < limits.width.min
+                ? (value = limits.width.min)
+                : (value = value)
+        }
+
+        if (
+            this[`${e.target.id}Input`].current.value >
+                limits[e.target.id].max ||
+            this[`${e.target.id}Input`].current.value < limits[e.target.id].min
+        ) {
+            this.props.setNotification(
+                `Window's height must be between ${limits.height.max}cm and ${limits.height.min}cm, also for width it's ${limits.width.max}cm and ${limits.width.min}cm`
+            )
+
+            this[`${e.target.id}Input`].current.value = value
         }
 
         this.props.resizeWindow({
@@ -35,7 +79,7 @@ class StepFirstOptions extends Component {
     render() {
         return (
             <div className={`pt-2`}>
-                <div className={`${styles.options} mb-10`}>
+                <div className={`mb-10`}>
                     <p className="mb-4 text-darkText border-b border-mercury">
                         Door type
                     </p>
@@ -56,7 +100,6 @@ class StepFirstOptions extends Component {
                         Double door
                     </label>
                 </div>
-                {this.state.doorType}
                 <div>
                     <p className="mb-4 text-darkText border-b border-mercury">
                         Door size
@@ -68,8 +111,8 @@ class StepFirstOptions extends Component {
                         <input
                             id="width"
                             className={`${styles.inputBox} border mr-1 text-center`}
-                            onChange={this.handleChange}
-                            value={this.props.window.width}
+                            onBlur={this.handleChange}
+                            ref={this.widthInput}
                             type="number"
                         />
                         <span>cm</span>
@@ -81,8 +124,8 @@ class StepFirstOptions extends Component {
                         <input
                             id="height"
                             className={`${styles.inputBox} border mr-1 text-center`}
-                            onChange={this.handleChange}
-                            value={this.props.window.height}
+                            onBlur={this.handleChange}
+                            ref={this.heightInput}
                             type="number"
                         />
                         <span>cm</span>
@@ -102,7 +145,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         resizeWindow: sizes => dispatch(resizeWindow(sizes)),
-        changeDoorType: doorType => dispatch(changeDoorType(doorType)),
+        changeWindowType: doorType => dispatch(changeWindowType(doorType)),
+        setNotification: notification =>
+            dispatch(setNotification(notification)),
     }
 }
 

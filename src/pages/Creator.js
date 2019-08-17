@@ -26,13 +26,12 @@ class Creator extends Component {
         }
 
         return (
-            <div className={`${styles.wrapper} mx-auto`}>
+            <div className={`${styles.wrapper} mx-auto z-10`}>
                 <Stepper />
-
                 <div className="flex mt-4">
                     <CreatorPreview />
                     <div className="w-1/3 ml-6 relative">
-                        <StepFirstOptions />
+                        {currentStepOptions}
                         <StepperNavigation />
                     </div>
                 </div>

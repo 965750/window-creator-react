@@ -8,32 +8,39 @@ class NotificationBanner extends Component {
         show: false,
     }
 
-    onCloseBanner = (time) => {
+    onCloseBanner = time => {
         setTimeout(() => {
             this.props.clearNotification()
 
             this.setState({
-                show: false
+                show: false,
             })
         }, time)
     }
 
-    componentDidUpdate () {
+    componentDidUpdate() {
         if (this.props.notification && !this.state.show) {
             this.setState({
-                show: true
+                show: true,
             })
 
-            this.onCloseBanner(5000)
+            this.onCloseBanner(7000)
         }
     }
 
     render() {
         if (this.state.show) {
             return (
-                <div className={`${styles.banner} bg-error absolute w-full top-0 text-white`}>
-                    <p className={`${styles.banner__text} text-center`}>{ this.props.notification }</p>
-                    <span onClick={() => this.onCloseBanner(0)} className={`${styles.banner__close} absolute right-30 top-half`}>
+                <div
+                    className={`${styles.banner} bg-error fixed w-full z-30 top-0 text-white`}
+                >
+                    <p className={`${styles.banner__text} text-center`}>
+                        {this.props.notification}
+                    </p>
+                    <span
+                        onClick={() => this.onCloseBanner(0)}
+                        className={`${styles.banner__close} absolute right-30 top-half`}
+                    >
                         &#10005;
                     </span>
                 </div>
@@ -44,17 +51,20 @@ class NotificationBanner extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        clearNotification: () => dispatch(clearNotification())
+        clearNotification: () => dispatch(clearNotification()),
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     console.log(state, 11111)
     return {
-        notification: state.theme.notification
+        notification: state.theme.notification,
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NotificationBanner)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(NotificationBanner)
