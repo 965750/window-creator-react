@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './DivisionInput.module.scss'
 
-const DivisionInput = ({ changeDivision, id, inputValue }) => {
+const DivisionInput = ({ changeDivision, id, inputValue, classes }) => {
     return (
-        <div className="flex">
+        <div className={`${classes ? classes : ''} flex`}>
             <div
                 className={`${styles.inputBox} border border-gullGray text-center`}
             >

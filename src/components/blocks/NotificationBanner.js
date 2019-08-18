@@ -24,7 +24,7 @@ class NotificationBanner extends Component {
                 show: true,
             })
 
-            this.onCloseBanner(7000)
+            this.onCloseBanner(5000)
         }
     }
 
@@ -58,7 +58,6 @@ const mapDispatchToProps = dispatch => {
 }
 
 const mapStateToProps = state => {
-    console.log(state, 11111)
     return {
         notification: state.theme.notification,
     }

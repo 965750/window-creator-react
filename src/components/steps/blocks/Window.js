@@ -13,10 +13,17 @@ class Window extends Component {
     render() {
         const table = this.props.window.rows.map((row, index) => {
             return (
-                <tr className={`${styles.window__rows}`} key={index}>
+                <tr
+                    style={{ borderColor: this.props.windowColor.color }}
+                    className={`${styles.window__rows}`}
+                    key={index}
+                >
                     {this.props.window.columns.map((column, index) => {
                         return (
                             <td
+                                style={{
+                                    borderColor: this.props.windowColor.color,
+                                }}
                                 className={`${styles.window__columns}`}
                                 key={index}
                             >
@@ -36,7 +43,10 @@ class Window extends Component {
                     height: `${this.props.window.height}px`,
                 }}
             >
-                <table className={`${styles.window} w-full h-full`}>
+                <table
+                    style={{ borderColor: this.props.windowColor.color }}
+                    className={`${styles.window} w-full h-full`}
+                >
                     <tbody>{table}</tbody>
                 </table>
             </div>

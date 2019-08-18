@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CreatorPreview from '../components/steps/blocks/CreatorPreview'
 import StepFirstOptions from '../components/steps/firstStep/StepFirstOptions'
 import StepSecondOptions from '../components/steps/secondStep/StepSecondOptions'
+import StepThirdOptions from '../components/steps/thirdStep/StepThirdOptions'
 import Stepper from '../components/steps/blocks/Stepper'
 import StepperNavigation from '../components/steps/blocks/StepperNavigation'
 import styles from './Creator.module.scss'
@@ -22,6 +23,9 @@ class Creator extends Component {
                 break
             case 2:
                 currentStepOptions = <StepSecondOptions />
+                break
+            case 3:
+                currentStepOptions = <StepThirdOptions />
                 break
         }
 

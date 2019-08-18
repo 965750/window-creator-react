@@ -44,6 +44,7 @@ class CreatorPreview extends Component {
                                 <Window
                                     key={index}
                                     window={this.props.window}
+                                    windowColor={this.props.windowColor}
                                 />
                             )
                         }
@@ -57,6 +58,9 @@ class CreatorPreview extends Component {
 const mapStateToProps = state => {
     return {
         window: state.creator.window,
+        windowColor: state.creator.colorBoxes.find(box => {
+            return box.active === true
+        }),
     }
 }
 

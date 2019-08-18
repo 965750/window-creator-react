@@ -2,31 +2,29 @@ const initState = {
     myAccount: {
         name: 'MyName',
         lastName: 'MyLastName',
-        age: '27'
+        age: '27',
     },
-    isLoggedIn: false
+    isLoggedIn: false,
 }
 
 const authReducer = (state = initState, action) => {
-    switch (action.type ) {
+    switch (action.type) {
         case 'CREATE_ACCOUNT':
-            console.log('created AACCCOUNT', action.account)
-            console.log(state)
             return {
                 ...state,
-                added: action.account
+                added: action.account,
             }
         case 'LOGIN_SUCCESS':
             return {
                 ...state,
                 myAccount: {
-                    id: action.userToken
+                    id: action.userToken,
                 },
-                isLoggedIn: true
+                isLoggedIn: true,
             }
         case 'LOGIN_FAILED':
             return {
-                ...state
+                ...state,
             }
     }
     return state

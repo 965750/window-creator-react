@@ -28,7 +28,6 @@ class StepFirstOptions extends Component {
     }
 
     handleChange = e => {
-        console.log(e.target.id, 67666666)
         let value = Number(e.target.value)
 
         const limits = {

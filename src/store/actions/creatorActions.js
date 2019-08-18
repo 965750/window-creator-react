@@ -7,6 +7,15 @@ export const resizeWindow = size => {
     }
 }
 
+export const changeColorBox = id => {
+    return dispatch => {
+        dispatch({
+            type: 'CHANGE_COLOR_BOX',
+            id,
+        })
+    }
+}
+
 export const changeWindowType = doorType => {
     return (dispatch, getState) => {
         dispatch({
@@ -17,13 +26,18 @@ export const changeWindowType = doorType => {
 }
 
 export const changeWindowDivision = (value, id) => {
-    console.log(value, id, 2222222222)
-    // Array.apply(null, Array(5))
     return (dispatch, getState) => {
-        dispatch({
-            type: 'SET_DOOR_DIVISION',
-            value,
-            id,
-        })
+        if (getState().creator.window[id].length > 6 - value) {
+            dispatch({
+                type: 'SET_NOTIFICATION',
+                notification: 'Maximum number of beams or posts is 5',
+            })
+        } else if (getState().creator.window[id].length > 0 - value) {
+            dispatch({
+                type: 'SET_DOOR_DIVISION',
+                value,
+                id,
+            })
+        }
     }
 }

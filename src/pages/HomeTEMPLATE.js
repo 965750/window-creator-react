@@ -4,36 +4,34 @@ import { createAccount } from '../store/actions/authActions'
 import styles from './Home.module.scss'
 
 class Home extends Component {
-    componentDidMount () {
-        console.log('i did mount')
-        console.log(this.props)
-
-    }
     handleClick = () => {
         this.props.createAccount('FromComponent')
-    }      
+    }
 
-    render () {
+    render() {
         return (
             <div className="test">
                 <p className="bg-blue-600 mt-5 test__text">My Home Page</p>
                 <p className={styles.test__text}>JUST TRYING MODULES</p>
-                <button onClick={this.handleClick} >New Account?</button>
+                <button onClick={this.handleClick}>New Account?</button>
             </div>
         )
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        createAccount: (account) => dispatch(createAccount(account))
+        createAccount: account => dispatch(createAccount(account)),
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
-        acc: state.auth.myAccount
+        acc: state.auth.myAccount,
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Home)

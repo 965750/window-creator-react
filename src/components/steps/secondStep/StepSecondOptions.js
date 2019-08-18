@@ -15,16 +15,23 @@ class StepSecondOptions extends Component {
                     <p className="mb-4 text-darkText border-b border-mercury">
                         Door division
                     </p>
-                    <DivisionInput
-                        id="rows"
-                        inputValue={this.props.window.rows.length - 1}
-                        changeDivision={this.changeDivision}
-                    />
-                    <DivisionInput
-                        id="columns"
-                        inputValue={this.props.window.columns.length - 1}
-                        changeDivision={this.changeDivision}
-                    />
+                    <div className="flex justify-between w-3/4">
+                        <p>Number of beams</p>
+                        <DivisionInput
+                            id="rows"
+                            classes="mb-5"
+                            inputValue={this.props.window.rows.length - 1}
+                            changeDivision={this.changeDivision}
+                        />
+                    </div>
+                    <div className="flex justify-between w-3/4">
+                        <p>Number of posts</p>
+                        <DivisionInput
+                            id="columns"
+                            inputValue={this.props.window.columns.length - 1}
+                            changeDivision={this.changeDivision}
+                        />
+                    </div>
                 </div>
             </div>
         )

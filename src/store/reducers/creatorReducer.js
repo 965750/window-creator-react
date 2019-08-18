@@ -1,5 +1,26 @@
 const initState = {
+    colorBoxes: [
+        {
+            id: '1',
+            color: '#000',
+            label: 'Black',
+            active: true,
+        },
+        {
+            id: '2',
+            color: '#797474',
+            label: 'Gray',
+            active: false,
+        },
+        {
+            id: '3',
+            color: '#f4f2f2',
+            label: 'White',
+            active: false,
+        },
+    ],
     window: {
+        color: '#000',
         width: 110,
         height: 230,
         doorType: 2,
@@ -36,6 +57,16 @@ const creatorReducer = (state = initState, action) => {
                         Array(state.window[action.id].length + action.value)
                     ),
                 },
+            }
+        case 'CHANGE_COLOR_BOX':
+            const localColorBoxes = state.colorBoxes.map(box => ({
+                ...box,
+                active: action.id === box.id,
+            }))
+
+            return {
+                ...state,
+                colorBoxes: localColorBoxes,
             }
     }
     return state
