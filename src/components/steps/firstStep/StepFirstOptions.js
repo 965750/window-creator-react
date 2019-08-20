@@ -6,6 +6,7 @@ import {
 } from '../../../store/actions/creatorActions'
 import { setNotification } from '../../../store/actions/themeActions'
 import styles from './StepFirstOptions.module.scss'
+import BaseCheckbox from '../../blocks/BaseCheckbox'
 
 class StepFirstOptions extends Component {
     constructor(props) {
@@ -82,22 +83,26 @@ class StepFirstOptions extends Component {
                     <p className="mb-4 text-darkText border-b border-mercury">
                         Door type
                     </p>
-                    <label className="block mb-0">
-                        <input
-                            onChange={() => this.handleDoorType(1)}
-                            checked={this.props.window.doorType === 1}
-                            type="radio"
-                        />{' '}
+                    <div
+                        className="mb-2 flex cursor-pointer"
+                        onClick={() => this.handleDoorType(1)}
+                    >
+                        <BaseCheckbox
+                            classes="mt-sm mr-2"
+                            isChecked={this.props.window.doorType === 1}
+                        />
                         Single door
-                    </label>
-                    <label className="block">
-                        <input
-                            onChange={() => this.handleDoorType(2)}
-                            checked={this.props.window.doorType === 2}
-                            type="radio"
-                        />{' '}
+                    </div>
+                    <div
+                        className="flex cursor-pointer"
+                        onClick={() => this.handleDoorType(2)}
+                    >
+                        <BaseCheckbox
+                            classes="mt-sm mr-2"
+                            isChecked={this.props.window.doorType === 2}
+                        />
                         Double door
-                    </label>
+                    </div>
                 </div>
                 <div>
                     <p className="mb-4 text-darkText border-b border-mercury">

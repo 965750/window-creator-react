@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import styles from './Login.module.scss'
 import { connect } from 'react-redux'
+import { FormattedMessage } from 'react-intl'
 import { login } from '../store/actions/authActions'
+import BaseCheckbox from '../components/blocks/BaseCheckbox'
 
 class Login extends Component {
     state = {
@@ -16,10 +18,10 @@ class Login extends Component {
         })
     }
 
-    toggleCheckbox = e => {
-        this.setState({
-            [e.target.id]: e.target.checked,
-        })
+    toggleCheckbox = () => {
+        this.setState(prevState => ({
+            remember: !prevState.remember,
+        }))
     }
 
     onLogin = e => {
@@ -46,14 +48,21 @@ class Login extends Component {
                     placeholder="Password"
                     className={`${styles.field} border border-light rounded p-3 mx-auto block mt-10`}
                 />
-                <div className={`${styles.checkbox} mx-auto block`}>
-                    <input
-                        id="remember"
-                        onChange={this.toggleCheckbox}
-                        checked={this.state.remember}
-                        type="checkbox"
+                <div
+                    id="remember"
+                    onClick={this.toggleCheckbox}
+                    className={`${styles.checkbox} mx-auto flex`}
+                >
+                    <BaseCheckbox
+                        classes="mt-sm mr-2"
+                        isChecked={this.state.remember}
                     />
-                    <label htmlFor="keepMeLoggedIn">Keep me logged in</label>
+                    <p>
+                        <FormattedMessage
+                            id="nav.dashboard"
+                            defaultMessage="Keep me logged in"
+                        />
+                    </p>
                 </div>
                 <input
                     type="submit"

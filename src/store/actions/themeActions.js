@@ -1,7 +1,50 @@
+import axios from 'axios'
+
 export const clearNotification = () => {
     return (dispatch, getState) => {
         dispatch({
             type: 'CLEAR_NOTIFICATION',
+        })
+    }
+}
+
+export const setLocalLang = lang => {
+    return (dispatch, getState) => {
+        localStorage.lang = lang
+
+        dispatch({
+            type: 'SET_LOCAL_LANG',
+            lang,
+        })
+    }
+}
+
+export const checkLocation = () => {
+    return dispatch => {
+        navigator.geolocation.getCurrentPosition(pos => {
+            axios
+                .get(
+                    `http://api.geonames.org/countryCodeJSON?lat=${pos.coords.latitude}&lng=${pos.coords.longitude}&username=a965750`
+                )
+                .then(data => {
+                    localStorage.lang = data.data.languages
+                    dispatch({
+                        type: 'SET_LOCAL_LANG',
+                        lang: data.data.languages,
+                    })
+                })
+                .catch(() => {
+                    if (
+                        navigator.language === 'pl' ||
+                        navigator.language === 'pl-PL'
+                    ) {
+                        localStorage.lang = 'pl'
+                        dispatch({
+                            type: 'SET_LOCAL_LANG',
+                            lang: 'pl',
+                        })
+                    }
+                })
         })
     }
 }

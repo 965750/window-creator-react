@@ -1,4 +1,5 @@
 const initState = {
+    lang: 'en',
     notification: null,
     isLoading: false,
     stepper: {
@@ -39,6 +40,11 @@ const themeReduceer = (state = initState, action) => {
             return {
                 ...state,
                 isLoading: action.isLoading,
+            }
+        case 'SET_LOCAL_LANG':
+            return {
+                ...state,
+                lang: action.lang,
             }
         case 'CHANGE_STEP':
             return {
