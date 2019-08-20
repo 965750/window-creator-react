@@ -7,6 +7,7 @@ import {
 import { setNotification } from '../../../store/actions/themeActions'
 import styles from './StepFirstOptions.module.scss'
 import BaseCheckbox from '../../blocks/BaseCheckbox'
+import { FormattedMessage } from 'react-intl'
 
 class StepFirstOptions extends Component {
     constructor(props) {
@@ -81,7 +82,10 @@ class StepFirstOptions extends Component {
             <div className={`pt-2`}>
                 <div className={`mb-10`}>
                     <p className="mb-4 text-darkText border-b border-mercury">
-                        Door type
+                        <FormattedMessage
+                            id="Door type"
+                            defaultMessage="Door type"
+                        />
                     </p>
                     <div
                         className="mb-2 flex cursor-pointer"
@@ -91,7 +95,10 @@ class StepFirstOptions extends Component {
                             classes="mt-sm mr-2"
                             isChecked={this.props.window.doorType === 1}
                         />
-                        Single door
+                        <FormattedMessage
+                            id="Single door"
+                            defaultMessage="Single door"
+                        />
                     </div>
                     <div
                         className="flex cursor-pointer"
@@ -101,16 +108,25 @@ class StepFirstOptions extends Component {
                             classes="mt-sm mr-2"
                             isChecked={this.props.window.doorType === 2}
                         />
-                        Double door
+                        <FormattedMessage
+                            id="Double door"
+                            defaultMessage="Double door"
+                        />
                     </div>
                 </div>
                 <div>
                     <p className="mb-4 text-darkText border-b border-mercury">
-                        Door size
+                        <FormattedMessage
+                            id="Door size"
+                            defaultMessage="Door size"
+                        />
                     </p>
                     <div className="flex mb-2">
                         <p className={`${styles.inputBox__label} mr-5`}>
-                            Width
+                            <FormattedMessage
+                                id="Width"
+                                defaultMessage="Width"
+                            />
                         </p>
                         <input
                             id="width"
@@ -123,7 +139,10 @@ class StepFirstOptions extends Component {
                     </div>
                     <div className="flex">
                         <p className={`${styles.inputBox__label} mr-5`}>
-                            Height
+                            <FormattedMessage
+                                id="Height"
+                                defaultMessage="Height"
+                            />
                         </p>
                         <input
                             id="height"

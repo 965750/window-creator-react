@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ColorBox from './ColorBox'
+import { FormattedMessage } from 'react-intl'
 
 class StepThirdOptions extends Component {
     render() {
@@ -12,7 +13,10 @@ class StepThirdOptions extends Component {
             <div className={`pt-2`}>
                 <div className={`mb-10`}>
                     <p className="mb-4 text-darkText border-b border-mercury">
-                        Choose color
+                        <FormattedMessage
+                            id="Choose color"
+                            defaultMessage="Choose color"
+                        />
                     </p>
                     <div className="flex">{colorBoxes}</div>
                 </div>

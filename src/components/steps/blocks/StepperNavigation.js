@@ -1,37 +1,56 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { changeStep } from '../../../store/actions/themeActions'
+import { FormattedMessage } from 'react-intl'
 
 class StepperNavigation extends Component {
     render() {
         let btnBack
 
         if (this.props.currentStep !== 1) {
-            btnBack = <button className='h-8 mr-4 uppercase border-2 border-gullGray w-full cursor-pointer' onClick={() => this.props.handleChangeStep(this.props.currentStep - 1)}>
-            back
-        </button>            
+            btnBack = (
+                <button
+                    className="h-8 mr-4 uppercase border-2 border-gullGray w-full cursor-pointer"
+                    onClick={() =>
+                        this.props.handleChangeStep(this.props.currentStep - 1)
+                    }
+                >
+                    <FormattedMessage id="back" defaultMessage="back" />
+                </button>
+            )
         }
         return (
-            <div className='flex absolute w-full bottom-0'>
-                { btnBack }
-                <button className='h-8 min-w-half uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer' onClick={() => this.props.handleChangeStep(this.props.currentStep + 1)}>
-                    next step
+            <div className="flex absolute w-full bottom-0">
+                {btnBack}
+                <button
+                    className="h-8 min-w-half uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer"
+                    onClick={() =>
+                        this.props.handleChangeStep(this.props.currentStep + 1)
+                    }
+                >
+                    <FormattedMessage
+                        id="next step"
+                        defaultMessage="next step"
+                    />
                 </button>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
-        currentStep: state.theme.stepper.active
+        currentStep: state.theme.stepper.active,
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        handleChangeStep: (step) => dispatch(changeStep(step))
+        handleChangeStep: step => dispatch(changeStep(step)),
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(StepperNavigation)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(StepperNavigation)

@@ -2,14 +2,6 @@ import React, { Component } from 'react'
 import styles from './Window.module.scss'
 
 class Window extends Component {
-    componentDidMount() {
-        // setTimeout(() => {
-        //     this.setState({
-        //         rows: Array.apply(null, Array(5))
-        //     })
-        // }, 3000)
-    }
-
     render() {
         const table = this.props.window.rows.map((row, index) => {
             return (

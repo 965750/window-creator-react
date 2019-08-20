@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { changeWindowDivision } from '../../../store/actions/creatorActions'
 import DivisionInput from './DivisionInput'
+import { FormattedMessage } from 'react-intl'
 
 class StepSecondOptions extends Component {
     changeDivision = (value, id) => {
@@ -16,7 +17,12 @@ class StepSecondOptions extends Component {
                         Door division
                     </p>
                     <div className="flex justify-between w-3/4">
-                        <p>Number of beams</p>
+                        <p>
+                            <FormattedMessage
+                                id="Number of beams"
+                                defaultMessage="Number of beams"
+                            />
+                        </p>
                         <DivisionInput
                             id="rows"
                             classes="mb-5"
@@ -25,7 +31,12 @@ class StepSecondOptions extends Component {
                         />
                     </div>
                     <div className="flex justify-between w-3/4">
-                        <p>Number of posts</p>
+                        <p>
+                            <FormattedMessage
+                                id="Number of posts"
+                                defaultMessage="Number of posts"
+                            />
+                        </p>
                         <DivisionInput
                             id="columns"
                             inputValue={this.props.window.columns.length - 1}
