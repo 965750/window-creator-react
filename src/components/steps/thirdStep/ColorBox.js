@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ColorBox.module.scss'
 import { changeColorBox } from '../../../store/actions/creatorActions'
 import { connect } from 'react-redux'
-
+import PropTypes from 'prop-types'
 import BaseCheckbox from '../../blocks/BaseCheckbox'
 import { FormattedMessage } from 'react-intl'
 
@@ -33,6 +33,17 @@ const mapDispatchToProps = dispatch => {
     return {
         changeColorBox: id => dispatch(changeColorBox(id)),
     }
+}
+
+ColorBox.propTypes = {
+    data: PropTypes.shape({
+        id: PropTypes.string,
+        color: PropTypes.string,
+        active: PropTypes.bool,
+        label: PropTypes.string,
+    }),
+    classes: PropTypes.string,
+    changeColorBox: PropTypes.func,
 }
 
 export default connect(

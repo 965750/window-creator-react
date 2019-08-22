@@ -4108,6 +4108,13 @@ video {
     left: 20px;
 }
 
+.inset-25 {
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+}
+
 .inset-30 {
     top: 30px;
     right: 30px;
@@ -4167,6 +4174,16 @@ video {
 .inset-x-20 {
     right: 20px;
     left: 20px;
+}
+
+.inset-y-25 {
+    top: 25px;
+    bottom: 25px;
+}
+
+.inset-x-25 {
+    right: 25px;
+    left: 25px;
 }
 
 .inset-y-30 {
@@ -4261,6 +4278,22 @@ video {
 
 .left-20 {
     left: 20px;
+}
+
+.top-25 {
+    top: 25px;
+}
+
+.right-25 {
+    right: 25px;
+}
+
+.bottom-25 {
+    bottom: 25px;
+}
+
+.left-25 {
+    left: 25px;
 }
 
 .top-30 {
@@ -8557,6 +8590,13 @@ video {
         left: 20px;
     }
 
+    .sm\:inset-25 {
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        left: 25px;
+    }
+
     .sm\:inset-30 {
         top: 30px;
         right: 30px;
@@ -8616,6 +8656,16 @@ video {
     .sm\:inset-x-20 {
         right: 20px;
         left: 20px;
+    }
+
+    .sm\:inset-y-25 {
+        top: 25px;
+        bottom: 25px;
+    }
+
+    .sm\:inset-x-25 {
+        right: 25px;
+        left: 25px;
     }
 
     .sm\:inset-y-30 {
@@ -8710,6 +8760,22 @@ video {
 
     .sm\:left-20 {
         left: 20px;
+    }
+
+    .sm\:top-25 {
+        top: 25px;
+    }
+
+    .sm\:right-25 {
+        right: 25px;
+    }
+
+    .sm\:bottom-25 {
+        bottom: 25px;
+    }
+
+    .sm\:left-25 {
+        left: 25px;
     }
 
     .sm\:top-30 {
@@ -13010,6 +13076,13 @@ video {
         left: 20px;
     }
 
+    .md\:inset-25 {
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        left: 25px;
+    }
+
     .md\:inset-30 {
         top: 30px;
         right: 30px;
@@ -13069,6 +13142,16 @@ video {
     .md\:inset-x-20 {
         right: 20px;
         left: 20px;
+    }
+
+    .md\:inset-y-25 {
+        top: 25px;
+        bottom: 25px;
+    }
+
+    .md\:inset-x-25 {
+        right: 25px;
+        left: 25px;
     }
 
     .md\:inset-y-30 {
@@ -13163,6 +13246,22 @@ video {
 
     .md\:left-20 {
         left: 20px;
+    }
+
+    .md\:top-25 {
+        top: 25px;
+    }
+
+    .md\:right-25 {
+        right: 25px;
+    }
+
+    .md\:bottom-25 {
+        bottom: 25px;
+    }
+
+    .md\:left-25 {
+        left: 25px;
     }
 
     .md\:top-30 {
@@ -17463,6 +17562,13 @@ video {
         left: 20px;
     }
 
+    .lg\:inset-25 {
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        left: 25px;
+    }
+
     .lg\:inset-30 {
         top: 30px;
         right: 30px;
@@ -17522,6 +17628,16 @@ video {
     .lg\:inset-x-20 {
         right: 20px;
         left: 20px;
+    }
+
+    .lg\:inset-y-25 {
+        top: 25px;
+        bottom: 25px;
+    }
+
+    .lg\:inset-x-25 {
+        right: 25px;
+        left: 25px;
     }
 
     .lg\:inset-y-30 {
@@ -17616,6 +17732,22 @@ video {
 
     .lg\:left-20 {
         left: 20px;
+    }
+
+    .lg\:top-25 {
+        top: 25px;
+    }
+
+    .lg\:right-25 {
+        right: 25px;
+    }
+
+    .lg\:bottom-25 {
+        bottom: 25px;
+    }
+
+    .lg\:left-25 {
+        left: 25px;
     }
 
     .lg\:top-30 {
@@ -21916,6 +22048,13 @@ video {
         left: 20px;
     }
 
+    .xl\:inset-25 {
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        left: 25px;
+    }
+
     .xl\:inset-30 {
         top: 30px;
         right: 30px;
@@ -21975,6 +22114,16 @@ video {
     .xl\:inset-x-20 {
         right: 20px;
         left: 20px;
+    }
+
+    .xl\:inset-y-25 {
+        top: 25px;
+        bottom: 25px;
+    }
+
+    .xl\:inset-x-25 {
+        right: 25px;
+        left: 25px;
     }
 
     .xl\:inset-y-30 {
@@ -22069,6 +22218,22 @@ video {
 
     .xl\:left-20 {
         left: 20px;
+    }
+
+    .xl\:top-25 {
+        top: 25px;
+    }
+
+    .xl\:right-25 {
+        right: 25px;
+    }
+
+    .xl\:bottom-25 {
+        bottom: 25px;
+    }
+
+    .xl\:left-25 {
+        left: 25px;
     }
 
     .xl\:top-30 {

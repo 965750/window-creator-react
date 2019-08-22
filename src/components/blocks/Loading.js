@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { isLoading } from '../../store/actions/themeActions'
 import { withRouter } from 'react-router'
 import { FormattedMessage } from 'react-intl'
+import PropTypes from 'prop-types'
 
 class Loading extends Component {
     state = {
@@ -66,6 +67,10 @@ const mapDispatchToProps = dispatch => {
     return {
         setLoading: loading => dispatch(isLoading(loading)),
     }
+}
+
+Loading.propTypes = {
+    setLoading: PropTypes.func,
 }
 
 export default withRouter(

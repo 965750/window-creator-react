@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styles from './NotificationBanner.module.scss'
 import { connect } from 'react-redux'
 import { clearNotification } from '../../store/actions/themeActions'
+import PropTypes from 'prop-types'
 
 class NotificationBanner extends Component {
     state = {
@@ -61,6 +62,11 @@ const mapStateToProps = state => {
     return {
         notification: state.theme.notification,
     }
+}
+
+NotificationBanner.propTypes = {
+    clearNotification: PropTypes.func,
+    notification: PropTypes.string,
 }
 
 export default connect(

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { changeWindowDivision } from '../../../store/actions/creatorActions'
 import DivisionInput from './DivisionInput'
 import { FormattedMessage } from 'react-intl'
+import PropTypes from 'prop-types'
 
 class StepSecondOptions extends Component {
     changeDivision = (value, id) => {
@@ -49,12 +50,6 @@ class StepSecondOptions extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        window: state.creator.window,
-    }
-}
-
 const mapDispatchToProps = dispatch => {
     return {
         changeWindowDivision: (value, id) =>
@@ -62,7 +57,19 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
+StepSecondOptions.propTypes = {
+    window: PropTypes.shape({
+        color: PropTypes.string,
+        width: PropTypes.number,
+        height: PropTypes.number,
+        doorType: PropTypes.number,
+        rows: PropTypes.array,
+        columns: PropTypes.array,
+    }),
+    changeWindowDivision: PropTypes.func,
+}
+
 export default connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
 )(StepSecondOptions)

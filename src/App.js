@@ -13,6 +13,7 @@ import NotificationBanner from './components/blocks/NotificationBanner'
 import Loading from './components/blocks/Loading'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { setLocalLang, checkLocation } from './store/actions/themeActions'
+import PropTypes from 'prop-types'
 
 class App extends Component {
     checkLoggedIn = () => {
@@ -32,8 +33,11 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.checkLoggedIn()
         this.checkLanguage()
+    }
+
+    componentWillMount() {
+        this.checkLoggedIn()
     }
 
     render() {
@@ -48,6 +52,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Login} />
                             <Route path="/creator" component={Creator} />
+                            <Route path="/*" component={Login} />
                         </Switch>
                         <NotificationBanner />
                         {this.props.showLoading ? (
@@ -75,6 +80,15 @@ const mapStateToProps = state => {
         showLoading: state.theme.isLoading,
         lang: state.theme.lang,
     }
+}
+
+App.propTypes = {
+    wasUserLoggedIn: PropTypes.func,
+    setLocalLang: PropTypes.func,
+    checkLocation: PropTypes.func,
+    isLoggedIn: PropTypes.bool.isRequired,
+    showLoading: PropTypes.bool.isRequired,
+    lang: PropTypes.string,
 }
 
 export default connect(

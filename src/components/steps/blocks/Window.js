@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import styles from './Window.module.scss'
+import PropTypes from 'prop-types'
 
 class Window extends Component {
     render() {
         const table = this.props.window.rows.map((row, index) => {
             return (
                 <tr
-                    style={{ borderColor: this.props.windowColor.color }}
+                    style={{ borderColor: this.props.windowColor }}
                     className={`${styles.window__rows}`}
                     key={index}
                 >
@@ -14,7 +15,7 @@ class Window extends Component {
                         return (
                             <td
                                 style={{
-                                    borderColor: this.props.windowColor.color,
+                                    borderColor: this.props.windowColor,
                                 }}
                                 className={`${styles.window__columns}`}
                                 key={index}
@@ -36,7 +37,7 @@ class Window extends Component {
                 }}
             >
                 <table
-                    style={{ borderColor: this.props.windowColor.color }}
+                    style={{ borderColor: this.props.windowColor }}
                     className={`${styles.window} w-full h-full`}
                 >
                     <tbody>{table}</tbody>
@@ -44,6 +45,18 @@ class Window extends Component {
             </div>
         )
     }
+}
+
+Window.propTypes = {
+    windowColor: PropTypes.string,
+    window: PropTypes.shape({
+        color: PropTypes.string,
+        width: PropTypes.number,
+        height: PropTypes.number,
+        doorType: PropTypes.number,
+        rows: PropTypes.array,
+        columns: PropTypes.array,
+    }),
 }
 
 export default Window

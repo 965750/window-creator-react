@@ -5,6 +5,7 @@ import styles from './CreatorPreview.module.scss'
 import WindowRulers from './WindowRulers'
 import { connect } from 'react-redux'
 import cityImage from '../../../assets/city.jpg'
+import PropTypes from 'prop-types'
 
 class CreatorPreview extends Component {
     state = {
@@ -44,7 +45,7 @@ class CreatorPreview extends Component {
                                 <Window
                                     key={index}
                                     window={this.props.window}
-                                    windowColor={this.props.windowColor}
+                                    windowColor={this.props.windowColor.color}
                                 />
                             )
                         }
@@ -62,6 +63,23 @@ const mapStateToProps = state => {
             return box.active === true
         }),
     }
+}
+
+CreatorPreview.propTypes = {
+    window: PropTypes.shape({
+        color: PropTypes.string,
+        width: PropTypes.number,
+        height: PropTypes.number,
+        doorType: PropTypes.number,
+        rows: PropTypes.array,
+        columns: PropTypes.array,
+    }),
+    windowColor: PropTypes.shape({
+        id: PropTypes.string,
+        color: PropTypes.string,
+        label: PropTypes.string,
+        active: PropTypes.bool,
+    }),
 }
 
 export default connect(mapStateToProps)(CreatorPreview)

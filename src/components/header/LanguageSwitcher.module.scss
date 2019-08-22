@@ -1,0 +1,13 @@
+.select {
+  appearance: button;
+
+  &__wrapper {
+    width: 110px;
+    height: 30px;
+  }
+
+  &__arrow {
+    top: 9px;
+    right: 10px;
+  }
+}

@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 import { login } from '../store/actions/authActions'
 import BaseCheckbox from '../components/blocks/BaseCheckbox'
+import PropTypes from 'prop-types'
+import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
     state = {
@@ -30,6 +32,8 @@ class Login extends Component {
     }
 
     render() {
+        if (this.props.isLoggedIn) return <Redirect to="/creator" />
+
         return (
             <form className={`mt-5`} onSubmit={this.onLogin}>
                 <input
@@ -59,7 +63,7 @@ class Login extends Component {
                     />
                     <p>
                         <FormattedMessage
-                            id="nav.dashboard"
+                            id="Keep me logged in"
                             defaultMessage="Keep me logged in"
                         />
                     </p>
@@ -74,13 +78,24 @@ class Login extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        isLoggedIn: state.auth.isLoggedIn,
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         login: credentials => dispatch(login(credentials)),
     }
 }
 
+Login.propTypes = {
+    isLoggedIn: PropTypes.bool,
+    login: PropTypes.func,
+}
+
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(Login)

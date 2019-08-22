@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './WindowRulers.module.scss'
+import PropTypes from 'prop-types'
 
-export default function WindowRulers({ window }) {
+function WindowRulers({ window }) {
     let bottomRuler
 
     if (window.doorType === 1) {
@@ -104,3 +105,16 @@ export default function WindowRulers({ window }) {
         </div>
     )
 }
+
+WindowRulers.propTypes = {
+    window: PropTypes.shape({
+        color: PropTypes.string,
+        width: PropTypes.number,
+        height: PropTypes.number,
+        doorType: PropTypes.number,
+        rows: PropTypes.array,
+        columns: PropTypes.array,
+    }),
+}
+
+export default WindowRulers

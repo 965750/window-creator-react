@@ -24,6 +24,9 @@ export default {
         'Choose Color': 'Choose Color',
         'next step': 'next step',
         back: 'back',
+        'Select language:': 'Select language:',
+        English: 'English',
+        Polish: 'Polish',
     },
     pl: {
         'Keep me logged in': 'Pozostań zalogowany',
@@ -48,5 +51,8 @@ export default {
         'Choose Color': 'Wybierz Kolor',
         'next step': 'następny krok',
         back: 'powrót',
+        'Select language:': 'Wybierz język:',
+        English: 'Angielski',
+        Polish: 'Polski',
     },
 }

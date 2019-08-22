@@ -12,7 +12,6 @@ export const createAccount = account => {
 export const wasUserLoggedIn = userToken => {
     return (dispatch, getState) => {
         // should POST userToken for check userData
-
         dispatch({
             type: 'LOGIN_SUCCESS',
             userToken: userToken,

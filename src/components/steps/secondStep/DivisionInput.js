@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './DivisionInput.module.scss'
+import PropTypes from 'prop-types'
 
 const DivisionInput = ({ changeDivision, id, inputValue, classes }) => {
     return (
@@ -23,6 +24,13 @@ const DivisionInput = ({ changeDivision, id, inputValue, classes }) => {
             </button>
         </div>
     )
+}
+
+DivisionInput.propTypes = {
+    changeDivision: PropTypes.func,
+    id: PropTypes.string,
+    inputValue: PropTypes.number,
+    classes: PropTypes.string,
 }
 
 export default DivisionInput

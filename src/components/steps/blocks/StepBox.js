@@ -3,6 +3,7 @@ import styles from './StepBox.module.scss'
 import { connect } from 'react-redux'
 import { changeStep } from '../../../store/actions/themeActions'
 import { FormattedMessage } from 'react-intl'
+import PropTypes from 'prop-types'
 
 function StepBox({ step, active, handleChangeStep }) {
     return (
@@ -44,6 +45,12 @@ const mapDispatchToProps = dispatch => {
     return {
         handleChangeStep: step => dispatch(changeStep(step)),
     }
+}
+
+StepBox.propTypes = {
+    step: PropTypes.object.isRequired,
+    active: PropTypes.bool,
+    handleChangeStep: PropTypes.func,
 }
 
 export default connect(
