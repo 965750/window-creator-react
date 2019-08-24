@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import styles from './Login.module.scss'
 import { connect } from 'react-redux'
-import { FormattedMessage } from 'react-intl'
-import { login } from '../store/actions/authActions'
-import BaseCheckbox from '../components/blocks/BaseCheckbox'
+import { FormattedMessage, injectIntl } from 'react-intl'
+import { login, loginRemebered } from '../store/actions/authActions'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
+import BaseCheckbox from '../components/blocks/BaseCheckbox'
 
 class Login extends Component {
     state = {
@@ -28,7 +28,12 @@ class Login extends Component {
 
     onLogin = e => {
         e.preventDefault()
-        this.props.login(this.state)
+        console.log(this.state.remember)
+        if (this.state.remember) {
+            this.props.loginRemebered(this.state)
+        } else {
+            this.props.login(this.state)
+        }
     }
 
     render() {
@@ -58,7 +63,7 @@ class Login extends Component {
                     className={`${styles.checkbox} mx-auto flex`}
                 >
                     <BaseCheckbox
-                        classes="mt-sm mr-2"
+                        classes="mr-2 mb-5"
                         isChecked={this.state.remember}
                     />
                     <p>
@@ -80,22 +85,25 @@ class Login extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.auth.isLoggedIn,
+        isLoggedIn: state.firebase.auth.uid,
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         login: credentials => dispatch(login(credentials)),
+        loginRemebered: credentials => dispatch(loginRemebered(credentials)),
     }
 }
 
 Login.propTypes = {
-    isLoggedIn: PropTypes.bool,
+    isLoggedIn: PropTypes.string,
     login: PropTypes.func,
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Login)
+export default injectIntl(
+    connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )(Login)
+)

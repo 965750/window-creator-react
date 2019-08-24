@@ -8,7 +8,6 @@ import messages from './messages-i18n'
 import Creator from './pages/Creator'
 import { connect } from 'react-redux'
 import { wasUserLoggedIn } from './store/actions/authActions'
-import cookies from 'js-cookie'
 import NotificationBanner from './components/blocks/NotificationBanner'
 import Loading from './components/blocks/Loading'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -16,14 +15,6 @@ import { setLocalLang, checkLocation } from './store/actions/themeActions'
 import PropTypes from 'prop-types'
 
 class App extends Component {
-    checkLoggedIn = () => {
-        const userToken =
-            cookies.get('userToken') || sessionStorage.getItem('userToken')
-        if (userToken) {
-            this.props.wasUserLoggedIn(userToken)
-        }
-    }
-
     checkLanguage = () => {
         if (localStorage.lang) {
             this.props.setLocalLang(localStorage.lang)
@@ -34,10 +25,6 @@ class App extends Component {
 
     componentDidMount() {
         this.checkLanguage()
-    }
-
-    componentWillMount() {
-        this.checkLoggedIn()
     }
 
     render() {
@@ -76,7 +63,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.auth.isLoggedIn,
+        isLoggedIn: state.firebase.auth.uid,
         showLoading: state.theme.isLoading,
         lang: state.theme.lang,
     }
@@ -86,7 +73,7 @@ App.propTypes = {
     wasUserLoggedIn: PropTypes.func,
     setLocalLang: PropTypes.func,
     checkLocation: PropTypes.func,
-    isLoggedIn: PropTypes.bool.isRequired,
+    isLoggedIn: PropTypes.string,
     showLoading: PropTypes.bool.isRequired,
     lang: PropTypes.string,
 }

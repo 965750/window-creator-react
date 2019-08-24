@@ -17,15 +17,17 @@ const authReducer = (state = initState, action) => {
         case 'LOGIN_SUCCESS':
             return {
                 ...state,
-                myAccount: {
-                    id: action.userToken,
-                },
-                isLoggedIn: true,
+            }
+        case 'LOGOUT_SUCCESS':
+            return {
+                ...state,
             }
         case 'LOGIN_FAILED':
             return {
                 ...state,
             }
+        default:
+            return state
     }
     return state
 }

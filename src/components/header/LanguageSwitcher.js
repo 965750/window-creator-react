@@ -26,18 +26,18 @@ class LanguageSwitcher extends Component {
 
     render() {
         return (
-            <div className="flex absolute top-25 right-10">
-                <p className="leading-loose">
+            <div className="flex">
+                <p className="leading-loose mt-lg">
                     <FormattedMessage
                         id="Select language:"
                         defaultMessage="Select language:"
                     />
                 </p>
                 <div
-                    className={`${styles.select__wrapper} relative relative ml-5`}
+                    className={`${styles.select__wrapper} relative relative mt-lg ml-5`}
                 >
                     <FontAwesomeIcon
-                        className={`${styles.select__arrow} absolute`}
+                        className={`${styles.select__arrow} absolute right-10`}
                         icon={faChevronDown}
                     />
                     <select

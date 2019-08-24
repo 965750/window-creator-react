@@ -3,7 +3,7 @@ import styles from './ColorBox.module.scss'
 import { changeColorBox } from '../../../store/actions/creatorActions'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import BaseCheckbox from '../../blocks/BaseCheckbox'
+import BaseRadio from '../../blocks/BaseRadio'
 import { FormattedMessage } from 'react-intl'
 
 const ColorBox = ({ data, changeColorBox, classes }) => {
@@ -17,7 +17,7 @@ const ColorBox = ({ data, changeColorBox, classes }) => {
                 style={{ background: data.color }}
             />
             <div className="flex justify-center">
-                <BaseCheckbox classes="mt-sm" isChecked={data.active} />
+                <BaseRadio classes="mt-sm" isChecked={data.active} />
                 <span className="ml-1">
                     <FormattedMessage
                         id={data.label}

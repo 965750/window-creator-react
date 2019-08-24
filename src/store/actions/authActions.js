@@ -1,5 +1,3 @@
-import cookies from 'js-cookie'
-
 export const createAccount = account => {
     return (dispatch, getState) => {
         dispatch({
@@ -19,52 +17,103 @@ export const wasUserLoggedIn = userToken => {
     }
 }
 
+export const logout = () => {
+    return (dispatch, getState, { getFirebase }) => {
+        const firebase = getFirebase()
+
+        firebase
+            .auth()
+            .signOut()
+            .then(() => {
+                dispatch({
+                    type: 'LOGOUT_SUCCESS',
+                })
+            })
+    }
+}
+
+export const loginRemebered = credentials => {
+    return async (dispatch, getState, { getFirebase }) => {
+        const firebase = getFirebase()
+
+        console.log('remebered login')
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(credentials.email, credentials.password)
+            .then(() => {
+                console.log('powiodlo siem REMEMBERED')
+
+                dispatch({
+                    type: 'CLEAR_NOTIFICATION',
+                })
+
+                dispatch({
+                    type: 'SET_LOADING',
+                    isLoading: true,
+                })
+
+                dispatch({
+                    type: 'LOGIN_SUCCESS',
+                    userToken: 123,
+                })
+            })
+            .catch(() => {
+                console.log('powiodlo siem NOPE')
+                dispatch({
+                    type: 'SET_NOTIFICATION',
+                    notification: 'Invalid email or password',
+                })
+
+                dispatch({
+                    type: 'LOGIN_FAILED',
+                })
+            })
+    }
+}
+
 export const login = credentials => {
-    return async (dispatch, getState) => {
-        // const res = await axios.get('https://api.github.com/search/repositories?q=topic:react+topic:js')
-        const accounts = [
-            {
-                login: '123',
-                password: '321',
-                userToken: '987214asdDAS1237DAW',
-            },
-        ]
+    return async (dispatch, getState, { getFirebase }) => {
+        const firebase = getFirebase()
 
-        const accountExist = accounts.find(acc => {
-            return (
-                acc.login === credentials.email &&
-                acc.password === credentials.password
-            )
-        })
+        console.log('normal login')
 
-        if (accountExist) {
-            if (credentials.remember) {
-                cookies.set('userToken', accountExist.userToken)
-            }
-            sessionStorage.setItem('userToken', accountExist.userToken)
-
-            dispatch({
-                type: 'CLEAR_NOTIFICATION',
+        firebase
+            .auth()
+            .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+            .then(function() {
+                return firebase
+                    .auth()
+                    .signInWithEmailAndPassword(
+                        credentials.email,
+                        credentials.password
+                    )
             })
+            .then(() => {
+                console.log('powiodlo siem')
 
-            dispatch({
-                type: 'SET_LOADING',
-                isLoading: true,
-            })
+                dispatch({
+                    type: 'CLEAR_NOTIFICATION',
+                })
 
-            dispatch({
-                type: 'LOGIN_SUCCESS',
-                userToken: accountExist.userToken,
-            })
-        } else {
-            dispatch({
-                type: 'SET_NOTIFICATION',
-                notification: 'Invalid email or password',
-            })
+                dispatch({
+                    type: 'SET_LOADING',
+                    isLoading: true,
+                })
 
-            dispatch({
-                type: 'LOGIN_FAILED',
+                dispatch({
+                    type: 'LOGIN_SUCCESS',
+                })
             })
-        }
+            .catch(() => {
+                console.log('powiodlo siem NOPE')
+                dispatch({
+                    type: 'SET_NOTIFICATION',
+                    notification: 'Invalid email or password',
+                })
+
+                dispatch({
+                    type: 'LOGIN_FAILED',
+                })
+            })
     }
 }

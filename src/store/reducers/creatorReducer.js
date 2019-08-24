@@ -68,6 +68,8 @@ const creatorReducer = (state = initState, action) => {
                 ...state,
                 colorBoxes: localColorBoxes,
             }
+        default:
+            return state
     }
     return state
 }

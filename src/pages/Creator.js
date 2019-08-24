@@ -54,14 +54,14 @@ class Creator extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.auth.isLoggedIn,
+        isLoggedIn: state.firebase.auth.uid,
         step: state.theme.stepper.active,
         window: state.creator.window,
     }
 }
 
 Creator.propTypes = {
-    isLoggedIn: PropTypes.bool,
+    isLoggedIn: PropTypes.string,
     window: PropTypes.shape({
         color: PropTypes.string,
         width: PropTypes.number,

@@ -54,6 +54,8 @@ const themeReduceer = (state = initState, action) => {
                     active: action.step,
                 },
             }
+        default:
+            return state
     }
     return state
 }

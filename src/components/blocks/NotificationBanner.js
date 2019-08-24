@@ -3,6 +3,7 @@ import styles from './NotificationBanner.module.scss'
 import { connect } from 'react-redux'
 import { clearNotification } from '../../store/actions/themeActions'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 class NotificationBanner extends Component {
     state = {
@@ -36,7 +37,18 @@ class NotificationBanner extends Component {
                     className={`${styles.banner} bg-error fixed w-full z-30 top-0 text-white`}
                 >
                     <p className={`${styles.banner__text} text-center`}>
-                        {this.props.notification}
+                        <FormattedMessage
+                            id={
+                                this.props.notification
+                                    ? this.props.notification
+                                    : ''
+                            }
+                            defaultMessage={
+                                this.props.notification
+                                    ? this.props.notification
+                                    : ''
+                            }
+                        />
                     </p>
                     <span
                         onClick={() => this.onCloseBanner(0)}

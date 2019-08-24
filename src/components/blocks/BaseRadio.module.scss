@@ -1,0 +1,13 @@
+.radio {
+
+  &__wrapper {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--checked {
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%);
+  }
+}

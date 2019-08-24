@@ -6,7 +6,7 @@ import {
 } from '../../../store/actions/creatorActions'
 import { setNotification } from '../../../store/actions/themeActions'
 import styles from './StepFirstOptions.module.scss'
-import BaseCheckbox from '../../blocks/BaseCheckbox'
+import BaseRadio from '../../blocks/BaseRadio'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
 
@@ -92,7 +92,7 @@ class StepFirstOptions extends Component {
                         className="mb-2 flex cursor-pointer"
                         onClick={() => this.handleDoorType(1)}
                     >
-                        <BaseCheckbox
+                        <BaseRadio
                             classes="mt-sm mr-2"
                             isChecked={this.props.window.doorType === 1}
                         />
@@ -105,7 +105,7 @@ class StepFirstOptions extends Component {
                         className="flex cursor-pointer"
                         onClick={() => this.handleDoorType(2)}
                     >
-                        <BaseCheckbox
+                        <BaseRadio
                             classes="mt-sm mr-2"
                             isChecked={this.props.window.doorType === 2}
                         />
