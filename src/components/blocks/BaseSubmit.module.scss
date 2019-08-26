@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.submit {
+  height: 50px;
+  width: 400px;
+  outline: none;
+
+  &:disabled {
+    background: $gullGray;
+  }
+}

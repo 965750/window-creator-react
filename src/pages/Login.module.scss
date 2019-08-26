@@ -1,15 +1,12 @@
 .field {
     height: 50px;
-    width: 400px;
     outline: none;
+    display: block;
 }
 
-.submit {
-    height: 50px;
-    width: 400px;
-    outline: none;
-}
+.form {
 
-.checkbox {
-    width: 400px;
+    &__wrapper {
+        width: 400px;
+    }
 }

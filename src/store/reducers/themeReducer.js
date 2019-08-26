@@ -29,7 +29,10 @@ const themeReduceer = (state = initState, action) => {
         case 'SET_NOTIFICATION':
             return {
                 ...state,
-                notification: action.notification,
+                notification: {
+                    text: action.notification,
+                    type: action.notificationType,
+                },
             }
         case 'CLEAR_NOTIFICATION':
             return {

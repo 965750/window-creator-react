@@ -49,11 +49,12 @@ export const checkLocation = () => {
     }
 }
 
-export const setNotification = notification => {
+export const setNotification = (notification, notificationType) => {
     return (dispatch, getState) => {
         dispatch({
             type: 'SET_NOTIFICATION',
             notification,
+            notificationType,
         })
     }
 }

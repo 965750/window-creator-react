@@ -3,6 +3,7 @@ import './App.scss'
 import './index.css'
 import Navbar from './components/header/Navbar'
 import Login from './pages/Login'
+import Register from './pages/Register'
 import { IntlProvider } from 'react-intl'
 import messages from './messages-i18n'
 import Creator from './pages/Creator'
@@ -39,13 +40,13 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Login} />
                             <Route path="/creator" component={Creator} />
+                            <Route path="/register" component={Register} />
                             <Route path="/*" component={Login} />
                         </Switch>
                         <NotificationBanner />
                         {this.props.showLoading ? (
                             <Loading showLoading={this.props.showLoading} />
                         ) : null}
-                        {this.props.isLoggedIn ? 'zalogowany' : 'niezalogowany'}
                     </div>
                 </BrowserRouter>
             </IntlProvider>
@@ -63,7 +64,6 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.firebase.auth.uid,
         showLoading: state.theme.isLoading,
         lang: state.theme.lang,
     }
@@ -73,7 +73,6 @@ App.propTypes = {
     wasUserLoggedIn: PropTypes.func,
     setLocalLang: PropTypes.func,
     checkLocation: PropTypes.func,
-    isLoggedIn: PropTypes.string,
     showLoading: PropTypes.bool.isRequired,
     lang: PropTypes.string,
 }

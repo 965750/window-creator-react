@@ -66,7 +66,8 @@ class StepFirstOptions extends Component {
             this[`${e.target.id}Input`].current.value < limits[e.target.id].min
         ) {
             this.props.setNotification(
-                `Window's height must be between ${limits.height.max}cm and ${limits.height.min}cm, also for width it's ${limits.width.max}cm and ${limits.width.min}cm`
+                `Window's height must be between ${limits.height.max}cm and ${limits.height.min}cm, also for width it's ${limits.width.max}cm and ${limits.width.min}cm`,
+                'error'
             )
 
             this[`${e.target.id}Input`].current.value = value
@@ -164,8 +165,8 @@ const mapDispatchToProps = dispatch => {
     return {
         resizeWindow: sizes => dispatch(resizeWindow(sizes)),
         changeWindowType: doorType => dispatch(changeWindowType(doorType)),
-        setNotification: notification =>
-            dispatch(setNotification(notification)),
+        setNotification: (notification, notificationType) =>
+            dispatch(setNotification(notification, notificationType)),
     }
 }
 

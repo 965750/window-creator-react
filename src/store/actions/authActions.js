@@ -1,9 +1,35 @@
-export const createAccount = account => {
-    return (dispatch, getState) => {
-        dispatch({
-            type: 'CREATE_ACCOUNT',
-            account,
-        })
+export const register = newUser => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firebase = getFirebase()
+        const firestore = getFirestore()
+
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(newUser.email, newUser.password)
+            .then(resp => {
+                return firestore
+                    .collection('users')
+                    .doc(resp.user.uid)
+                    .set({
+                        firstName: newUser.firstName,
+                        lastName: newUser.lastName,
+                    })
+            })
+            .then(() => {
+                dispatch({
+                    type: 'SET_NOTIFICATION',
+                    notification: 'Your account has been created',
+                    notificationType: 'success',
+                })
+            })
+            .catch(() => {
+                dispatch({
+                    type: 'SET_NOTIFICATION',
+                    notification:
+                        'We could not create Your account, try again later',
+                    notificationType: 'error',
+                })
+            })
     }
 }
 
@@ -36,13 +62,10 @@ export const loginRemebered = credentials => {
     return async (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase()
 
-        console.log('remebered login')
         firebase
             .auth()
             .signInWithEmailAndPassword(credentials.email, credentials.password)
             .then(() => {
-                console.log('powiodlo siem REMEMBERED')
-
                 dispatch({
                     type: 'CLEAR_NOTIFICATION',
                 })
@@ -58,10 +81,10 @@ export const loginRemebered = credentials => {
                 })
             })
             .catch(() => {
-                console.log('powiodlo siem NOPE')
                 dispatch({
                     type: 'SET_NOTIFICATION',
                     notification: 'Invalid email or password',
+                    notificationType: 'error',
                 })
 
                 dispatch({
@@ -75,8 +98,6 @@ export const login = credentials => {
     return async (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase()
 
-        console.log('normal login')
-
         firebase
             .auth()
             .setPersistence(firebase.auth.Auth.Persistence.SESSION)
@@ -89,8 +110,6 @@ export const login = credentials => {
                     )
             })
             .then(() => {
-                console.log('powiodlo siem')
-
                 dispatch({
                     type: 'CLEAR_NOTIFICATION',
                 })
@@ -105,10 +124,10 @@ export const login = credentials => {
                 })
             })
             .catch(() => {
-                console.log('powiodlo siem NOPE')
                 dispatch({
                     type: 'SET_NOTIFICATION',
                     notification: 'Invalid email or password',
+                    notificationType: 'error',
                 })
 
                 dispatch({

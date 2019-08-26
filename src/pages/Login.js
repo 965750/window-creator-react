@@ -6,17 +6,27 @@ import { login, loginRemebered } from '../store/actions/authActions'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import BaseCheckbox from '../components/blocks/BaseCheckbox'
+import BaseInput from '../components/blocks/BaseInput'
+import BaseSubmit from '../components/blocks/BaseSubmit'
+import { Link } from 'react-router-dom'
 
 class Login extends Component {
     state = {
         email: '',
         password: '',
         remember: false,
+        error: null,
     }
 
     handleChange = e => {
         this.setState({
             [e.target.id]: e.target.value,
+        })
+    }
+
+    validationError = error => {
+        this.setState({
+            error,
         })
     }
 
@@ -28,7 +38,6 @@ class Login extends Component {
 
     onLogin = e => {
         e.preventDefault()
-        console.log(this.state.remember)
         if (this.state.remember) {
             this.props.loginRemebered(this.state)
         } else {
@@ -40,43 +49,64 @@ class Login extends Component {
         if (this.props.isLoggedIn) return <Redirect to="/creator" />
 
         return (
-            <form className={`mt-5`} onSubmit={this.onLogin}>
-                <input
-                    id="email"
-                    onChange={this.handleChange}
+            <form
+                className={`${styles.form__wrapper} mt-10 mx-auto`}
+                onSubmit={this.onLogin}
+            >
+                <BaseInput
                     value={this.state.email}
+                    validationError={this.validationError}
+                    handleChange={this.handleChange}
+                    id="email"
                     type="text"
+                    toValide={['email', 'isRequired']}
+                    classes="mb-3"
                     placeholder="Email address"
-                    className={`${styles.field} border border-light rounded p-3 mx-auto block`}
                 />
-                <input
-                    id="password"
-                    onChange={this.handleChange}
+                <BaseInput
                     value={this.state.password}
+                    validationError={this.validationError}
+                    handleChange={this.handleChange}
+                    id="password"
                     type="password"
+                    toValide={['isRequired']}
+                    classes="mb-3"
                     placeholder="Password"
-                    className={`${styles.field} border border-light rounded p-3 mx-auto block mt-10`}
                 />
-                <div
-                    id="remember"
-                    onClick={this.toggleCheckbox}
-                    className={`${styles.checkbox} mx-auto flex`}
-                >
-                    <BaseCheckbox
-                        classes="mr-2 mb-5"
-                        isChecked={this.state.remember}
-                    />
-                    <p>
-                        <FormattedMessage
-                            id="Keep me logged in"
-                            defaultMessage="Keep me logged in"
+                <div className="flex justify-between">
+                    <div
+                        id="remember"
+                        onClick={this.toggleCheckbox}
+                        className={`flex cursor-pointer`}
+                    >
+                        <BaseCheckbox
+                            classes="mr-2 mb-3"
+                            isChecked={this.state.remember}
                         />
-                    </p>
+                        <p>
+                            <FormattedMessage
+                                id="Keep me logged in"
+                                defaultMessage="Keep me logged in"
+                            />
+                        </p>
+                    </div>
+                    <Link
+                        to="/register"
+                        className="hover:text-malachite text-malachite cursor-pointer"
+                    >
+                        <FormattedMessage
+                            id="Register new account here"
+                            defaultMessage="Register new account here"
+                        />
+                    </Link>
                 </div>
-                <input
-                    type="submit"
-                    className={`${styles.submit} block bg-first rounded text-white mx-auto`}
+                <BaseSubmit
                     value="Login"
+                    disabled={
+                        !this.state.email ||
+                        !this.state.password ||
+                        this.state.error
+                    }
                 />
             </form>
         )

@@ -31,6 +31,7 @@ export const changeWindowDivision = (value, id) => {
             dispatch({
                 type: 'SET_NOTIFICATION',
                 notification: 'Maximum number of beams or posts is 5',
+                notificationType: 'error',
             })
         } else if (getState().creator.window[id].length > 0 - value) {
             dispatch({

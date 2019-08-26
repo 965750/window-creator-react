@@ -31,28 +31,20 @@ class NotificationBanner extends Component {
     }
 
     render() {
-        if (this.state.show) {
+        if (this.state.show && this.props.notification) {
             return (
                 <div
-                    className={`${styles.banner} bg-error fixed w-full z-30 top-0 text-white`}
+                    className={`${styles.banner}  bg-${this.props.notification.type} fixed w-full z-30 top-0 text-white`}
                 >
                     <p className={`${styles.banner__text} text-center`}>
                         <FormattedMessage
-                            id={
-                                this.props.notification
-                                    ? this.props.notification
-                                    : ''
-                            }
-                            defaultMessage={
-                                this.props.notification
-                                    ? this.props.notification
-                                    : ''
-                            }
+                            id={this.props.notification.text}
+                            defaultMessage={this.props.notification.text}
                         />
                     </p>
                     <span
                         onClick={() => this.onCloseBanner(0)}
-                        className={`${styles.banner__close} absolute right-30 top-half`}
+                        className={`${styles.banner__close} absolute right-30 cursor-pointer top-half`}
                     >
                         &#10005;
                     </span>
@@ -78,7 +70,10 @@ const mapStateToProps = state => {
 
 NotificationBanner.propTypes = {
     clearNotification: PropTypes.func,
-    notification: PropTypes.string,
+    notification: PropTypes.shape({
+        type: PropTypes.string,
+        text: PropTypes.string,
+    }),
 }
 
 export default connect(
