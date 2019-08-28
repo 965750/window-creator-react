@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import Window from './Window'
 import PreviewSwitcher from './PreviewSwitcher'
 import styles from './CreatorPreview.module.scss'
 import WindowRulers from './WindowRulers'
-import { connect } from 'react-redux'
 import cityImage from '../../../assets/city.jpg'
-import PropTypes from 'prop-types'
 
 class CreatorPreview extends Component {
     state = {
@@ -41,15 +41,13 @@ class CreatorPreview extends Component {
                     ) : null}
                     <WindowRulers window={this.props.window} />
                     {[...Array(this.props.window.doorType)].map(
-                        (single, index) => {
-                            return (
-                                <Window
-                                    key={index}
-                                    window={this.props.window}
-                                    windowColor={this.props.windowColor.color}
-                                />
-                            )
-                        }
+                        (single, index) => (
+                            <Window
+                                key={index}
+                                window={this.props.window}
+                                windowColor={this.props.windowColor.color}
+                            />
+                        )
                     )}
                 </div>
             </div>
@@ -57,14 +55,10 @@ class CreatorPreview extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        window: state.creator.window,
-        windowColor: state.creator.colorBoxes.find(box => {
-            return box.active === true
-        }),
-    }
-}
+const mapStateToProps = state => ({
+    window: state.creator.window,
+    windowColor: state.creator.colorBoxes.find(box => box.active === true),
+})
 
 CreatorPreview.propTypes = {
     window: PropTypes.shape({

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import styles from './Navbar.module.scss'
 import LanguageSwitcher from './LanguageSwitcher'
 import LoggedInLinks from './LoggedInLinks'
 import LoggedOutLinks from './LoggedOutLinks'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 
 class Navbar extends Component {
     render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import styles from './BaseInput.module.scss'
 import { injectIntl, FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
+import styles from './BaseInput.module.scss'
 
 class BaseInput extends Component {
     state = {
@@ -47,6 +47,7 @@ class BaseInput extends Component {
             }
         }
     }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.value !== this.props.value) {
             this.validate()
@@ -69,7 +70,7 @@ class BaseInput extends Component {
     render() {
         let errorMsg
 
-        if (this.state.error)
+        if (this.state.error) {
             errorMsg = (
                 <p className={styles.field__errorMsg}>
                     <FormattedMessage
@@ -78,6 +79,7 @@ class BaseInput extends Component {
                     />
                 </p>
             )
+        }
 
         return (
             <div

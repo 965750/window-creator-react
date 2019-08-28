@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import styles from './Login.module.scss'
 import { connect } from 'react-redux'
 import { FormattedMessage, injectIntl } from 'react-intl'
-import { login, loginRemebered } from '../store/actions/authActions'
 import PropTypes from 'prop-types'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
+import { login, loginRemebered } from '../store/actions/authActions'
+import styles from './Login.module.scss'
 import BaseCheckbox from '../components/blocks/BaseCheckbox'
 import BaseInput from '../components/blocks/BaseInput'
 import BaseSubmit from '../components/blocks/BaseSubmit'
-import { Link } from 'react-router-dom'
 
 class Login extends Component {
     state = {
@@ -77,7 +76,7 @@ class Login extends Component {
                     <div
                         id="remember"
                         onClick={this.toggleCheckbox}
-                        className={`flex cursor-pointer`}
+                        className="flex cursor-pointer"
                     >
                         <BaseCheckbox
                             classes="mr-2 mb-3"
@@ -113,18 +112,14 @@ class Login extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.firebase.auth.uid,
-    }
-}
+const mapStateToProps = state => ({
+    isLoggedIn: state.firebase.auth.uid,
+})
 
-const mapDispatchToProps = dispatch => {
-    return {
-        login: credentials => dispatch(login(credentials)),
-        loginRemebered: credentials => dispatch(loginRemebered(credentials)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    login: credentials => dispatch(login(credentials)),
+    loginRemebered: credentials => dispatch(loginRemebered(credentials)),
+})
 
 Login.propTypes = {
     isLoggedIn: PropTypes.string,

@@ -3,7 +3,7 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: 'AIzaSyCM8-ntamEuIgK6Ufs5TucG-LCyoovgXNE',
     authDomain: 'window-creator.firebaseapp.com',
     databaseURL: 'https://window-creator.firebaseio.com',

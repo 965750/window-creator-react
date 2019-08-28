@@ -1,39 +1,32 @@
 import React from 'react'
-import styles from './ColorBox.module.scss'
-import { changeColorBox } from '../../../store/actions/creatorActions'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import BaseRadio from '../../blocks/BaseRadio'
 import { FormattedMessage } from 'react-intl'
+import styles from './ColorBox.module.scss'
+import { changeColorBox } from '../../../store/actions/creatorActions'
+import BaseRadio from '../../blocks/BaseRadio'
 
-const ColorBox = ({ data, changeColorBox, classes }) => {
-    return (
+const ColorBox = ({ data, changeColorBox, classes }) => (
+    <div
+        className={`${classes} cursor-pointer`}
+        onClick={() => changeColorBox(data.id)}
+    >
         <div
-            className={`${classes} cursor-pointer`}
-            onClick={() => changeColorBox(data.id)}
-        >
-            <div
-                className={`${styles.colorBox} mx-auto rounded-full mb-1`}
-                style={{ background: data.color }}
-            />
-            <div className="flex justify-center">
-                <BaseRadio classes="mt-sm" isChecked={data.active} />
-                <span className="ml-1">
-                    <FormattedMessage
-                        id={data.label}
-                        defaultMessage={data.label}
-                    />
-                </span>
-            </div>
+            className={`${styles.colorBox} mx-auto rounded-full mb-1`}
+            style={{ background: data.color }}
+        />
+        <div className="flex justify-center">
+            <BaseRadio classes="mt-sm" isChecked={data.active} />
+            <span className="ml-1">
+                <FormattedMessage id={data.label} defaultMessage={data.label} />
+            </span>
         </div>
-    )
-}
+    </div>
+)
 
-const mapDispatchToProps = dispatch => {
-    return {
-        changeColorBox: id => dispatch(changeColorBox(id)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    changeColorBox: id => dispatch(changeColorBox(id)),
+})
 
 ColorBox.propTypes = {
     data: PropTypes.shape({

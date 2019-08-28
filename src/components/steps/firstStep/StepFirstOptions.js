@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { FormattedMessage } from 'react-intl'
+import PropTypes from 'prop-types'
 import {
     resizeWindow,
     changeWindowType,
@@ -7,8 +9,6 @@ import {
 import { setNotification } from '../../../store/actions/themeActions'
 import styles from './StepFirstOptions.module.scss'
 import BaseRadio from '../../blocks/BaseRadio'
-import { FormattedMessage } from 'react-intl'
-import PropTypes from 'prop-types'
 
 class StepFirstOptions extends Component {
     constructor(props) {
@@ -73,8 +73,8 @@ class StepFirstOptions extends Component {
 
     render() {
         return (
-            <div className={`pt-2`}>
-                <div className={`mb-10`}>
+            <div className="pt-2">
+                <div className="mb-10">
                     <p className="mb-4 text-darkText border-b border-mercury">
                         <FormattedMessage
                             id="Door type"
@@ -153,14 +153,12 @@ class StepFirstOptions extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        resizeWindow: sizes => dispatch(resizeWindow(sizes)),
-        changeWindowType: doorType => dispatch(changeWindowType(doorType)),
-        setNotification: (notification, notificationType) =>
-            dispatch(setNotification(notification, notificationType)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    resizeWindow: sizes => dispatch(resizeWindow(sizes)),
+    changeWindowType: doorType => dispatch(changeWindowType(doorType)),
+    setNotification: (notification, notificationType) =>
+        dispatch(setNotification(notification, notificationType)),
+})
 
 StepFirstOptions.propTypes = {
     window: PropTypes.shape({

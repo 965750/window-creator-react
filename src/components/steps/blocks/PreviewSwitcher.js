@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './PreviewSwitcher.module.scss'
 import PropTypes from 'prop-types'
+import styles from './PreviewSwitcher.module.scss'
 
 function PreviewSwitcher({ onSwitchPreview, interiorPreview }) {
     return (

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { changeWindowDivision } from '../../../store/actions/creatorActions'
-import DivisionInput from './DivisionInput'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
+import { changeWindowDivision } from '../../../store/actions/creatorActions'
+import DivisionInput from './DivisionInput'
 
 class StepSecondOptions extends Component {
     changeDivision = (value, id) => {
@@ -12,8 +12,8 @@ class StepSecondOptions extends Component {
 
     render() {
         return (
-            <div className={`pt-2`}>
-                <div className={`mb-10`}>
+            <div className="pt-2">
+                <div className="mb-10">
                     <p className="mb-4 text-darkText border-b border-mercury">
                         Door division
                     </p>
@@ -50,12 +50,10 @@ class StepSecondOptions extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        changeWindowDivision: (value, id) =>
-            dispatch(changeWindowDivision(value, id)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    changeWindowDivision: (value, id) =>
+        dispatch(changeWindowDivision(value, id)),
+})
 
 StepSecondOptions.propTypes = {
     window: PropTypes.shape({

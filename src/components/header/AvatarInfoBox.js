@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styles from './AvatarInfoBox.module.scss'
 import { connect } from 'react-redux'
+import styles from './AvatarInfoBox.module.scss'
 
 class AvatarInfoBox extends Component {
     state = {
@@ -32,11 +32,11 @@ class AvatarInfoBox extends Component {
 
     render() {
         let infoBox
-        let initials = this.props.user.firstName
+        const initials = this.props.user.firstName
             ? this.props.user.firstName[0] + this.props.user.lastName[0]
             : ''
 
-        if (this.state.showInfoBox)
+        if (this.state.showInfoBox) {
             infoBox = (
                 <div
                     className={`${styles.infoBox} p-2 absolute right-0 border border-gullGray rounded bg-wildSand`}
@@ -45,6 +45,7 @@ class AvatarInfoBox extends Component {
                     <p>{this.props.auth.email}</p>
                 </div>
             )
+        }
 
         return (
             <div
@@ -75,11 +76,9 @@ AvatarInfoBox.propTypes = {
     }),
 }
 
-const mapStateToProps = state => {
-    return {
-        user: state.firebase.profile,
-        auth: state.firebase.auth,
-    }
-}
+const mapStateToProps = state => ({
+    user: state.firebase.profile,
+    auth: state.firebase.auth,
+})
 
 export default connect(mapStateToProps)(AvatarInfoBox)

@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { Redirect } from 'react-router-dom'
 import CreatorPreview from '../components/steps/blocks/CreatorPreview'
 import StepFirstOptions from '../components/steps/firstStep/StepFirstOptions'
 import StepSecondOptions from '../components/steps/secondStep/StepSecondOptions'
@@ -6,9 +9,6 @@ import StepThirdOptions from '../components/steps/thirdStep/StepThirdOptions'
 import Stepper from '../components/steps/blocks/Stepper'
 import StepperNavigation from '../components/steps/blocks/StepperNavigation'
 import styles from './Creator.module.scss'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
-import { Redirect } from 'react-router-dom'
 
 class Creator extends Component {
     state = {
@@ -59,13 +59,11 @@ class Creator extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.firebase.auth.uid,
-        step: state.theme.stepper.active,
-        window: state.creator.window,
-    }
-}
+const mapStateToProps = state => ({
+    isLoggedIn: state.firebase.auth.uid,
+    step: state.theme.stepper.active,
+    window: state.creator.window,
+})
 
 Creator.propTypes = {
     isLoggedIn: PropTypes.string,

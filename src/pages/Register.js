@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import styles from './Register.module.scss'
 import { connect } from 'react-redux'
 import { injectIntl } from 'react-intl'
-import { register } from '../store/actions/authActions'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
+import { register } from '../store/actions/authActions'
+import styles from './Register.module.scss'
 import BaseInput from '../components/blocks/BaseInput'
 import BaseSubmit from '../components/blocks/BaseSubmit'
 import PasswordStrength from '../components/blocks/PasswordStrength'
@@ -43,6 +43,8 @@ class Register extends Component {
     }
 
     render() {
+        // const { register, isLoggedIn } = this.props
+
         if (this.props.isLoggedIn) return <Redirect to="/creator" />
 
         return (
@@ -120,17 +122,13 @@ class Register extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.firebase.auth.uid,
-    }
-}
+const mapStateToProps = state => ({
+    isLoggedIn: state.firebase.auth.uid,
+})
 
-const mapDispatchToProps = dispatch => {
-    return {
-        register: credentials => dispatch(register(credentials)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    register: credentials => dispatch(register(credentials)),
+})
 
 Register.propTypes = {
     isLoggedIn: PropTypes.string,

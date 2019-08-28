@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './StepBox.module.scss'
 import { connect } from 'react-redux'
-import { changeStep } from '../../../store/actions/themeActions'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
+import { changeStep } from '../../../store/actions/themeActions'
+import styles from './StepBox.module.scss'
 
 function StepBox({ step, active, handleChangeStep }) {
     return (
@@ -41,11 +41,9 @@ function StepBox({ step, active, handleChangeStep }) {
     )
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        handleChangeStep: step => dispatch(changeStep(step)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    handleChangeStep: step => dispatch(changeStep(step)),
+})
 
 StepBox.propTypes = {
     step: PropTypes.object.isRequired,

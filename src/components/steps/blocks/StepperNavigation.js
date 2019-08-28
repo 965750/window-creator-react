@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { changeStep } from '../../../store/actions/themeActions'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
+import { changeStep } from '../../../store/actions/themeActions'
 
 class StepperNavigation extends Component {
     render() {
@@ -47,17 +47,13 @@ class StepperNavigation extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        activeStep: state.theme.stepper.active,
-    }
-}
+const mapStateToProps = state => ({
+    activeStep: state.theme.stepper.active,
+})
 
-const mapDispatchToProps = dispatch => {
-    return {
-        handleChangeStep: step => dispatch(changeStep(step)),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    handleChangeStep: step => dispatch(changeStep(step)),
+})
 
 StepperNavigation.propTypes = {
     activeStep: PropTypes.number.isRequired,

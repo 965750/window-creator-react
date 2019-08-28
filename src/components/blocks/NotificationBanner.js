@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import styles from './NotificationBanner.module.scss'
 import { connect } from 'react-redux'
-import { clearNotification } from '../../store/actions/themeActions'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
+import { clearNotification } from '../../store/actions/themeActions'
+import styles from './NotificationBanner.module.scss'
 
 class NotificationBanner extends Component {
     state = {
@@ -50,23 +50,18 @@ class NotificationBanner extends Component {
                     </span>
                 </div>
             )
-        } else {
-            return null
         }
+        return null
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        clearNotification: () => dispatch(clearNotification()),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    clearNotification: () => dispatch(clearNotification()),
+})
 
-const mapStateToProps = state => {
-    return {
-        notification: state.theme.notification,
-    }
-}
+const mapStateToProps = state => ({
+    notification: state.theme.notification,
+})
 
 NotificationBanner.propTypes = {
     clearNotification: PropTypes.func,

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { logout } from '../../store/actions/authActions'
 import { connect } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
+import { logout } from '../../store/actions/authActions'
 import AvatarBox from './AvatarInfoBox'
 
 class LoggedInLinks extends Component {
@@ -21,11 +21,9 @@ class LoggedInLinks extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        logout: () => dispatch(logout()),
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch(logout()),
+})
 
 LoggedInLinks.propTypes = {
     logout: PropTypes.func,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import styles from './CodeInfoBox.module.scss'
 import Cookies from 'js-cookie'
+import styles from './CodeInfoBox.module.scss'
 
 class CodeInfoBox extends Component {
     state = {
@@ -49,9 +49,8 @@ class CodeInfoBox extends Component {
                     </span>
                 </div>
             )
-        } else {
-            return null
         }
+        return null
     }
 }
 

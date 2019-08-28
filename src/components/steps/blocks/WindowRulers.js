@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './WindowRulers.module.scss'
 import PropTypes from 'prop-types'
+import styles from './WindowRulers.module.scss'
 
 function WindowRulers({ window }) {
     let bottomRuler

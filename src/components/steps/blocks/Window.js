@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import styles from './Window.module.scss'
 import PropTypes from 'prop-types'
+import styles from './Window.module.scss'
 
 class Window extends Component {
     componentDidMount() {
@@ -10,29 +10,25 @@ class Window extends Component {
     }
 
     render() {
-        const table = this.props.window.rows.map((row, index) => {
-            return (
-                <tr
-                    style={{ borderColor: this.props.windowColor }}
-                    className={`${styles.window__rows}`}
-                    key={index}
-                >
-                    {this.props.window.columns.map((column, index) => {
-                        return (
-                            <td
-                                style={{
-                                    borderColor: this.props.windowColor,
-                                }}
-                                className={`${styles.window__columns}`}
-                                key={index}
-                            >
-                                &nbsp;
-                            </td>
-                        )
-                    })}
-                </tr>
-            )
-        })
+        const table = this.props.window.rows.map((row, index) => (
+            <tr
+                style={{ borderColor: this.props.windowColor }}
+                className={`${styles.window__rows}`}
+                key={index}
+            >
+                {this.props.window.columns.map((column, index) => (
+                    <td
+                        style={{
+                            borderColor: this.props.windowColor,
+                        }}
+                        className={`${styles.window__columns}`}
+                        key={index}
+                    >
+                        &nbsp;
+                    </td>
+                ))}
+            </tr>
+        ))
 
         return (
             <div
