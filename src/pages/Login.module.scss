@@ -8,5 +8,9 @@
 
     &__wrapper {
         width: 400px;
+
+        @media screen and (max-width: 640px) {
+            width: 300px;
+        }
     }
 }

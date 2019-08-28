@@ -38,11 +38,13 @@ class Creator extends Component {
         if (!this.props.isLoggedIn) return <Redirect to="/" />
 
         return (
-            <div className={`${styles.wrapper} mx-auto z-10`}>
+            <div className={`${styles.wrapper} mb-10 md:px-3 mx-auto z-10`}>
                 <Stepper />
-                <div className="flex mt-4">
+                <div className="flex flex-wrap md:flex-no-wrap mt-4">
                     <CreatorPreview />
-                    <div className="w-1/3 ml-6 relative">
+                    <div
+                        className={`${styles.options__wrapper} w-full md:w-1/3 md:ml-6 relative`}
+                    >
                         {currentStepOptions}
                         <StepperNavigation />
                     </div>

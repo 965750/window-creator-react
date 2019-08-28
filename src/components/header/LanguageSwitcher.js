@@ -27,14 +27,14 @@ class LanguageSwitcher extends Component {
     render() {
         return (
             <div className="flex">
-                <p className="leading-loose mt-lg">
+                <p className={`${styles.select__label} mr-5`}>
                     <FormattedMessage
                         id="Select language:"
                         defaultMessage="Select language:"
                     />
                 </p>
                 <div
-                    className={`${styles.select__wrapper} relative relative mt-lg ml-5`}
+                    className={`${styles.select__wrapper} relative relative mt-lg`}
                 >
                     <FontAwesomeIcon
                         className={`${styles.select__arrow} absolute right-10`}

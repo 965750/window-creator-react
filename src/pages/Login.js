@@ -73,7 +73,7 @@ class Login extends Component {
                     classes="mb-3"
                     placeholder="Password"
                 />
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap mb-3">
                     <div
                         id="remember"
                         onClick={this.toggleCheckbox}

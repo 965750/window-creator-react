@@ -3,6 +3,12 @@ import styles from './Window.module.scss'
 import PropTypes from 'prop-types'
 
 class Window extends Component {
+    componentDidMount() {
+        console.log(
+            this.props.window.width * (window.innerWidth > 767 ? 1 : 0.8)
+        )
+    }
+
     render() {
         const table = this.props.window.rows.map((row, index) => {
             return (
@@ -32,8 +38,10 @@ class Window extends Component {
             <div
                 className="h-full z-20"
                 style={{
-                    width: `${this.props.window.width}px`,
-                    height: `${this.props.window.height}px`,
+                    width: `${this.props.window.width *
+                        (window.innerWidth > 767 ? 1 : 0.6)}px`,
+                    height: `${this.props.window.height *
+                        (window.innerWidth > 767 ? 1 : 0.6)}px`,
                 }}
             >
                 <table

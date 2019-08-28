@@ -27,10 +27,10 @@ export const changeWindowType = doorType => {
 
 export const changeWindowDivision = (value, id) => {
     return (dispatch, getState) => {
-        if (getState().creator.window[id].length > 6 - value) {
+        if (getState().creator.window[id].length > 5 - value) {
             dispatch({
                 type: 'SET_NOTIFICATION',
-                notification: 'Maximum number of beams or posts is 5',
+                notification: 'Maximum number of beams or posts is 4',
                 notificationType: 'error',
             })
         } else if (getState().creator.window[id].length > 0 - value) {

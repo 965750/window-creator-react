@@ -28,8 +28,8 @@ export default {
         English: 'English',
         Polish: 'Polish',
         'Invalid email or password': 'Invalid email or password',
-        'Maximum number of beams or posts is 5':
-            'Maximum number of beams or posts is 5',
+        'Maximum number of beams or posts is 4':
+            'Maximum number of beams or posts is 4',
         Logout: 'Logout',
         Password: 'Password',
         'Repeat password': 'Repeat password',
@@ -79,8 +79,8 @@ export default {
         English: 'Angielski',
         Polish: 'Polski',
         'Invalid email or password': 'Niepoprawny email albo hasło',
-        'Maximum number of beams or posts is 5':
-            'Maksymalna liczba belek albo słupków to 5',
+        'Maximum number of beams or posts is 4':
+            'Maksymalna liczba belek albo słupków to 4',
         Logout: 'Wyloguj',
         Password: 'Hasło',
         'Repeat password': 'Powtórz hasło',

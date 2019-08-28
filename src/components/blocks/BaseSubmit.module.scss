@@ -5,6 +5,10 @@
   width: 400px;
   outline: none;
 
+  @media screen and (max-width: 640px) {
+    width: 300px;
+  }
+
   &:disabled {
     background: $gullGray;
   }

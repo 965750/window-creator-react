@@ -14,6 +14,7 @@ import Loading from './components/blocks/Loading'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { setLocalLang, checkLocation } from './store/actions/themeActions'
 import PropTypes from 'prop-types'
+import CodeInfoBox from './components/blocks/CodeInfoBox'
 
 class App extends Component {
     checkLanguage = () => {
@@ -47,6 +48,7 @@ class App extends Component {
                         {this.props.showLoading ? (
                             <Loading showLoading={this.props.showLoading} />
                         ) : null}
+                        <CodeInfoBox />
                     </div>
                 </BrowserRouter>
             </IntlProvider>

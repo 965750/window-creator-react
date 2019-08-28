@@ -15,6 +15,7 @@ module.exports = {
             hippieBlue: '#6991b2',
             gullGray: '#95a3ad',
             mercury: '#e6e6e6',
+            wildSand: '#f4f4f4',
             scorpion: '#5a5858',
         },
         minWidth: {
@@ -22,13 +23,17 @@ module.exports = {
         },
         inset: {
             '-40': '-40px',
+            '-25': '-25px',
+            '-30': '-30px',
             0: '0px',
             3: '3px',
+            5: '5px',
             10: '10px',
             20: '20px',
             25: '25px',
             30: '30px',
             half: '50%',
+            full: '100%',
         },
         extend: {
             spacing: {

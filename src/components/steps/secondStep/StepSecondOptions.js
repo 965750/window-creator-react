@@ -17,7 +17,7 @@ class StepSecondOptions extends Component {
                     <p className="mb-4 text-darkText border-b border-mercury">
                         Door division
                     </p>
-                    <div className="flex justify-between w-3/4">
+                    <div className="flex justify-between">
                         <p>
                             <FormattedMessage
                                 id="Number of beams"
@@ -31,7 +31,7 @@ class StepSecondOptions extends Component {
                             changeDivision={this.changeDivision}
                         />
                     </div>
-                    <div className="flex justify-between w-3/4">
+                    <div className="flex justify-between">
                         <p>
                             <FormattedMessage
                                 id="Number of posts"

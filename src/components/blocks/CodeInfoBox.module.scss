@@ -1,0 +1,16 @@
+.box {
+
+  &__wrapper {
+    width: 200px;
+    transition: all .5s;
+    opacity: 0;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__close {
+    transform: translate(0, -50%)
+  }
+}

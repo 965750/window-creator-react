@@ -1,9 +1,17 @@
 .stepper {
     width: 450px;
 
+    @media screen and (max-width: 768px) {
+        width: 300px;
+    }
+
     &__line {
         transform: translate(-50%, 0);
         top: 25px;
         width: 300px;
+
+        @media screen and (max-width: 768px) {
+            width: 250px;
+        }
     }
 }

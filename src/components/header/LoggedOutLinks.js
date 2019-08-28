@@ -6,11 +6,11 @@ import { NavLink } from 'react-router-dom'
 
 const LoggedOutLinks = () => {
     return (
-        <div className={`${styles.loggedIn__wrapper} uppercase flex`}>
+        <div className=" uppercase flex">
             <NavLink
                 exact
                 to="/register"
-                className="text-darkText hover:text-malachite flex self-center cursor-pointer mr-10"
+                className="text-darkText hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4"
                 activeClassName={styles['link--active']}
             >
                 <FormattedMessage id="RegisterNav" defaultMessage="Register" />
@@ -18,7 +18,7 @@ const LoggedOutLinks = () => {
             <NavLink
                 exact
                 to="/"
-                className="text-darkText hover:text-malachite flex self-center cursor-pointer mr-10"
+                className="text-darkText hover:text-malachite flex self-center cursor-pointer"
                 activeClassName={styles['link--active']}
             >
                 <FormattedMessage id="LoginNav" defaultMessage="Login" />

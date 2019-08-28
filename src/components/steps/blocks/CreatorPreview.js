@@ -23,7 +23,7 @@ class CreatorPreview extends Component {
             <div
                 className={`${styles.preview} ${
                     this.state.interiorPreview ? styles.preview__background : ''
-                } w-2/3 border border-mercury relative`}
+                } w-full md:w-2/3 border border-mercury relative`}
             >
                 <PreviewSwitcher
                     interiorPreview={this.state.interiorPreview}

@@ -10,11 +10,11 @@ class Navbar extends Component {
     render() {
         return (
             <div
-                className={`${styles.navbar} px-5 flex bg-white shadow space justify-between`}
+                className={`${styles.navbar} px-2 sm:px-5 flex bg-white shadow space justify-between`}
             >
                 <LanguageSwitcher />
                 {!this.props.isLoggedIn ? (
-                    <LoggedInLinks user={this.props.user} />
+                    <LoggedInLinks />
                 ) : (
                     <LoggedOutLinks />
                 )}

@@ -10,7 +10,7 @@ function WindowRulers({ window }) {
             <div
                 className={`${
                     styles['ruler--horizontal']
-                } absolute -bottom-40 w-full border-l-2 border-r-2`}
+                } absolute -bottom-25 md:-bottom-40 w-full border-l-2 border-scorpion border-r-2`}
             >
                 <div
                     className={`${styles.ruler__counter} absolute top-half left-half border bg-white text-center`}
@@ -30,7 +30,7 @@ function WindowRulers({ window }) {
                 <div
                     className={`${
                         styles['ruler--horizontal']
-                    } absolute -bottom-40 w-1/2 border-l-2 border-scorpion border-r-2`}
+                    } absolute -bottom-25 md:-bottom-40 w-1/2 border-l-2 border-scorpion border-r-2`}
                 >
                     <div
                         className={`${styles.ruler__counter} absolute top-half left-half border bg-white text-center`}
@@ -46,7 +46,7 @@ function WindowRulers({ window }) {
                 <div
                     className={`${
                         styles['ruler--horizontal']
-                    } absolute -bottom-40 w-1/2 right-0 border-l-2 border-scorpion border-r-2`}
+                    } absolute -bottom-25 md:-bottom-40 w-1/2 right-0 border-l-2 border-scorpion border-r-2`}
                 >
                     <div
                         className={`${styles.ruler__counter} absolute top-half left-half border bg-white text-center`}
@@ -68,7 +68,7 @@ function WindowRulers({ window }) {
             <div
                 className={`${
                     styles['ruler--vertical']
-                } absolute -left-40 h-full border-t-2 border-scorpion border-b-2`}
+                } absolute -left-30 md:-left-40 h-full border-t-2 border-scorpion border-b-2`}
             >
                 <div
                     className={`${styles.ruler__counter} absolute top-half left-half border bg-white text-center`}
@@ -84,7 +84,7 @@ function WindowRulers({ window }) {
             <div
                 className={`${
                     styles['ruler--horizontal']
-                } absolute -top-40 w-full border-l-2 border-scorpion border-r-2`}
+                } absolute -top-25 md:-top-40 w-full border-l-2 border-scorpion border-r-2`}
             >
                 <div
                     className={`${styles.ruler__counter} absolute top-half left-half border bg-white text-center`}
