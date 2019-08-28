@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './Register.module.scss'
 import { connect } from 'react-redux'
-import { FormattedMessage, injectIntl } from 'react-intl'
+import { injectIntl } from 'react-intl'
 import { register } from '../store/actions/authActions'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'

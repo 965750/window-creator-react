@@ -16,7 +16,7 @@ class PasswordStrength extends Component {
             lowerAlph: /(?=.*[a-z])/,
             upperAlph: /(?=.*[A-Z])/,
             numericChar: /(?=.*[0-9])/,
-            specialChar: /(?=.[!@#\$%\^&])/,
+            specialChar: /(?=.[!@#%&])/,
             long: /(?=.{12,})/,
         }
 
@@ -49,6 +49,8 @@ class PasswordStrength extends Component {
                 })
 
                 break
+            default:
+                return
         }
 
         this.setState({

@@ -33,6 +33,7 @@ class CreatorPreview extends Component {
                     {this.state.interiorPreview ? (
                         <div className="overflow-hidden absolute w-full h-full">
                             <img
+                                alt="city"
                                 src={cityImage}
                                 className={`${styles.city__background} absolute bottom-0`}
                             />

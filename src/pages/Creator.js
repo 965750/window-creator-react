@@ -24,15 +24,20 @@ class Creator extends Component {
                 currentStepOptions = (
                     <StepFirstOptions window={this.props.window} />
                 )
+
                 break
             case 2:
                 currentStepOptions = (
                     <StepSecondOptions window={this.props.window} />
                 )
+
                 break
             case 3:
                 currentStepOptions = <StepThirdOptions />
+
                 break
+            default:
+                return
         }
 
         if (!this.props.isLoggedIn) return <Redirect to="/" />

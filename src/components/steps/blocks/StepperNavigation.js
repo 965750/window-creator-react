@@ -7,11 +7,12 @@ import PropTypes from 'prop-types'
 class StepperNavigation extends Component {
     render() {
         let btnBack
+        let btnNext
 
         if (this.props.activeStep !== 1) {
             btnBack = (
                 <button
-                    className="h-8 mr-4 uppercase border-2 border-gullGray w-full cursor-pointer"
+                    className="h-8 mr-4 uppercase border-2 border-gullGray min-w-half cursor-pointer"
                     onClick={() =>
                         this.props.handleChangeStep(this.props.activeStep - 1)
                     }
@@ -20,9 +21,9 @@ class StepperNavigation extends Component {
                 </button>
             )
         }
-        return (
-            <div className="flex absolute w-full bottom-0">
-                {btnBack}
+
+        if (this.props.activeStep < 3) {
+            btnNext = (
                 <button
                     className="h-8 min-w-half uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer"
                     onClick={() =>
@@ -34,6 +35,13 @@ class StepperNavigation extends Component {
                         defaultMessage="next step"
                     />
                 </button>
+            )
+        }
+
+        return (
+            <div className="flex absolute w-full bottom-0">
+                {btnBack}
+                {btnNext}
             </div>
         )
     }

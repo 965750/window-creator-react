@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './LoggedOutLinks.module.scss'
 import { FormattedMessage } from 'react-intl'
-import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
 const LoggedOutLinks = () => {
@@ -25,10 +24,6 @@ const LoggedOutLinks = () => {
             </NavLink>
         </div>
     )
-}
-
-LoggedOutLinks.propTypes = {
-    // logout: PropTypes.func,
 }
 
 export default LoggedOutLinks

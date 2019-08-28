@@ -45,19 +45,11 @@ class StepFirstOptions extends Component {
         }
 
         if (e.target.id === 'height') {
-            value > limits.height.max
-                ? (value = limits.height.max)
-                : (value = value)
-            value < limits.height.min
-                ? (value = limits.height.min)
-                : (value = value)
+            if (value > limits.height.max) value = limits.height.max
+            if (value < limits.height.min) value = limits.height.min
         } else if (e.target.id === 'width') {
-            value > limits.width.max
-                ? (value = limits.width.max)
-                : (value = value)
-            value < limits.width.min
-                ? (value = limits.width.min)
-                : (value = value)
+            if (value > limits.width.max) value = limits.width.max
+            if (value < limits.width.min) value = limits.width.min
         }
 
         if (

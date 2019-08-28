@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default {
     en: {
         'Keep me logged in': 'Keep me logged in',
