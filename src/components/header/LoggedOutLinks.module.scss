@@ -1,16 +1,8 @@
 @import '../../variables';
 
-//.loggedIn {
-//
-//  &__avatar {
-//    height: 50px;
-//    width: 50px;
-//  }
-//}
-//
-//.link {
-//
-//  &--active {
-//    color: $malachite;
-//  }
-//}
+.link {
+
+ &--active {
+   color: $malachite;
+ }
+}

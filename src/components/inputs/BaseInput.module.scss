@@ -16,4 +16,8 @@
   &__wrapper {
     height: 71px;
   }
+
+  &:focus {
+    border: 1px solid $osloGray;
+  }
 }

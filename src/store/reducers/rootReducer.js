@@ -1,14 +1,13 @@
-import { firebaseReducer } from 'react-redux-firebase'
 import { combineReducers } from 'redux'
-import authReducer from './authReducer'
-import themeReducer from './themeReducer'
+import { firebaseReducer } from 'react-redux-firebase'
+
 import creatorReducer from './creatorReducer'
+import themeReducer from './themeReducer'
 
 const rootReducer = combineReducers({
-    auth: authReducer,
-    theme: themeReducer,
-    creator: creatorReducer,
-    firebase: firebaseReducer,
+  theme: themeReducer,
+  creator: creatorReducer,
+  firebase: firebaseReducer,
 })
 
 export default rootReducer

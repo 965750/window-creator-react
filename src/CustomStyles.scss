@@ -5,3 +5,15 @@ body {
     color: #848c93;
     font-size: 14px;
 }
+
+a:focus {
+    outline: none !important;
+}
+
+input {
+    outline: none !important;
+}
+
+button {
+    outline: none !important;
+}

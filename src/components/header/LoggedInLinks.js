@@ -1,35 +1,34 @@
-import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { FormattedMessage } from 'react-intl'
-import PropTypes from 'prop-types'
 import { logout } from '../../store/actions/authActions'
-import AvatarBox from './AvatarInfoBox'
+import { FormattedMessage } from 'react-intl'
 
-class LoggedInLinks extends Component {
-    render() {
-        return (
-            <div className="flex relative">
-                <p
-                    className="uppercase mr-5 flex self-center cursor-pointer"
-                    onClick={this.props.logout}
-                >
-                    <FormattedMessage id="Logout" defaultMessage="Logout" />
-                </p>
-                <AvatarBox />
-            </div>
-        )
-    }
-}
+import AvatarBox from './AvatarInfoBox'
+import PropTypes from 'prop-types'
+import React from 'react'
+
+const LoggedInLinks = (
+  { logout } // eslint-disable-line
+) => (
+  <div className="flex relative">
+    <button
+      className="uppercase mr-5 flex self-center cursor-pointer"
+      onClick={logout}
+    >
+      <FormattedMessage id="Logout" defaultMessage="Logout" />
+    </button>
+    <AvatarBox />
+  </div>
+)
 
 const mapDispatchToProps = dispatch => ({
-    logout: () => dispatch(logout()),
+  logout: () => dispatch(logout()),
 })
 
 LoggedInLinks.propTypes = {
-    logout: PropTypes.func,
+  logout: PropTypes.func,
 }
 
 export default connect(
-    null,
-    mapDispatchToProps
+  null,
+  mapDispatchToProps
 )(LoggedInLinks)
