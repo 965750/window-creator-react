@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const StepThirdOptions = ({ colorBoxes }) => {
-  const allColorBoxes = colorBoxes.map(box => (
+  const allColorBoxes = colorBoxes.map((box) => (
     <ColorBox classes="w-1/4" key={box.id} data={box} />
   ))
 
@@ -26,7 +26,7 @@ StepThirdOptions.propTypes = {
   colorBoxes: PropTypes.array,
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   colorBoxes: state.creator.colorBoxes,
 })
 

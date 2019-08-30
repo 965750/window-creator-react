@@ -7,7 +7,7 @@ import styles from './Stepper.module.scss'
 
 const Stepper = ({ steps, activeStep }) => (
   <div className={`${styles.stepper} flex relative mx-auto mt-6`}>
-    {steps.map(step => (
+    {steps.map((step) => (
       <StepBox step={step} active={step.id === activeStep} key={step.id} />
     ))}
     <div
@@ -16,7 +16,7 @@ const Stepper = ({ steps, activeStep }) => (
   </div>
 )
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   steps: state.theme.stepper.steps,
   activeStep: state.theme.stepper.active,
 })

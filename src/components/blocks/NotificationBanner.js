@@ -25,7 +25,7 @@ class NotificationBanner extends Component {
     }
   }
 
-  onCloseBanner = time => {
+  onCloseBanner = (time) => {
     setTimeout(() => {
       this.props.clearNotification()
 
@@ -60,11 +60,11 @@ class NotificationBanner extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   clearNotification: () => dispatch(clearNotification()),
 })
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   notification: state.theme.notification,
 })
 
@@ -78,5 +78,5 @@ NotificationBanner.propTypes = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(NotificationBanner)

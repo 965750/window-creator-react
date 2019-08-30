@@ -13,7 +13,7 @@ class CreatorPreview extends Component {
     interiorPreview: true,
   }
 
-  onSwitchPreview = isSwiched => {
+  onSwitchPreview = (isSwiched) => {
     this.setState({
       interiorPreview: isSwiched,
     })
@@ -54,9 +54,9 @@ class CreatorPreview extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   window: state.creator.window,
-  windowColor: state.creator.colorBoxes.find(box => box.active === true),
+  windowColor: state.creator.colorBoxes.find((box) => box.active === true),
 })
 
 CreatorPreview.propTypes = {

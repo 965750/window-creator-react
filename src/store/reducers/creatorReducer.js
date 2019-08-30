@@ -52,15 +52,14 @@ const creatorReducer = (state = initState, action) => {
         ...state,
         window: {
           ...state.window,
-          [action.id]: Array.apply(
-            // eslint-disable-line
+          [action.id]: Array.apply( // eslint-disable-line
             null,
-            Array(state.window[action.id].length + action.value)
+            Array(state.window[action.id].length + action.value),
           ),
         },
       }
     case 'CHANGE_COLOR_BOX':
-      const localColorBoxes = state.colorBoxes.map(box => ({
+      const localColorBoxes = state.colorBoxes.map((box) => ({
         ...box,
         active: action.id === box.id,
       }))

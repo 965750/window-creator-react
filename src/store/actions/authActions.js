@@ -1,7 +1,7 @@
-export const register = newUser => (
+export const register = (newUser) => (
   dispatch,
   getState,
-  { getFirebase, getFirestore }
+  { getFirebase, getFirestore },
 ) => {
   const firebase = getFirebase()
   const firestore = getFirestore()
@@ -9,15 +9,13 @@ export const register = newUser => (
   firebase
     .auth()
     .createUserWithEmailAndPassword(newUser.email, newUser.password)
-    .then(resp =>
-      firestore
-        .collection('users')
-        .doc(resp.user.uid)
-        .set({
-          firstName: newUser.firstName,
-          lastName: newUser.lastName,
-        })
-    )
+    .then((resp) => firestore
+      .collection('users')
+      .doc(resp.user.uid)
+      .set({
+        firstName: newUser.firstName,
+        lastName: newUser.lastName,
+      }))
     .then(() => {
       dispatch({
         type: 'SET_NOTIFICATION',
@@ -49,10 +47,10 @@ export const logout = () => (dispatch, getState, { getFirebase }) => {
     })
 }
 
-export const loginRemembered = credentials => async (
+export const loginRemembered = (credentials) => async (
   dispatch,
   getState,
-  { getFirebase }
+  { getFirebase },
 ) => {
   const firebase = getFirebase()
 
@@ -73,21 +71,19 @@ export const loginRemembered = credentials => async (
     })
 }
 
-export const login = credentials => async (
+export const login = (credentials) => async (
   dispatch,
   getState,
-  { getFirebase }
+  { getFirebase },
 ) => {
   const firebase = getFirebase()
 
   firebase
     .auth()
     .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-    .then(() =>
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(credentials.email, credentials.password)
-    )
+    .then(() => firebase
+      .auth()
+      .signInWithEmailAndPassword(credentials.email, credentials.password))
     .then(() => {
       dispatch({
         type: 'CLEAR_NOTIFICATION',

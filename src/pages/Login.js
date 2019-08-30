@@ -18,25 +18,25 @@ class Login extends Component {
     error: null,
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
     })
   }
 
-  validationError = error => {
+  validationError = (error) => {
     this.setState({
       error,
     })
   }
 
   toggleCheckbox = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       remember: !prevState.remember,
     }))
   }
 
-  onLogin = e => {
+  onLogin = (e) => {
     e.preventDefault()
 
     if (this.state.remember) {
@@ -109,13 +109,13 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isLoggedIn: state.firebase.auth.uid,
 })
 
-const mapDispatchToProps = dispatch => ({
-  login: credentials => dispatch(login(credentials)),
-  loginRemembered: credentials => dispatch(loginRemembered(credentials)),
+const mapDispatchToProps = (dispatch) => ({
+  login: (credentials) => dispatch(login(credentials)),
+  loginRemembered: (credentials) => dispatch(loginRemembered(credentials)),
 })
 
 Login.propTypes = {
@@ -127,6 +127,6 @@ Login.propTypes = {
 export default injectIntl(
   connect(
     mapStateToProps,
-    mapDispatchToProps
-  )(Login)
+    mapDispatchToProps,
+  )(Login),
 )

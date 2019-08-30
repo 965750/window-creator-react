@@ -12,25 +12,25 @@ import App from './App'
 import fbConfig from './firebase/fbConfig'
 
 const store = createStore(
-    rootReducer,
-    compose(
-        applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-        reduxFirestore(fbConfig),
-        reactReduxFirebase(fbConfig, {
-            useFirestoreForProfile: true,
-            userProfile: 'users',
-            attachAuthIsReady: true,
-        })
-    )
+  rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig, {
+      useFirestoreForProfile: true,
+      userProfile: 'users',
+      attachAuthIsReady: true,
+    }),
+  ),
 )
 
 store.firebaseAuthIsReady.then(() => {
-    ReactDOM.render(
-        <Provider store={store}>
-            <App />
-        </Provider>,
-        document.getElementById('root')
-    )
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root'),
+  )
 })
 
 // If you want your app to work offline and load faster, you can change

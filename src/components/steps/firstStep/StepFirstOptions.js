@@ -23,11 +23,11 @@ class StepFirstOptions extends Component {
     this.widthInput.current.value = this.props.window.width
   }
 
-  handleDoorType = value => {
+  handleDoorType = (value) => {
     this.props.changeWindowType(value)
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     let value = Number(e.target.value)
 
     const limits = {
@@ -50,12 +50,12 @@ class StepFirstOptions extends Component {
     }
 
     if (
-      this[`${e.target.id}Input`].current.value > limits[e.target.id].max ||
-      this[`${e.target.id}Input`].current.value < limits[e.target.id].min
+      this[`${e.target.id}Input`].current.value > limits[e.target.id].max
+      || this[`${e.target.id}Input`].current.value < limits[e.target.id].min
     ) {
       this.props.setNotification(
         `Window's height must be between ${limits.height.max}cm and ${limits.height.min}cm, also for width it's ${limits.width.max}cm and ${limits.width.min}cm`,
-        'error'
+        'error',
       )
 
       this[`${e.target.id}Input`].current.value = value
@@ -131,11 +131,10 @@ class StepFirstOptions extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  resizeWindow: sizes => dispatch(resizeWindow(sizes)),
-  changeWindowType: doorType => dispatch(changeWindowType(doorType)),
-  setNotification: (notification, notificationType) =>
-    dispatch(setNotification(notification, notificationType)),
+const mapDispatchToProps = (dispatch) => ({
+  resizeWindow: (sizes) => dispatch(resizeWindow(sizes)),
+  changeWindowType: (doorType) => dispatch(changeWindowType(doorType)),
+  setNotification: (notification, notificationType) => dispatch(setNotification(notification, notificationType)),
 })
 
 StepFirstOptions.propTypes = {
@@ -154,5 +153,5 @@ StepFirstOptions.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(StepFirstOptions)

@@ -27,8 +27,8 @@ const ColorBox = (
   </button>
 )
 
-const mapDispatchToProps = dispatch => ({
-  changeColorBox: id => dispatch(changeColorBox(id)),
+const mapDispatchToProps = (dispatch) => ({
+  changeColorBox: (id) => dispatch(changeColorBox(id)),
 })
 
 ColorBox.propTypes = {
@@ -44,5 +44,5 @@ ColorBox.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(ColorBox)

@@ -22,7 +22,7 @@ class LanguageSwitcher extends Component {
     ],
   }
 
-  changeSelect = e => {
+  changeSelect = (e) => {
     this.props.setLocalLang(e.target.value)
   }
 
@@ -45,7 +45,7 @@ class LanguageSwitcher extends Component {
             value={this.props.language}
             className={`${styles.select} h-full w-full pl-3 border border-gullGray rounded bg-white outline-none`}
           >
-            {this.state.languages.map(option => (
+            {this.state.languages.map((option) => (
               <option value={option.value} key={option.value}>
                 {this.props.intl.formatMessage({
                   id: option.label,
@@ -59,12 +59,12 @@ class LanguageSwitcher extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   language: state.theme.lang,
 })
 
-const mapDispatchToProps = dispatch => ({
-  setLocalLang: lang => dispatch(setLocalLang(lang)),
+const mapDispatchToProps = (dispatch) => ({
+  setLocalLang: (lang) => dispatch(setLocalLang(lang)),
 })
 
 LanguageSwitcher.propTypes = {
@@ -78,6 +78,6 @@ LanguageSwitcher.propTypes = {
 export default injectIntl(
   connect(
     mapStateToProps,
-    mapDispatchToProps
-  )(LanguageSwitcher)
+    mapDispatchToProps,
+  )(LanguageSwitcher),
 )

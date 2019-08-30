@@ -20,13 +20,13 @@ class Register extends Component {
     error: null,
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
     })
   }
 
-  onRegister = e => {
+  onRegister = (e) => {
     e.preventDefault()
 
     this.props.register({
@@ -37,7 +37,7 @@ class Register extends Component {
     })
   }
 
-  validationError = error => {
+  validationError = (error) => {
     this.setState({
       error,
     })
@@ -108,12 +108,12 @@ class Register extends Component {
         <BaseSubmit
           value="Register"
           disabled={
-            this.state.error ||
-            !this.state.email ||
-            !this.state.password ||
-            !this.state.passwordRepeat ||
-            !this.state.firstName ||
-            !this.state.lastName
+            this.state.error
+            || !this.state.email
+            || !this.state.password
+            || !this.state.passwordRepeat
+            || !this.state.firstName
+            || !this.state.lastName
           }
         />
       </form>
@@ -121,12 +121,12 @@ class Register extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isLoggedIn: state.firebase.auth.uid,
 })
 
-const mapDispatchToProps = dispatch => ({
-  register: credentials => dispatch(register(credentials)),
+const mapDispatchToProps = (dispatch) => ({
+  register: (credentials) => dispatch(register(credentials)),
 })
 
 Register.propTypes = {
@@ -137,6 +137,6 @@ Register.propTypes = {
 export default injectIntl(
   connect(
     mapStateToProps,
-    mapDispatchToProps
-  )(Register)
+    mapDispatchToProps,
+  )(Register),
 )

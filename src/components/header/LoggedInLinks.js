@@ -20,7 +20,7 @@ const LoggedInLinks = (
   </div>
 )
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
 })
 
@@ -30,5 +30,5 @@ LoggedInLinks.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(LoggedInLinks)

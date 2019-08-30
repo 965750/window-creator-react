@@ -34,8 +34,8 @@ function StepBox({ step, active, handleChangeStep }) {
   )
 }
 
-const mapDispatchToProps = dispatch => ({
-  handleChangeStep: step => dispatch(changeStep(step)),
+const mapDispatchToProps = (dispatch) => ({
+  handleChangeStep: (step) => dispatch(changeStep(step)),
 })
 
 StepBox.propTypes = {
@@ -50,5 +50,5 @@ StepBox.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(StepBox)

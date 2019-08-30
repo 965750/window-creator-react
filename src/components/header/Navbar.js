@@ -16,7 +16,7 @@ const Navbar = ({ isLoggedIn }) => (
   </div>
 )
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isLoggedIn: state.firebase.auth.isEmpty,
   user: state.firebase.profile,
 })

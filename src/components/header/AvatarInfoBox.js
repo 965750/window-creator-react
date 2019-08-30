@@ -17,13 +17,13 @@ class AvatarInfoBox extends Component {
     window.removeEventListener('click', this.hideInfoBox)
   }
 
-  showInfoBox = value => {
+  showInfoBox = (value) => {
     this.setState({
       showInfoBox: value,
     })
   }
 
-  hideInfoBox = e => {
+  hideInfoBox = (e) => {
     if (this.state.showInfoBox && !this.node.contains(e.target)) {
       this.setState({
         showInfoBox: false,
@@ -78,7 +78,7 @@ AvatarInfoBox.propTypes = {
   }),
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   user: state.firebase.profile,
   auth: state.firebase.auth,
 })

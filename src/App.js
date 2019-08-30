@@ -53,12 +53,12 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  setLocalLang: lang => dispatch(setLocalLang(lang)),
+const mapDispatchToProps = (dispatch) => ({
+  setLocalLang: (lang) => dispatch(setLocalLang(lang)),
   checkLocation: () => dispatch(checkLocation()),
 })
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   lang: state.theme.lang,
 })
 
@@ -70,5 +70,5 @@ App.propTypes = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(App)

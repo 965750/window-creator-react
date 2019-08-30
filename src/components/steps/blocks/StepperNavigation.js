@@ -39,12 +39,12 @@ const StepperNavigation = ({ activeStep, handleChangeStep }) => {
   )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   activeStep: state.theme.stepper.active,
 })
 
-const mapDispatchToProps = dispatch => ({
-  handleChangeStep: step => dispatch(changeStep(step)),
+const mapDispatchToProps = (dispatch) => ({
+  handleChangeStep: (step) => dispatch(changeStep(step)),
 })
 
 StepperNavigation.propTypes = {
@@ -54,5 +54,5 @@ StepperNavigation.propTypes = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(StepperNavigation)

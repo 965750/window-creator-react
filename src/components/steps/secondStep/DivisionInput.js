@@ -2,7 +2,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './DivisionInput.module.scss'
 
-const DivisionInput = ({ changeDivision, id, inputValue, classes }) => (
+const DivisionInput = ({
+  changeDivision, id, inputValue, classes,
+}) => (
   <div className={`${classes || ''} flex`}>
     <div className={`${styles.inputBox} border border-gullGray text-center`}>
       {inputValue}

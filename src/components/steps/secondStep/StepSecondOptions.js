@@ -51,9 +51,8 @@ class StepSecondOptions extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  changeWindowDivision: (value, id) =>
-    dispatch(changeWindowDivision(value, id)),
+const mapDispatchToProps = (dispatch) => ({
+  changeWindowDivision: (value, id) => dispatch(changeWindowDivision(value, id)),
 })
 
 StepSecondOptions.propTypes = {
@@ -70,5 +69,5 @@ StepSecondOptions.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(StepSecondOptions)

@@ -49,7 +49,7 @@ const Creator = ({ isLoggedIn, step, window }) => {
   )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isLoggedIn: state.firebase.auth.uid,
   step: state.theme.stepper.active,
   window: state.creator.window,

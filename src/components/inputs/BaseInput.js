@@ -16,8 +16,8 @@ class BaseInput extends Component {
 
     if (this.props.valueToMatch && this.props.value) {
       if (
-        prevProps.value !== this.props.value ||
-        prevProps.valueToMatch !== this.props.valueToMatch
+        prevProps.value !== this.props.value
+        || prevProps.valueToMatch !== this.props.valueToMatch
       ) {
         this.validate()
       }
