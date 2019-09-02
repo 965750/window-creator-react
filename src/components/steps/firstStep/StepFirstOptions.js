@@ -19,6 +19,16 @@ class StepFirstOptions extends Component {
   }
 
   componentDidMount() {
+    this.updateInputs()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.window !== this.props.window) {
+      this.updateInputs()
+    }
+  }
+
+  updateInputs = () => {
     this.heightInput.current.value = this.props.window.height
     this.widthInput.current.value = this.props.window.width
   }

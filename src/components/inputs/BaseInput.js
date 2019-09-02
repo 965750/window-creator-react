@@ -66,6 +66,14 @@ class BaseInput extends Component {
         })
       }
     }
+
+    if (this.props.toValidate.indexOf('tooLong') > -1) {
+      if (this.props.value.length >= 12) {
+        this.setState({
+          error: 'Name must be shorter',
+        })
+      }
+    }
   }
 
   render() {

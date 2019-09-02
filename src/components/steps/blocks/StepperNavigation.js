@@ -12,7 +12,7 @@ const StepperNavigation = ({ activeStep, handleChangeStep }) => {
   if (activeStep !== 1) {
     btnBack = (
       <button
-        className="h-8 mr-4 uppercase border-2 border-gullGray min-w-half cursor-pointer"
+        className="h-8 mr-1 uppercase border-2 border-gullGray w-1/2 cursor-pointer"
         onClick={() => handleChangeStep(activeStep - 1)}
       >
         <FormattedMessage id="back" defaultMessage="back" />
@@ -23,7 +23,7 @@ const StepperNavigation = ({ activeStep, handleChangeStep }) => {
   if (activeStep < 3) {
     btnNext = (
       <button
-        className="h-8 min-w-half uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer"
+        className="h-8 w-1/2 uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer"
         onClick={() => handleChangeStep(activeStep + 1)}
       >
         <FormattedMessage id="next step" defaultMessage="next step" />
@@ -32,7 +32,7 @@ const StepperNavigation = ({ activeStep, handleChangeStep }) => {
   }
 
   return (
-    <div className="flex absolute w-full bottom-0">
+    <div className="flex w-full">
       {btnBack}
       {btnNext}
     </div>

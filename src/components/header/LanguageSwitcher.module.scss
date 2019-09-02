@@ -10,8 +10,12 @@
   }
 
   &__wrapper {
-    width: 110px;
+    width: 85px;
     height: 30px;
+
+    @media (min-width: 640px) {
+      width: 110px;
+    }
   }
 
   &__arrow {

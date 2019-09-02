@@ -43,6 +43,7 @@ class CreatorPreview extends Component {
           <WindowRulers window={this.props.window} />
           {[...Array(this.props.window.doorType)].map((single, index) => (
             <Window
+              innerWidth={window.innerWidth}
               key={index} // eslint-disable-line
               window={this.props.window}
               windowColor={this.props.windowColor.color}

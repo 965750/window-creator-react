@@ -39,7 +39,7 @@ class NotificationBanner extends Component {
     if (this.state.show && this.props.notification) {
       return (
         <div
-          className={`${styles.banner} bg-${this.props.notification.type} flex items-center fixed w-full z-30 top-0 text-white`}
+          className={`${styles.banner} bg-${this.props.notification.type} flex items-center fixed w-full z-50 top-0 text-white`}
         >
           <p className={`${styles.banner__text} mx-auto text-center`}>
             <FormattedMessage

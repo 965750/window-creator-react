@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 
+import LoadWindow from './LoadWindow'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import styles from './AvatarInfoBox.module.scss'
+import styles from './LoadWindows.module.scss'
 
-class AvatarInfoBox extends Component {
+class LoadWindows extends Component {
   state = {
     showInfoBox: false,
   }
@@ -34,46 +35,41 @@ class AvatarInfoBox extends Component {
 
   render() {
     let infoBox
-    const initials = this.props.user.firstName
-      ? this.props.user.firstName[0] + this.props.user.lastName[0]
-      : ''
+    let savedWindows
+
+    if (this.props.user.windows) {
+      savedWindows = this.props.user.windows.map((window, index) => (
+        <LoadWindow isLast={this.props.user.windows.length === index + 1} key={window.id} window={window} />
+      ))
+    }
+
 
     if (this.state.showInfoBox) {
       infoBox = (
         <div
-          className={`${styles.infoBox} p-2 absolute right-0 border border-gullGray rounded bg-wildSand`}
+          className={`${styles.infoBox} px-2 absolute right-0 border border-gullGray rounded bg-wildSand lowercase`}
         >
-          <p>{`${this.props.user.firstName} ${this.props.user.lastName}`}</p>
-          <p>{this.props.auth.email}</p>
-          <p>
-            <span>
-              <FormattedMessage
-                id="saved projects:"
-                defaultMessage="saved projects:"
-              />
-            </span>
-            <span>{` ${this.props.user.windows.length}`}</span>
-          </p>
+          {savedWindows}
         </div>
       )
     }
 
     return (
-      <div
-        className={`${styles.avatar} z-30 mt-md rounded-full bg-mountainMeadow cursor-pointer`}
+      <button
+        className="z-40 uppercase mr-5 cursor-pointer"
         onClick={this.toggleInfoBox}
         ref={n => (this.node = n)} // eslint-disable-line
       >
-        <p className="uppercase text-center pt-1 leading-loose text-white text-xl font-bold">
-          {initials}
-        </p>
+        <span className="hover:text-malachite">
+          <FormattedMessage id="Load" defaultMessage="Load" />
+        </span>
         {infoBox}
-      </div>
+      </button>
     )
   }
 }
 
-AvatarInfoBox.propTypes = {
+LoadWindows.propTypes = {
   user: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,
@@ -90,7 +86,6 @@ AvatarInfoBox.propTypes = {
 
 const mapStateToProps = (state) => ({
   user: state.firebase.profile,
-  auth: state.firebase.auth,
 })
 
-export default connect(mapStateToProps)(AvatarInfoBox)
+export default connect(mapStateToProps)(LoadWindows)

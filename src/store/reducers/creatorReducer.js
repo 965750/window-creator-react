@@ -24,8 +24,8 @@ const initState = {
     width: 110,
     height: 230,
     doorType: 2,
-    rows: ['', '', ''],
-    columns: ['', '', ''],
+    rows: [0, 1, 2],
+    columns: [0, 1, 2],
   },
 }
 
@@ -47,15 +47,17 @@ const creatorReducer = (state = initState, action) => {
           doorType: action.doorType,
         },
       }
+    case 'SET_WINDOW':
+      return {
+        ...state,
+        window: action.window,
+      }
     case 'SET_DOOR_DIVISION':
       return {
         ...state,
         window: {
           ...state.window,
-          [action.id]: Array.apply( // eslint-disable-line
-            null,
-            Array(state.window[action.id].length + action.value),
-          ),
+          [action.id]: [...Array(state.window[action.id].length + action.value).keys()],
         },
       }
     case 'CHANGE_COLOR_BOX':

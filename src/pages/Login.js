@@ -100,6 +100,7 @@ class Login extends Component {
         </div>
         <BaseSubmit
           value="Login"
+          classes="mx-auto"
           disabled={
             !this.state.email || !this.state.password || this.state.error
           }

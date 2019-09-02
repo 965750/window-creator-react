@@ -106,6 +106,7 @@ class Register extends Component {
           placeholder="Last name"
         />
         <BaseSubmit
+          classes="mx-auto"
           value="Register"
           disabled={
             this.state.error

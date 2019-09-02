@@ -4,11 +4,13 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './BaseSubmit.module.scss'
 
-const BaseSubmit = ({ disabled, value, intl }) => (
+const BaseSubmit = ({
+  disabled, value, intl, sm, classes,
+}) => (
   <input
     disabled={disabled}
     type="submit"
-    className={`${styles.submit} cursor-pointer block bg-mountainMeadow rounded text-white mx-auto`}
+    className={`${styles.submit} ${sm ? styles['submit--sm'] : ''} ${classes || ''} cursor-pointer block bg-mountainMeadow rounded text-white`}
     value={intl.formatMessage({
       id: value,
     })}
@@ -21,6 +23,8 @@ BaseSubmit.propTypes = {
   intl: PropTypes.shape({
     formatMessage: PropTypes.func,
   }),
+  sm: PropTypes.bool,
+  classes: PropTypes.string,
 }
 
 export default injectIntl(BaseSubmit)

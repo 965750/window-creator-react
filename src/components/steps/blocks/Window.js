@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './Window.module.scss'
 
-const Window = ({ window, windowColor }) => {
+const Window = ({ window, windowColor, innerWidth }) => {
   const table = window.rows.map((row, index) => (
     <tr
       style={{ borderColor: windowColor }}
@@ -30,8 +30,8 @@ const Window = ({ window, windowColor }) => {
     <div
       className="h-full z-20"
       style={{
-        width: `${window.width * (window.innerWidth > 767 ? 1 : 0.6)}px`,
-        height: `${window.height * (window.innerWidth > 767 ? 1 : 0.6)}px`,
+        width: `${window.width * (innerWidth > 767 ? 1 : 0.6)}px`,
+        height: `${window.height * (innerWidth > 767 ? 1 : 0.6)}px`,
       }}
     >
       <table
@@ -46,6 +46,7 @@ const Window = ({ window, windowColor }) => {
 
 Window.propTypes = {
   windowColor: PropTypes.string,
+  innerWidth: PropTypes.number,
   window: PropTypes.shape({
     innerWidth: PropTypes.number,
     color: PropTypes.string,

@@ -15,6 +15,7 @@ export const register = (newUser) => (
       .set({
         firstName: newUser.firstName,
         lastName: newUser.lastName,
+        windows: [],
       }))
     .then(() => {
       dispatch({

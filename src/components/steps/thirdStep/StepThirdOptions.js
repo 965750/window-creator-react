@@ -12,7 +12,7 @@ const StepThirdOptions = ({ colorBoxes }) => {
 
   return (
     <div className="pt-2">
-      <div className="mb-10">
+      <div className="mb-30">
         <p className="mb-4 text-osloGray border-b border-mercury">
           <FormattedMessage id="Choose color" defaultMessage="Choose color" />
         </p>

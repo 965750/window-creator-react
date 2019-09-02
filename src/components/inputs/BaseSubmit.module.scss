@@ -9,6 +9,11 @@
     width: 300px;
   }
 
+  &--sm {
+    width: 100px;
+    min-width: 100px;
+  }
+
   &:disabled {
     background: $gullGray;
   }

@@ -3,6 +3,7 @@ import { logout } from '../../store/actions/authActions'
 import { FormattedMessage } from 'react-intl'
 
 import AvatarBox from './AvatarInfoBox'
+import LoadWindows from './LoadWindows'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -10,8 +11,9 @@ const LoggedInLinks = (
   { logout } // eslint-disable-line
 ) => (
   <div className="flex relative">
+    <LoadWindows />
     <button
-      className="uppercase mr-5 flex self-center cursor-pointer"
+      className="uppercase mr-5 hover:text-malachite cursor-pointer"
       onClick={logout}
     >
       <FormattedMessage id="Logout" defaultMessage="Logout" />
