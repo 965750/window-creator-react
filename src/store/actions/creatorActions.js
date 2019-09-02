@@ -5,10 +5,11 @@ export const resizeWindow = (size) => (dispatch) => {
   })
 }
 
-export const changeColorBox = (id) => (dispatch) => {
+export const changeColorBox = (id, color) => (dispatch) => {
   dispatch({
     type: 'CHANGE_COLOR_BOX',
     id,
+    color,
   })
 }
 
@@ -46,37 +47,52 @@ export const saveWindow = (name) => (dispatch, getState, { getFirebase, getFires
   const firestore = getFirestore()
   const userUid = getState().firebase.auth.uid
   const windowToSave = getState().creator.window
+  const currentSavesNumber = getState().firebase.profile.windows.length
 
-  const fullWindow = {
-    ...windowToSave,
-    id: `_${Math.random().toString(36).substr(2, 9)}`,
-    save: {
-      name,
-      time: Date.now(),
-    },
-  }
-
-  firestore.collection('users').doc(userUid).update({
-    windows: firestore.FieldValue.arrayUnion(fullWindow),
-  }).then(() => {
+  if (currentSavesNumber > 4) {
     dispatch({
       type: 'SET_NOTIFICATION',
-      notification: 'Your current window has been saved',
-      notificationType: 'success',
+      notification: 'You have reached limit of saved windows, delete older first',
+      notificationType: 'error',
     })
-  })
-    .catch(() => {
+  } else {
+    const fullWindow = {
+      ...windowToSave,
+      id: `_${Math.random().toString(36).substr(2, 9)}`,
+      save: {
+        name,
+        time: Date.now(),
+      },
+    }
+
+    firestore.collection('users').doc(userUid).update({
+      windows: firestore.FieldValue.arrayUnion(fullWindow),
+    }).then(() => {
       dispatch({
         type: 'SET_NOTIFICATION',
-        notification: 'We could not save Your window, try again later',
-        notificationType: 'error',
+        notification: 'Your current window has been saved',
+        notificationType: 'success',
       })
     })
+      .catch(() => {
+        dispatch({
+          type: 'SET_NOTIFICATION',
+          notification: 'We could not save Your window, try again later',
+          notificationType: 'error',
+        })
+      })
+  }
 }
 
 export const loadWindow = (id) => (dispatch, getState) => {
   const { windows } = getState().firebase.profile
   const windowToLoad = windows.find((window) => window.id === id)
+
+  dispatch({
+    type: 'SET_NOTIFICATION',
+    notification: 'Window has been loaded',
+    notificationType: 'success',
+  })
 
   dispatch({
     type: 'SET_WINDOW',

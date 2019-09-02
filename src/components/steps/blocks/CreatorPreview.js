@@ -46,7 +46,6 @@ class CreatorPreview extends Component {
               innerWidth={window.innerWidth}
               key={index} // eslint-disable-line
               window={this.props.window}
-              windowColor={this.props.windowColor.color}
             />
           ))}
         </div>
@@ -57,7 +56,6 @@ class CreatorPreview extends Component {
 
 const mapStateToProps = (state) => ({
   window: state.creator.window,
-  windowColor: state.creator.colorBoxes.find((box) => box.active === true),
 })
 
 CreatorPreview.propTypes = {
@@ -68,12 +66,6 @@ CreatorPreview.propTypes = {
     doorType: PropTypes.number,
     rows: PropTypes.array,
     columns: PropTypes.array,
-  }),
-  windowColor: PropTypes.shape({
-    id: PropTypes.string,
-    color: PropTypes.string,
-    label: PropTypes.string,
-    active: PropTypes.bool,
   }),
 }
 

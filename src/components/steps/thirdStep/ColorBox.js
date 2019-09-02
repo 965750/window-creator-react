@@ -12,7 +12,7 @@ const ColorBox = (
 ) => (
   <button
     className={`${classes} cursor-pointer`}
-    onClick={() => changeColorBox(data.id)}
+    onClick={() => changeColorBox(data.id, data.color)}
   >
     <div
       className={`${styles.colorBox} mx-auto rounded-full mb-1`}
@@ -28,7 +28,7 @@ const ColorBox = (
 )
 
 const mapDispatchToProps = (dispatch) => ({
-  changeColorBox: (id) => dispatch(changeColorBox(id)),
+  changeColorBox: (id, color) => dispatch(changeColorBox(id, color)),
 })
 
 ColorBox.propTypes = {

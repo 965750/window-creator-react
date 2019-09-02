@@ -58,6 +58,10 @@ export default {
     'We could not remove Your saved window, try again later': 'We could not remove Your saved window, try again later',
     'You can save Your current window project for later use.': 'You can save Your current window project for later use.',
     'saved projects:': 'saved projects:',
+    'You have reached limit of saved windows, delete older first': 'You have reached limit of saved windows, delete older first',
+    'Window has been loaded': 'Window has been loaded',
+    'Your current window has been saved': 'Your current window has been saved',
+    'Window\'s height must be between 300cm and 160cm, also for width it\'s 170cm and 60cm': 'Window\'s height must be between 300cm and 160cm, also for width it\'s 170cm and 60cm',
   },
   pl: {
     'Keep me logged in': 'Pozostań zalogowany',
@@ -118,5 +122,9 @@ export default {
     'We could not remove Your saved window, try again later': 'Nie mogliśmy usunąć Twojego zapisu okna, spróbuj później',
     'You can save Your current window project for later use.': 'Możesz zapisać swój aktualny projekt okna do późniejszego wykorzystania.',
     'saved projects:': 'zapisanych projektów:',
+    'You have reached limit of saved windows, delete older first': 'Osiągnąłeś limit możliwych zapisów okien, pierw usuń starsze',
+    'Window has been loaded': 'Okno zostało wczytane',
+    'Your current window has been saved': 'Twoje aktualne okno zostało zapisane',
+    'Window\'s height must be between 300cm and 160cm, also for width it\'s 170cm and 60cm': 'Wysokość okna musi być pomiedzy 300cm i 160cm, a dla szerokości pomiędzy 170cm i 60cm',
   },
 }

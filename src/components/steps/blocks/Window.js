@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './Window.module.scss'
 
-const Window = ({ window, windowColor, innerWidth }) => {
+const Window = ({ window, innerWidth }) => {
   const table = window.rows.map((row, index) => (
     <tr
-      style={{ borderColor: windowColor }}
+      style={{ borderColor: window.color }}
       className={`${styles.window__rows}`}
       key={index} // eslint-disable-line
     >
@@ -15,7 +15,7 @@ const Window = ({ window, windowColor, innerWidth }) => {
       ) => (
         <td
           style={{
-            borderColor: windowColor,
+            borderColor: window.color,
           }}
           className={`${styles.window__columns}`}
           key={index} // eslint-disable-line
@@ -35,7 +35,7 @@ const Window = ({ window, windowColor, innerWidth }) => {
       }}
     >
       <table
-        style={{ borderColor: windowColor }}
+        style={{ borderColor: window.color }}
         className={`${styles.window} w-full h-full`}
       >
         <tbody>{table}</tbody>
@@ -45,7 +45,6 @@ const Window = ({ window, windowColor, innerWidth }) => {
 }
 
 Window.propTypes = {
-  windowColor: PropTypes.string,
   innerWidth: PropTypes.number,
   window: PropTypes.shape({
     innerWidth: PropTypes.number,

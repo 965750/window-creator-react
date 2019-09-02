@@ -68,6 +68,10 @@ const creatorReducer = (state = initState, action) => {
 
       return {
         ...state,
+        window: {
+          ...state.window,
+          color: action.color,
+        },
         colorBoxes: localColorBoxes,
       }
     default:

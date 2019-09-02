@@ -39,10 +39,10 @@ LoadWindow.propTypes = {
   removeWindowSave: PropTypes.func,
   isLast: PropTypes.bool,
   window: PropTypes.shape({
-    save: {
+    save: PropTypes.shape({
       name: PropTypes.string,
       time: PropTypes.number,
-    },
+    }),
     id: PropTypes.string,
   }),
 }

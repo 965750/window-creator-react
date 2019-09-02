@@ -13,7 +13,7 @@ const LoggedInLinks = (
   <div className="flex relative">
     <LoadWindows />
     <button
-      className="uppercase mr-5 hover:text-malachite cursor-pointer"
+      className="uppercase mr-3 md:mr-5 hover:text-malachite cursor-pointer"
       onClick={logout}
     >
       <FormattedMessage id="Logout" defaultMessage="Logout" />
