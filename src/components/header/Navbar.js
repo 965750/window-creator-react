@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './Navbar.module.scss'
 
-import LanguageSwitcher from './LanguageSwitcher'
+import LanguageSwitcher from './LanguageSwitcher/'
 import LoggedInLinks from './LoggedInLinks'
 import LoggedOutLinks from './LoggedOutLinks'
 

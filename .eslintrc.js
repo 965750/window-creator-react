@@ -26,6 +26,7 @@ module.exports = {
     'react/state-in-constructor': 0,
     'react/forbid-prop-types': 0,
     'import/order': 0,
+    'import/no-useless-path-segments': 0,
     'max-len': 0,
     'no-case-declarations': 0,
     'consistent-return': 0,
