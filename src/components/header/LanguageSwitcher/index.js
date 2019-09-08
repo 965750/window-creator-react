@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import styles from './LanguageSwitcher.module.scss'
 
-class Index extends Component {
+class LanguageSwitcher extends Component {
   state = {
     languages: [
       {
@@ -68,7 +68,7 @@ const mapDispatchToProps = (dispatch) => ({
   setLocalLang: (lang) => dispatch(setLocalLang(lang)),
 })
 
-Index.propTypes = {
+LanguageSwitcher.propTypes = {
   setLocalLang: PropTypes.func,
   language: PropTypes.string,
   intl: PropTypes.shape({
@@ -80,5 +80,5 @@ export default injectIntl(
   connect(
     mapStateToProps,
     mapDispatchToProps,
-  )(Index),
+  )(LanguageSwitcher),
 )

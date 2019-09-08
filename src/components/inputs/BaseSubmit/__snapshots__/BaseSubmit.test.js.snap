@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseSubmit should match snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="submit   cursor-pointer block bg-mountainMeadow rounded text-white"
+    data-testid="submitWrapper"
+    disabled=""
+    type="submit"
+    value="Zaloguj"
+  />
+</DocumentFragment>
+`;

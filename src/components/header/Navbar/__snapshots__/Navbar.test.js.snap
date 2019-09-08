@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should match logged in snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar px-2 sm:px-5 flex bg-white shadow space justify-between"
+  >
+    <div
+      class="flex"
+    >
+      <p
+        class="select__label mr-5"
+      >
+        Wybierz język:
+      </p>
+      <div
+        class="select__wrapper relative relative mt-lg"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-chevron-down fa-w-14 select__arrow absolute right-10"
+          data-icon="chevron-down"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+            fill="currentColor"
+          />
+        </svg>
+        <select
+          class="select h-full w-full pl-3 border border-gullGray rounded bg-white outline-none"
+          data-testid="select"
+        >
+          <option
+            value="pl"
+          >
+            Polski
+          </option>
+          <option
+            value="en"
+          >
+            Angielski
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      class="flex relative"
+    >
+      <button
+        class="z-40 uppercase mr-5 cursor-pointer"
+      >
+        <span
+          class="hover:text-malachite"
+        >
+          Wczytaj
+        </span>
+      </button>
+      <button
+        class="uppercase mr-3 md:mr-5 hover:text-malachite cursor-pointer"
+      >
+        Wyloguj
+      </button>
+      <div
+        class="avatar z-30 mt-md rounded-full bg-mountainMeadow cursor-pointer"
+        data-testid="avatar"
+      >
+        <p
+          class="uppercase text-center pt-1 leading-loose text-white text-xl font-bold"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navbar should match logged out snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar px-2 sm:px-5 flex bg-white shadow space justify-between"
+  >
+    <div
+      class="flex"
+    >
+      <p
+        class="select__label mr-5"
+      >
+        Wybierz język:
+      </p>
+      <div
+        class="select__wrapper relative relative mt-lg"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-chevron-down fa-w-14 select__arrow absolute right-10"
+          data-icon="chevron-down"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+            fill="currentColor"
+          />
+        </svg>
+        <select
+          class="select h-full w-full pl-3 border border-gullGray rounded bg-white outline-none"
+          data-testid="select"
+        >
+          <option
+            value="pl"
+          >
+            Polski
+          </option>
+          <option
+            value="en"
+          >
+            Angielski
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      class="uppercase flex"
+    >
+      <a
+        class="text-osloGray hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4"
+        href="/register"
+      >
+        Rejestracja
+      </a>
+      <a
+        aria-current="page"
+        class="text-osloGray hover:text-malachite flex self-center cursor-pointer link--active"
+        href="/"
+      >
+        Logowanie
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

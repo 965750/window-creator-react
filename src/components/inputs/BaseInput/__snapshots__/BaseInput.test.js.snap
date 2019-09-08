@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseInput should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="field__wrapper "
+    data-testid="inputWrapper"
+  >
+    <input
+      class="field  border border-silver rounded p-3 w-full"
+      id="mockId"
+      placeholder="Imie"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;

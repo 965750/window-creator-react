@@ -1,0 +1,36 @@
+@import '../../../variables';
+
+.save {
+  box-sizing: border-box;
+
+  &__name {
+    margin-right: 60px;
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  &__time {
+    font-size: 10px;
+    line-height: 11px;
+  }
+
+  &__btnLoad {
+    font-size: 22px;
+    transform: translate(0, -50%);
+    transition: all .2s;
+
+    &:hover {
+      color: darken($hippieBlue, 10%);
+    }
+  }
+
+  &__btnDelete {
+    font-size: 21px;
+    transform: translate(0, -50%);
+    transition: all .2s;
+
+    &:hover {
+      color: darken($error, 10%);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseRadio should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="radio__wrapper border-botticelli border-4 rounded-full relative undefined"
+    data-testid="radioWrapper"
+  />
+</DocumentFragment>
+`;
+
+exports[`BaseRadio should show inner dot when checked 1`] = `
+<DocumentFragment>
+  <div
+    class="radio__wrapper border-botticelli border-4 rounded-full relative undefined"
+    data-testid="radioWrapper"
+  >
+    <div
+      class="radio--checked top-half left-half rounded-full bg-hippieBlue absolute"
+    />
+  </div>
+</DocumentFragment>
+`;

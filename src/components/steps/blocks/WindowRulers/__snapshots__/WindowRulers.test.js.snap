@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WindowRulers should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="ruler--vertical absolute -left-30 md:-left-40 h-full border-t-2 border-scorpion border-b-2"
+    >
+      <div
+        class="ruler__counter absolute top-half left-half border bg-white text-center"
+      >
+        <span>
+          180
+        </span>
+      </div>
+      <div
+        class="bar--vertical h-full bg-scorpion mx-auto"
+      />
+    </div>
+    <div
+      class="ruler--horizontal absolute -top-25 md:-top-40 w-full border-l-2 border-scorpion border-r-2"
+    >
+      <div
+        class="ruler__counter absolute top-half left-half border bg-white text-center"
+      >
+        <span>
+          180
+        </span>
+      </div>
+      <div
+        class="bar--horizontal w-full bg-scorpion"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <div
+        class="ruler--horizontal absolute -bottom-25 md:-bottom-40 w-1/2 border-l-2 border-scorpion border-r-2"
+      >
+        <div
+          class="ruler__counter absolute top-half left-half border bg-white text-center"
+        >
+          <span>
+            90
+          </span>
+        </div>
+        <div
+          class="bar--horizontal w-full bg-scorpion"
+        />
+      </div>
+      <div
+        class="ruler--horizontal absolute -bottom-25 md:-bottom-40 w-1/2 right-0 border-l-2 border-scorpion border-r-2"
+      >
+        <div
+          class="ruler__counter absolute top-half left-half border bg-white text-center"
+        >
+          <span>
+            90
+          </span>
+        </div>
+        <div
+          class="bar--horizontal w-full bg-scorpion"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WindowRulers should match when doorType is 1 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="ruler--vertical absolute -left-30 md:-left-40 h-full border-t-2 border-scorpion border-b-2"
+    >
+      <div
+        class="ruler__counter absolute top-half left-half border bg-white text-center"
+      >
+        <span>
+          180
+        </span>
+      </div>
+      <div
+        class="bar--vertical h-full bg-scorpion mx-auto"
+      />
+    </div>
+    <div
+      class="ruler--horizontal absolute -top-25 md:-top-40 w-full border-l-2 border-scorpion border-r-2"
+    >
+      <div
+        class="ruler__counter absolute top-half left-half border bg-white text-center"
+      >
+        <span>
+          90
+        </span>
+      </div>
+      <div
+        class="bar--horizontal w-full bg-scorpion"
+      />
+    </div>
+    <div
+      class="ruler--horizontal absolute -bottom-25 md:-bottom-40 w-full border-l-2 border-scorpion border-r-2"
+    >
+      <div
+        class="ruler__counter absolute top-half left-half border bg-white text-center"
+      >
+        <span>
+          90
+        </span>
+      </div>
+      <div
+        class="bar--horizontal w-full bg-scorpion"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

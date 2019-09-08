@@ -10,12 +10,12 @@ import messages from "../../../messages-i18n"
 import thunk from 'redux-thunk';
 import React from 'react'
 
-const startingState = {
+const initialStore = {
   theme: {
     lang: 'pl'
   }
 }
-const reducer = (state = startingState, action) => {
+const reducer = (state = initialStore, action) => {
   switch (action.type) {
     case 'SET_LOCAL_LANG':
       return {

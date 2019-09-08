@@ -51,13 +51,6 @@ export const setNotification = (notification, notificationType) => (dispatch) =>
   })
 }
 
-export const isLoading = (loading) => (dispatch) => {
-  dispatch({
-    type: 'SET_LOADING',
-    isLoading: loading,
-  })
-}
-
 export const changeStep = (step) => (dispatch) => {
   dispatch({
     type: 'CHANGE_STEP',

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepSecondOptions should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pt-2"
+  >
+    <div
+      class="mb-10"
+    >
+      <p
+        class="mb-4 text-osloGray border-b border-mercury"
+      >
+        Podział drzwi
+      </p>
+      <div
+        class="flex justify-between"
+      >
+        <p>
+          Ilość belek
+        </p>
+        <div
+          class="mb-5 flex"
+          data-testid="divisionInputWrapper"
+        >
+          <div
+            class="inputBox border border-gullGray text-center"
+          >
+            2
+          </div>
+          <button
+            class="inputBox ml-1 bg-botticelli text-center cursor-pointer"
+          >
+            +
+          </button>
+          <button
+            class="inputBox ml-1 bg-botticelli text-center cursor-pointer"
+          >
+            -
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex justify-between"
+      >
+        <p>
+          Ilość słupków
+        </p>
+        <div
+          class=" flex"
+          data-testid="divisionInputWrapper"
+        >
+          <div
+            class="inputBox border border-gullGray text-center"
+          >
+            2
+          </div>
+          <button
+            class="inputBox ml-1 bg-botticelli text-center cursor-pointer"
+          >
+            +
+          </button>
+          <button
+            class="inputBox ml-1 bg-botticelli text-center cursor-pointer"
+          >
+            -
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

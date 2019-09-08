@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepperNavigation should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex w-full"
+  >
+    <button
+      class="h-8 mr-1 uppercase border-2 border-gullGray w-1/2 cursor-pointer"
+      data-testid="prevStepBtn"
+    >
+      powrót
+    </button>
+    <button
+      class="h-8 w-1/2 uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer"
+      data-testid="nextStepBtn"
+    >
+      następny krok
+    </button>
+  </div>
+</DocumentFragment>
+`;

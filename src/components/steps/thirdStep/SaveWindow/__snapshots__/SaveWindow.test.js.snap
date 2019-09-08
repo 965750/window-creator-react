@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SaveWindow should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <p
+      class="text-xs mb-2"
+    >
+      Możesz zapisać swój aktualny projekt okna do późniejszego wykorzystania.
+    </p>
+    <form
+      class="flex mb-2"
+    >
+      <div
+        class="field__wrapper mr-1 w-full"
+        data-testid="inputWrapper"
+      >
+        <input
+          class="field  border border-silver rounded p-3 w-full"
+          id="name"
+          placeholder="Nazwa Twojego projektu"
+          type="text"
+          value=""
+        />
+      </div>
+      <input
+        class="submit submit--sm  cursor-pointer block bg-mountainMeadow rounded text-white"
+        data-testid="submitWrapper"
+        disabled=""
+        type="submit"
+        value="Zapisz projekt"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;

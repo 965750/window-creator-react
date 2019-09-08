@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseCheckbox should match snapshot with unchecked checkbox 1`] = `
+<DocumentFragment>
+  <div
+    class="checkbox__wrapper border-gullGray border relative "
+    data-testid="checkboxWrapper"
+  />
+</DocumentFragment>
+`;

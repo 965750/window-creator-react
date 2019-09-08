@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorBox should be checked when is active has been passed 1`] = `
+<DocumentFragment>
+  <button
+    class="undefined cursor-pointer"
+    data-testid="colorBoxWrapper"
+  >
+    <div
+      class="colorBox mx-auto rounded-full mb-1"
+      style="background: red;"
+    />
+    <div
+      class="flex justify-center"
+    >
+      <div
+        class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm"
+        data-testid="radioWrapper"
+      >
+        <div
+          class="radio--checked top-half left-half rounded-full bg-hippieBlue absolute"
+        />
+      </div>
+      <span
+        class="ml-1"
+      >
+        Czarny
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ColorBox should match snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="undefined cursor-pointer"
+    data-testid="colorBoxWrapper"
+  >
+    <div
+      class="colorBox mx-auto rounded-full mb-1"
+      style="background: red;"
+    />
+    <div
+      class="flex justify-center"
+    >
+      <div
+        class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm"
+        data-testid="radioWrapper"
+      />
+      <span
+        class="ml-1"
+      >
+        Czarny
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;

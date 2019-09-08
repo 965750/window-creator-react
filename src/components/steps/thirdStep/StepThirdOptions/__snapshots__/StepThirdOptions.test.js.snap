@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepThirdOptions should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pt-2"
+  >
+    <div
+      class="mb-30"
+    >
+      <p
+        class="mb-4 text-osloGray border-b border-mercury"
+      >
+        Wybierz kolor
+      </p>
+      <div
+        class="flex"
+      >
+        <button
+          class="w-1/3 cursor-pointer"
+          data-testid="colorBoxWrapper"
+        >
+          <div
+            class="colorBox mx-auto rounded-full mb-1"
+            style="background: red;"
+          />
+          <div
+            class="flex justify-center"
+          >
+            <div
+              class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm"
+              data-testid="radioWrapper"
+            />
+            <span
+              class="ml-1"
+            >
+              Czarny
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

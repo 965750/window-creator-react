@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Window should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="h-full z-20"
+    style="width: 54px; height: 108px;"
+  >
+    <table
+      class="window w-full h-full"
+      style="border-color: #000;"
+    >
+      <tbody>
+        <tr
+          class="window__rows"
+          style="border-color: #000;"
+        >
+          <td
+            class="window__columns"
+            style="border-color: #000;"
+          >
+             
+          </td>
+          <td
+            class="window__columns"
+            style="border-color: #000;"
+          >
+             
+          </td>
+        </tr>
+        <tr
+          class="window__rows"
+          style="border-color: #000;"
+        >
+          <td
+            class="window__columns"
+            style="border-color: #000;"
+          >
+             
+          </td>
+          <td
+            class="window__columns"
+            style="border-color: #000;"
+          >
+             
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

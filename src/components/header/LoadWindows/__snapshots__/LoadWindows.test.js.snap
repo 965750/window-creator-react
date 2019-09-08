@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadWindows should match snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="z-40 uppercase mr-5 cursor-pointer"
+  >
+    <span
+      class="hover:text-malachite"
+    >
+      Wczytaj
+    </span>
+  </button>
+</DocumentFragment>
+`;

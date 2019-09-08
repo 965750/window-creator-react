@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepFirstOptions should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pt-2"
+  >
+    <div
+      class="mb-10"
+    >
+      <p
+        class="mb-4 text-osloGray border-b border-mercury"
+      >
+        Typ drzwi
+      </p>
+      <button
+        class="mb-2 flex cursor-pointer"
+      >
+        <div
+          class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm mr-2"
+          data-testid="radioWrapper"
+        />
+        Pojedyńcze drzwi
+      </button>
+      <button
+        class="flex cursor-pointer"
+      >
+        <div
+          class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm mr-2"
+          data-testid="radioWrapper"
+        >
+          <div
+            class="radio--checked top-half left-half rounded-full bg-hippieBlue absolute"
+          />
+        </div>
+        Podwójne drzwi
+      </button>
+    </div>
+    <div>
+      <p
+        class="mb-4 text-osloGray border-b border-mercury"
+      >
+        Wymiar drzwi
+      </p>
+      <div
+        class="flex mb-2"
+      >
+        <p
+          class="inputBox__label mr-5"
+        >
+          Szerokość
+        </p>
+        <input
+          class="inputBox border mr-1 text-center"
+          data-testid="widthInput"
+          id="width"
+          type="number"
+        />
+        <span>
+          cm
+        </span>
+      </div>
+      <div
+        class="flex"
+      >
+        <p
+          class="inputBox__label mr-5"
+        >
+          Wysokość
+        </p>
+        <input
+          class="inputBox border mr-1 text-center"
+          data-testid="heightInput"
+          id="height"
+          type="number"
+        />
+        <span>
+          cm
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

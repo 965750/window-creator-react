@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PreviewSwitcher should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex cursor-pointer text-center absolute top-10 right-20"
+  >
+    <button
+      class="sideBtn border bg-botticelli opacity-75 border-gullGray"
+      data-testid="previewSwitcher3d"
+    >
+      3D
+    </button>
+    <button
+      class="sideBtn border-2 bg-white border-gullGray"
+      data-testid="previewSwitcher2d"
+    >
+      2D
+    </button>
+  </div>
+</DocumentFragment>
+`;

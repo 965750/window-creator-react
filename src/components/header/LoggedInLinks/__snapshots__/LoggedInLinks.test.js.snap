@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoggedInLinks should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex relative"
+  >
+    <button
+      class="z-40 uppercase mr-5 cursor-pointer"
+    >
+      <span
+        class="hover:text-malachite"
+      >
+        Wczytaj
+      </span>
+    </button>
+    <button
+      class="uppercase mr-3 md:mr-5 hover:text-malachite cursor-pointer"
+    >
+      Wyloguj
+    </button>
+    <div
+      class="avatar z-30 mt-md rounded-full bg-mountainMeadow cursor-pointer"
+      data-testid="avatar"
+    >
+      <p
+        class="uppercase text-center pt-1 leading-loose text-white text-xl font-bold"
+      >
+        mm
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

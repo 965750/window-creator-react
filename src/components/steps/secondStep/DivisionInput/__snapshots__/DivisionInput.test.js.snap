@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DivisionInput should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class=" flex"
+    data-testid="divisionInputWrapper"
+  >
+    <div
+      class="inputBox border border-gullGray text-center"
+    >
+      7
+    </div>
+    <button
+      class="inputBox ml-1 bg-botticelli text-center cursor-pointer"
+    >
+      +
+    </button>
+    <button
+      class="inputBox ml-1 bg-botticelli text-center cursor-pointer"
+    >
+      -
+    </button>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepBox should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="w-1/3 text-center z-20"
+  >
+    <div
+      class="circle bg-botticelli cursor-pointer rounded-full bg-botticelli relative mx-auto"
+      data-testid="stepBoxCircle"
+    >
+      <div
+        class="circle__inside bg-hippieBlue top-half left-half absolute rounded-full"
+        data-testid="stepBoxDot"
+      />
+    </div>
+    <div>
+      <p
+        class="circle__text uppercase font-bold mt-3"
+      >
+        mockLabel
+      </p>
+      <p
+        class="circle__text uppercase font-bold"
+      >
+        mockTitle
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

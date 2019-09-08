@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarInfoBox should have informations about user in opened box 1`] = `
+<DocumentFragment>
+  <div
+    class="avatar z-30 mt-md rounded-full bg-mountainMeadow cursor-pointer"
+    data-testid="avatar"
+  >
+    <p
+      class="uppercase text-center pt-1 leading-loose text-white text-xl font-bold"
+    >
+      mm
+    </p>
+    <div
+      class="infoBox p-2 absolute right-0 border border-gullGray rounded bg-wildSand"
+      data-testid="avatarInfoBox"
+    >
+      <p>
+        mockName mockLastName
+      </p>
+      <p>
+        mockEmail@gmail.com
+      </p>
+      <p>
+        <span>
+          zapisanych projektów:
+        </span>
+        <span>
+           1
+        </span>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AvatarInfoBox should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="avatar z-30 mt-md rounded-full bg-mountainMeadow cursor-pointer"
+    data-testid="avatar"
+  >
+    <p
+      class="uppercase text-center pt-1 leading-loose text-white text-xl font-bold"
+    >
+      mm
+    </p>
+  </div>
+</DocumentFragment>
+`;

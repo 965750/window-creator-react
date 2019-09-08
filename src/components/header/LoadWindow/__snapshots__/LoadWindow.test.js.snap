@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadWindow should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="save  py-2 text-left flex relative"
+    data-testid="wrapper"
+  >
+    <div>
+      <p
+        class="save__name"
+      >
+        mockName
+      </p>
+      <p
+        class="save__time text-gullGray opacity-75"
+      >
+        50 years ago
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16 save__btnLoad text-hippieBlue absolute top-half right-30"
+      data-icon="arrow-alt-circle-down"
+      data-prefix="fas"
+      data-testid="loadIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM212 140v116h-70.9c-10.7 0-16.1 13-8.5 20.5l114.9 114.3c4.7 4.7 12.2 4.7 16.9 0l114.9-114.3c7.6-7.6 2.2-20.5-8.5-20.5H300V140c0-6.6-5.4-12-12-12h-64c-6.6 0-12 5.4-12 12z"
+        fill="currentColor"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-trash fa-w-14 save__btnDelete text-error absolute top-half right-0"
+      data-icon="trash"
+      data-prefix="fas"
+      data-testid="removeIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
