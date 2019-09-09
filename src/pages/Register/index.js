@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
 import { injectIntl } from 'react-intl'
 import { Redirect } from 'react-router-dom'
-import { register } from '../store/actions/authActions'
+import { register } from '../../store/actions/authActions'
 
-import BaseInput from '../components/inputs/BaseInput/'
-import BaseSubmit from '../components/inputs/BaseSubmit/'
-import PasswordStrength from '../components/blocks/PasswordStrength/'
+import BaseInput from '../../components/inputs/BaseInput'
+import BaseSubmit from '../../components/inputs/BaseSubmit'
+import PasswordStrength from '../../components/blocks/PasswordStrength'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import styles from './Register.module.scss'
@@ -17,13 +17,38 @@ class Register extends Component {
     passwordRepeat: '',
     firstName: '',
     lastName: '',
-    error: null,
+    formError: true,
+    error: {
+      email: null,
+      password: null,
+      passwordRepeat: null,
+      firstName: null,
+      lastName: null,
+    },
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.error !== prevState.error) {
+      this.checkFormValidation()
+    }
   }
 
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
     })
+  }
+
+  checkFormValidation = () => {
+    if (!this.state.error.email && !this.state.error.password && !this.state.error.passwordRepeat && !this.state.error.firstName && !this.state.error.email && !this.state.error.lastName) {
+      this.setState({
+        formError: null,
+      })
+    } else {
+      this.setState({
+        formError: true,
+      })
+    }
   }
 
   onRegister = (e) => {
@@ -37,9 +62,12 @@ class Register extends Component {
     })
   }
 
-  validationError = (error) => {
+  validationError = (error, id) => {
+    const newError = { ...this.state.error } // eslint-disable-line
+    newError[id] = error
+
     this.setState({
-      error,
+      error: newError,
     })
   }
 
@@ -109,7 +137,7 @@ class Register extends Component {
           classes="mx-auto"
           value="Register"
           disabled={
-            this.state.error
+            this.state.formError
             || !this.state.email
             || !this.state.password
             || !this.state.passwordRepeat

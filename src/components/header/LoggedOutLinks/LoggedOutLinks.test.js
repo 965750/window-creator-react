@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom/extend-expect'
 
-import { applyMiddleware, compose, createStore } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux'
+import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import { Provider } from 'react-redux'
 import { render, cleanup } from '@testing-library/react'
@@ -56,12 +57,14 @@ describe('LoggedOutLinks', () => {
 
   const setUp = (props = initialProps) => {
     wrapper = renderWithRedux(
-      <IntlProvider
-        locale="en"
-        messages={messages[store.getState().theme.lang]}
-      >
-        <LoggedOutLinks {...props} />
-      </IntlProvider>,
+      <BrowserRouter>
+        <IntlProvider
+          locale="en"
+          messages={messages[store.getState().theme.lang]}
+        >
+          <LoggedOutLinks {...props} />
+        </IntlProvider>
+      </BrowserRouter>,
     )
   }
 

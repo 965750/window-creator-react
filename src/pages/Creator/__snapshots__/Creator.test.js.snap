@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creator should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="wrapper mb-10 md:px-3 mx-auto z-10"
+  >
+    <div
+      class="stepper flex relative mx-auto mt-6"
+    >
+      <div
+        class="w-1/3 text-center z-20"
+      >
+        <div
+          class="circle bg-gullGray cursor-pointer rounded-full bg-botticelli relative mx-auto"
+          data-testid="stepBoxCircle"
+        >
+          <div
+            class="circle__inside bg-white top-half left-half absolute rounded-full"
+            data-testid="stepBoxDot"
+          />
+        </div>
+        <div>
+          <p
+            class="circle__text uppercase font-bold mt-3"
+          >
+            Krok 1
+          </p>
+          <p
+            class="circle__text uppercase font-bold"
+          >
+            Wybierz Drzwi
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-1/3 text-center z-20"
+      >
+        <div
+          class="circle bg-botticelli cursor-pointer rounded-full bg-botticelli relative mx-auto"
+          data-testid="stepBoxCircle"
+        >
+          <div
+            class="circle__inside bg-hippieBlue top-half left-half absolute rounded-full"
+            data-testid="stepBoxDot"
+          />
+        </div>
+        <div>
+          <p
+            class="circle__text uppercase font-bold mt-3"
+          >
+            Krok 2
+          </p>
+          <p
+            class="circle__text uppercase font-bold"
+          >
+            Wybierz Podział Drzwi
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-1/3 text-center z-20"
+      >
+        <div
+          class="circle bg-botticelli cursor-pointer rounded-full bg-botticelli relative mx-auto"
+          data-testid="stepBoxCircle"
+        >
+          <div
+            class="circle__inside bg-hippieBlue top-half left-half absolute rounded-full"
+            data-testid="stepBoxDot"
+          />
+        </div>
+        <div>
+          <p
+            class="circle__text uppercase font-bold mt-3"
+          >
+            Krok 3
+          </p>
+          <p
+            class="circle__text uppercase font-bold"
+          >
+            Wybierz Kolor
+          </p>
+        </div>
+      </div>
+      <div
+        class="stepper__line border-b border-mercury absolute z-10 left-half"
+      />
+    </div>
+    <div
+      class="flex flex-wrap md:flex-no-wrap mt-4"
+    >
+      <div
+        class="preview preview__background w-full md:w-2/3 border border-mercury relative"
+      >
+        <div
+          class="flex cursor-pointer text-center absolute top-10 right-20"
+        >
+          <button
+            class="sideBtn border-2 bg-white border-gullGray"
+            data-testid="previewSwitcher3d"
+          >
+            3D
+          </button>
+          <button
+            class="sideBtn border bg-botticelli opacity-75 border-gullGray"
+            data-testid="previewSwitcher2d"
+          >
+            2D
+          </button>
+        </div>
+        <div
+          class="city__window absolute flex"
+        >
+          <div
+            class="overflow-hidden absolute w-full h-full"
+          >
+            <img
+              alt="city"
+              class="city__background absolute bottom-0"
+              src="city.jpg"
+            />
+          </div>
+          <div>
+            <div
+              class="ruler--vertical absolute -left-30 md:-left-40 h-full border-t-2 border-scorpion border-b-2"
+            >
+              <div
+                class="ruler__counter absolute top-half left-half border bg-white text-center"
+              >
+                <span>
+                  230
+                </span>
+              </div>
+              <div
+                class="bar--vertical h-full bg-scorpion mx-auto"
+              />
+            </div>
+            <div
+              class="ruler--horizontal absolute -top-25 md:-top-40 w-full border-l-2 border-scorpion border-r-2"
+            >
+              <div
+                class="ruler__counter absolute top-half left-half border bg-white text-center"
+              >
+                <span>
+                  220
+                </span>
+              </div>
+              <div
+                class="bar--horizontal w-full bg-scorpion"
+              />
+            </div>
+            <div
+              class="flex"
+            >
+              <div
+                class="ruler--horizontal absolute -bottom-25 md:-bottom-40 w-1/2 border-l-2 border-scorpion border-r-2"
+              >
+                <div
+                  class="ruler__counter absolute top-half left-half border bg-white text-center"
+                >
+                  <span>
+                    110
+                  </span>
+                </div>
+                <div
+                  class="bar--horizontal w-full bg-scorpion"
+                />
+              </div>
+              <div
+                class="ruler--horizontal absolute -bottom-25 md:-bottom-40 w-1/2 right-0 border-l-2 border-scorpion border-r-2"
+              >
+                <div
+                  class="ruler__counter absolute top-half left-half border bg-white text-center"
+                >
+                  <span>
+                    110
+                  </span>
+                </div>
+                <div
+                  class="bar--horizontal w-full bg-scorpion"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="h-full z-20"
+            style="width: 110px; height: 230px;"
+          >
+            <table
+              class="window w-full h-full"
+              style="border-color: #000;"
+            >
+              <tbody>
+                <tr
+                  class="window__rows"
+                  style="border-color: #000;"
+                >
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                </tr>
+                <tr
+                  class="window__rows"
+                  style="border-color: #000;"
+                >
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                </tr>
+                <tr
+                  class="window__rows"
+                  style="border-color: #000;"
+                >
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="h-full z-20"
+            style="width: 110px; height: 230px;"
+          >
+            <table
+              class="window w-full h-full"
+              style="border-color: #000;"
+            >
+              <tbody>
+                <tr
+                  class="window__rows"
+                  style="border-color: #000;"
+                >
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                </tr>
+                <tr
+                  class="window__rows"
+                  style="border-color: #000;"
+                >
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                </tr>
+                <tr
+                  class="window__rows"
+                  style="border-color: #000;"
+                >
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                  <td
+                    class="window__columns"
+                    style="border-color: #000;"
+                  >
+                     
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/3 md:ml-6 flex flex-col justify-between"
+      >
+        <div
+          class="options__wrapper relative h-full"
+        >
+          <div
+            class="pt-2"
+          >
+            <div
+              class="mb-10"
+            >
+              <p
+                class="mb-4 text-osloGray border-b border-mercury"
+              >
+                Typ drzwi
+              </p>
+              <button
+                class="mb-2 flex cursor-pointer"
+              >
+                <div
+                  class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm mr-2"
+                  data-testid="radioWrapper"
+                />
+                Pojedyńcze drzwi
+              </button>
+              <button
+                class="flex cursor-pointer"
+              >
+                <div
+                  class="radio__wrapper border-botticelli border-4 rounded-full relative mt-sm mr-2"
+                  data-testid="radioWrapper"
+                >
+                  <div
+                    class="radio--checked top-half left-half rounded-full bg-hippieBlue absolute"
+                  />
+                </div>
+                Podwójne drzwi
+              </button>
+            </div>
+            <div>
+              <p
+                class="mb-4 text-osloGray border-b border-mercury"
+              >
+                Wymiar drzwi
+              </p>
+              <div
+                class="flex mb-2"
+              >
+                <p
+                  class="inputBox__label mr-5"
+                >
+                  Szerokość
+                </p>
+                <input
+                  class="inputBox border mr-1 text-center"
+                  data-testid="widthInput"
+                  id="width"
+                  type="number"
+                />
+                <span>
+                  cm
+                </span>
+              </div>
+              <div
+                class="flex"
+              >
+                <p
+                  class="inputBox__label mr-5"
+                >
+                  Wysokość
+                </p>
+                <input
+                  class="inputBox border mr-1 text-center"
+                  data-testid="heightInput"
+                  id="height"
+                  type="number"
+                />
+                <span>
+                  cm
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full"
+        >
+          <button
+            class="h-8 w-1/2 uppercase border-2 bg-gullGray text-white border-gullGray cursor-pointer"
+            data-testid="nextStepBtn"
+          >
+            następny krok
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Creator should redirect when user is NOT logged in 1`] = `<DocumentFragment />`;

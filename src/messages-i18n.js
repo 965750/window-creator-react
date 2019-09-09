@@ -64,6 +64,7 @@ export default {
     'Are You interested in this app? If You want to see full code with tests checkout my Github repository': 'Are You interested in this app? If You want to see full code with tests checkout my Github repository',
     'Window\'s height must be between 300cm and 160cm, also for width it\'s 170cm and 60cm': 'Window\'s height must be between 300cm and 160cm, also for width it\'s 170cm and 60cm',
     'Door division': 'Door division',
+    'You have no saved window projects, save Your current project first': 'You have no saved window projects, save Your current project first',
   },
   pl: {
     'Keep me logged in': 'Pozostań zalogowany',
@@ -130,5 +131,6 @@ export default {
     'Are You interested in this app? If You want to see full code with tests checkout my Github repository': 'Zainteresowała Cie aplikacja? Jeśli chcesz zobaczyć pełny kod razem z testami, sprawdź moje repozytorium na Github\'ie',
     'Window\'s height must be between 300cm and 160cm, also for width it\'s 170cm and 60cm': 'Wysokość okna musi być pomiedzy 300cm i 160cm, a dla szerokości pomiędzy 170cm i 60cm',
     'Door division': 'Podział drzwi',
+    'You have no saved window projects, save Your current project first': 'Nie posiadasz zapisany projektów okien, pierw zapisz swój aktualny projekt',
   },
 }

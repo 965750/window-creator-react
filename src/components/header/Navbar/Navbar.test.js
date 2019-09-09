@@ -3,6 +3,7 @@ import '@testing-library/jest-dom'
 import { applyMiddleware, compose, createStore } from 'redux';
 import { IntlProvider } from 'react-intl'
 import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 import { render, cleanup } from "@testing-library/react"
 
 import Navbar from './index'
@@ -50,12 +51,14 @@ describe('Navbar', () => {
 
   const setUp = (props = initialProps) => {
     wrapper = renderWithRedux(
-      <IntlProvider
-        locale='en'
-        messages={messages[store.getState().theme.lang]}
-      >
-        <Navbar {...props}/>
-      </IntlProvider>
+      <BrowserRouter>
+        <IntlProvider
+          locale='en'
+          messages={messages[store.getState().theme.lang]}
+        >
+          <Navbar {...props}/>
+        </IntlProvider>
+      </BrowserRouter>,
     )
   }
 

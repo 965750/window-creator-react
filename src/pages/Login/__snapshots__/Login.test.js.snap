@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should match snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="form__wrapper mt-10 mx-auto"
+  >
+    <div
+      class="field__wrapper mb-3"
+      data-testid="inputWrapper"
+    >
+      <input
+        class="field  border border-silver rounded p-3 w-full"
+        id="email"
+        placeholder="Adres Email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="field__wrapper mb-3"
+      data-testid="inputWrapper"
+    >
+      <input
+        class="field  border border-silver rounded p-3 w-full"
+        id="password"
+        placeholder="Hasło"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      class="flex justify-between flex-wrap mb-3"
+    >
+      <div
+        class="flex cursor-pointer"
+        id="remember"
+      >
+        <div
+          class="checkbox__wrapper border-gullGray border relative mr-2 mb-3"
+          data-testid="checkboxWrapper"
+        />
+        <p>
+          Pozostań zalogowany
+        </p>
+      </div>
+      <a
+        class="hover:text-malachite text-malachite cursor-pointer"
+        href="/register"
+      >
+        Stwórz nowe konto tutaj
+      </a>
+    </div>
+    <input
+      class="submit  mx-auto cursor-pointer block bg-mountainMeadow rounded text-white"
+      data-testid="submitWrapper"
+      disabled=""
+      type="submit"
+      value="Zaloguj"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Login should redirect when user is logged in 1`] = `<DocumentFragment />`;

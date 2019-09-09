@@ -30,7 +30,7 @@ class BaseInput extends Component {
     }
 
     if (prevState.error !== this.state.error) {
-      this.props.validationError(this.state.error)
+      this.props.validationError(this.state.error, this.props.id)
     }
   }
 

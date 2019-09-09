@@ -7,14 +7,14 @@ import { IntlProvider } from 'react-intl'
 import { setLocalLang, checkLocation } from './store/actions/themeActions'
 
 import CodeInfoBox from './components/blocks/CodeInfoBox/'
-import Creator from './pages/Creator'
-import Login from './pages/Login'
+import Creator from './pages/Creator/'
+import Login from './pages/Login/'
 import messages from './messages-i18n'
 import Navbar from './components/header/Navbar/'
 import NotificationBanner from './components/blocks/NotificationBanner/'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import Register from './pages/Register'
+import Register from './pages/Register/'
 
 class App extends Component {
   componentDidMount() {

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register should match snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="form__wrapper mt-10 mx-auto"
+  >
+    <div
+      class="field__wrapper mb-3"
+      data-testid="inputWrapper"
+    >
+      <input
+        class="field  border border-silver rounded p-3 w-full"
+        id="email"
+        placeholder="Adres Email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="bar relative w-4/9 mb-1"
+    >
+      <p
+        class="bar__label top-10- text-osloGray"
+      />
+      <div
+        class="bar__back rounded"
+      />
+      <div
+        class="bar__cover rounded-r absolute bg-white opacity-75 h-full bottom-0 right-0 w-50"
+        data-testid="passwordStrength"
+        style="width: 100%;"
+      />
+    </div>
+    <div
+      class="flex flex-wrap"
+    >
+      <div
+        class="field__wrapper mb-3 w-4/9"
+        data-testid="inputWrapper"
+      >
+        <input
+          class="field  border border-silver rounded p-3 w-full"
+          id="password"
+          placeholder="Hasło"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        class="field__wrapper mb-3 ml-auto w-4/9"
+        data-testid="inputWrapper"
+      >
+        <input
+          class="field  border border-silver rounded p-3 w-full"
+          id="passwordRepeat"
+          placeholder="Powtórz hasło"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="field__wrapper mb-3"
+      data-testid="inputWrapper"
+    >
+      <input
+        class="field  border border-silver rounded p-3 w-full"
+        id="firstName"
+        placeholder="Imie"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="field__wrapper mb-3"
+      data-testid="inputWrapper"
+    >
+      <input
+        class="field  border border-silver rounded p-3 w-full"
+        id="lastName"
+        placeholder="Nazwisko"
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      class="submit  mx-auto cursor-pointer block bg-mountainMeadow rounded text-white"
+      data-testid="submitWrapper"
+      disabled=""
+      type="submit"
+      value="Zarejestruj"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Register should redirect when user is logged in 1`] = `<DocumentFragment />`;

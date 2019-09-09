@@ -37,10 +37,14 @@ class LoadWindows extends Component {
     let infoBox
     let savedWindows
 
-    if (this.props.user.windows) {
+    if (this.props.user.windows && this.props.user.windows.length > 0) {
       savedWindows = this.props.user.windows.map((window, index) => (
         <LoadWindow isLast={this.props.user.windows.length === index + 1} key={window.id} window={window} />
       ))
+    } else {
+      savedWindows = (
+        <p className="leading-relaxed text-sm"><FormattedMessage id="You have no saved window projects, save Your current project first" defaultMessage="You have no saved window projects, save Your current project first" /></p>
+      )
     }
 
 

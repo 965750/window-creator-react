@@ -1,15 +1,15 @@
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import CreatorPreview from '../components/steps/blocks/CreatorPreview/'
+import CreatorPreview from '../../components/steps/blocks/CreatorPreview'
 import PropTypes from 'prop-types'
 import React from 'react'
-import SaveWindow from '../components/steps/thirdStep/SaveWindow/'
-import StepFirstOptions from '../components/steps/firstStep/StepFirstOptions/'
-import Stepper from '../components/steps/blocks/Stepper/'
-import StepperNavigation from '../components/steps/blocks/StepperNavigation/'
-import StepSecondOptions from '../components/steps/secondStep/StepSecondOptions/'
-import StepThirdOptions from '../components/steps/thirdStep/StepThirdOptions/'
+import SaveWindow from '../../components/steps/thirdStep/SaveWindow'
+import StepFirstOptions from '../../components/steps/firstStep/StepFirstOptions'
+import Stepper from '../../components/steps/blocks/Stepper'
+import StepperNavigation from '../../components/steps/blocks/StepperNavigation'
+import StepSecondOptions from '../../components/steps/secondStep/StepSecondOptions'
+import StepThirdOptions from '../../components/steps/thirdStep/StepThirdOptions'
 import styles from './Creator.module.scss'
 
 const Creator = ({ isLoggedIn, step, window }) => {
@@ -37,7 +37,7 @@ const Creator = ({ isLoggedIn, step, window }) => {
       return
   }
 
-  if (!isLoggedIn) return <Redirect to="/" />
+  if (!isLoggedIn) return <Redirect data-testid="redirect" to="/" />
 
   return (
     <div className={`${styles.wrapper} mb-10 md:px-3 mx-auto z-10`}>
