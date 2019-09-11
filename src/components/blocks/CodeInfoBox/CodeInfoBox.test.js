@@ -63,7 +63,7 @@ describe('CodeInfoBox', () => {
 
     jest.runAllTimers()
 
-    const cookieBox = await waitForElement(() => wrapper.getByText("Zainteresowała Cie aplikacja? Jeśli chcesz zobaczyć pełny kod razem z testami, sprawdź moje repozytorium na Github'ie"))
+    const cookieBox = await waitForElement(() => wrapper.getByText("repozytorium na Github'ie tutaj"))
 
     expect(cookieBox).toBeVisible()
   })

@@ -42,10 +42,18 @@ class CodeInfoBox extends Component {
           } z-30 p-2 pr-5 fixed right-20 bottom-20 border border-gullGray rounded bg-wildSand`}
         >
           <p>
-            <FormattedMessage
-              id="Are You interested in this app? If You want to see full code with tests checkout my Github repository"
-              defaultMessage="Are You interested in this app? If You want to see full code with tests checkout my Github repository"
-            />
+            <span>
+              <FormattedMessage
+                id="Are You interested in this app? If You want to see full code with tests checkout my "
+                defaultMessage="Are You interested in this app? If You want to see full code with tests checkout my "
+              />
+            </span>
+            <a href="https://github.com/965750/window-creator-react" className="hover:text-mountainMeadow text-malachite cursor-pointer">
+              <FormattedMessage
+                id="Github repository here"
+                defaultMessage="Github repository here"
+              />
+            </a>
           </p>
           <button
             onClick={this.closeBox}
