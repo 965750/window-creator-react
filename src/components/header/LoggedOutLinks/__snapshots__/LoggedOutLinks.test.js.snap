@@ -6,17 +6,17 @@ exports[`LoggedOutLinks should match snapshot 1`] = `
     class="uppercase flex"
   >
     <a
-      class="text-osloGray hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4"
-      href="/register"
-    >
-      Rejestracja
-    </a>
-    <a
       aria-current="page"
-      class="text-osloGray hover:text-malachite flex self-center cursor-pointer link--active"
+      class="text-osloGray hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4 link--active"
       href="/"
     >
       Logowanie
+    </a>
+    <a
+      class="text-osloGray hover:text-malachite flex self-center cursor-pointer"
+      href="/register"
+    >
+      Rejestracja
     </a>
   </div>
 </DocumentFragment>

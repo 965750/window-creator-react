@@ -127,6 +127,7 @@ describe('Register', () => {
 
     expect(wrapper.getByTestId('submitWrapper').disabled).toBe(true)
 
+    fireEvent.change(wrapper.getByPlaceholderText('Adres Email'), { target: { value: 'gmail.com' }})
     fireEvent.change(wrapper.getByPlaceholderText('Adres Email'), { target: { value: 'mockedEmail@gmail.com' }})
     fireEvent.change(wrapper.getByPlaceholderText('Hasło'), { target: { value: 'mockPassword' }})
     fireEvent.change(wrapper.getByPlaceholderText('Powtórz hasło'), { target: { value: 'mockPassword' }})

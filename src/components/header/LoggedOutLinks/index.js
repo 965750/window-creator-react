@@ -8,19 +8,19 @@ const LoggedOutLinks = () => (
   <div className="uppercase flex">
     <NavLink
       exact
-      to="/register"
+      to="/"
       className="text-osloGray hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4"
       activeClassName={styles['link--active']}
     >
-      <FormattedMessage id="RegisterNav" defaultMessage="Register" />
+      <FormattedMessage id="LoginNav" defaultMessage="Login" />
     </NavLink>
     <NavLink
       exact
-      to="/"
+      to="/register"
       className="text-osloGray hover:text-malachite flex self-center cursor-pointer"
       activeClassName={styles['link--active']}
     >
-      <FormattedMessage id="LoginNav" defaultMessage="Login" />
+      <FormattedMessage id="RegisterNav" defaultMessage="Register" />
     </NavLink>
   </div>
 )

@@ -1,9 +1,9 @@
 {
   "name": "Window Creator",
-  "short_name": "windowCreator",
+  "short_name": "WindowCreator",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#00ca2b",
+  "background_color": "#90ffa8",
   "theme_color": "#1de278",
   "orientation": "portrait-primary",
   "icons": [

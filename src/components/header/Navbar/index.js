@@ -8,7 +8,7 @@ import LoggedOutLinks from '../LoggedOutLinks/'
 
 const Navbar = ({ auth }) => (
   <div
-    className={`${styles.navbar} px-2 sm:px-5 flex bg-white shadow space justify-between`}
+    className={`${styles.navbar} px-3 sm:px-5 flex bg-white shadow space justify-between`}
   >
     <LanguageSwitcher />
     {!auth.isEmpty ? <LoggedInLinks /> : <LoggedOutLinks />}

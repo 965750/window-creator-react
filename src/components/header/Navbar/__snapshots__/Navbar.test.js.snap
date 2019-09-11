@@ -3,7 +3,7 @@
 exports[`Navbar should match logged in snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="navbar px-2 sm:px-5 flex bg-white shadow space justify-between"
+    class="navbar px-3 sm:px-5 flex bg-white shadow space justify-between"
   >
     <div
       class="flex"
@@ -81,7 +81,7 @@ exports[`Navbar should match logged in snapshot 1`] = `
 exports[`Navbar should match logged out snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="navbar px-2 sm:px-5 flex bg-white shadow space justify-between"
+    class="navbar px-3 sm:px-5 flex bg-white shadow space justify-between"
   >
     <div
       class="flex"
@@ -130,17 +130,17 @@ exports[`Navbar should match logged out snapshot 1`] = `
       class="uppercase flex"
     >
       <a
-        class="text-osloGray hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4"
-        href="/register"
-      >
-        Rejestracja
-      </a>
-      <a
         aria-current="page"
-        class="text-osloGray hover:text-malachite flex self-center cursor-pointer link--active"
+        class="text-osloGray hover:text-malachite flex self-center cursor-pointer sm:mr-10 mr-4 link--active"
         href="/"
       >
         Logowanie
+      </a>
+      <a
+        class="text-osloGray hover:text-malachite flex self-center cursor-pointer"
+        href="/register"
+      >
+        Rejestracja
       </a>
     </div>
   </div>
