@@ -30,6 +30,7 @@ module.exports = {
     'max-len': 0,
     'no-case-declarations': 0,
     'consistent-return': 0,
+    'linebreak-style': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/click-events-have-key-events': 0,
   },
