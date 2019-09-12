@@ -30,12 +30,14 @@ const Window = ({ window, innerWidth }) => {
     <div
       className="h-full z-20"
       style={{
-        width: `${window.width * (innerWidth > 767 ? 1 : 0.6)}px`,
-        height: `${window.height * (innerWidth > 767 ? 1 : 0.6)}px`,
+        width: `${window.width * (innerWidth > 767 ? 1 : 0.70)}px`,
+        height: `${window.height * (innerWidth > 767 ? 1 : 0.70)}px`,
       }}
     >
       <table
-        style={{ borderColor: window.color }}
+        style={{
+          borderColor: window.color,
+        }}
         className={`${styles.window} w-full h-full`}
       >
         <tbody>{table}</tbody>

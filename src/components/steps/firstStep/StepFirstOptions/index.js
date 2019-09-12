@@ -41,12 +41,12 @@ class StepFirstOptions extends Component {
     let value = Number(e.target.value)
     const limits = {
       height: {
-        min: 160,
-        max: 300,
+        min: 180,
+        max: 260,
       },
       width: {
-        min: 60,
-        max: 170,
+        min: 70,
+        max: 140,
       },
     }
 

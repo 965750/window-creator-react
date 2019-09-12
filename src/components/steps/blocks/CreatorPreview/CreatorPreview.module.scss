@@ -7,13 +7,13 @@
 
     &__background {
         background-image: url('../../../../assets/room.jpg');
-        background-position: -150px -24px;
+        background-position: -190px -24px;
         background-size: 820px 571px;
         background-repeat: no-repeat;
 
         @media screen and (max-width: 768px) {
-            background-position: -140px -4px;
-            background-size: 517px 360px;
+            background-position: -214px -33px;
+            background-size: 589px 410px;
         }
     }
 }
@@ -25,8 +25,8 @@
         left: 120px;
 
         @media screen and (max-width: 768px) {
-            bottom: 45px;
-            left: 64px;
+            bottom: 37px;
+            left: 50px;
         }
     }
 
